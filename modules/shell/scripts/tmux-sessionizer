@@ -156,12 +156,6 @@ new_session() {
     eval $hook
 }
 
-new_session_systemd() {
-    # app2unit -- tmux new-session -s $1 -c $2 $3
-    tmux new-session -s $1 -c $2 $3
-    eval $hook
-}
-
 ##############################################################################
 # Main
 ##############################################################################
@@ -189,7 +183,7 @@ if no_tmux; then
         tmux attach-session -t $name
     else
         debug "Create new session $name"
-        new_session_systemd $name $directory
+        new_session $name $directory
     fi
 else
     if ! has_session $name; then

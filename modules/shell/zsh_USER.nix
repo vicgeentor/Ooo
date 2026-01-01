@@ -78,7 +78,6 @@
         gaa = "git add --all";
 
         # Tmux
-        # t = "app2unit -- tmux";
         t = "tmux";
 
         # Syncing
@@ -101,10 +100,9 @@
         # Nice ones
         off = "hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'";
         reboot = "hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'";
-        hibernate = "systemctl hibernate";
         goto = "source";
         open = "xdg-open";
-        valias = "vim ~/Ooo//modules/zsh.nix";
+        valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/zsh_USER.nix";
         view = "qimgv";
         ev = "silent evince";
         thu = "silent thunar .";
@@ -113,7 +111,6 @@
         cp = "cp -v";
         mv = "mv -v";
         godot = "godot4 --display-driver wayland";
-        batterystatus = "acpi";
         vpak = "${config.flake.meta.vic.editor} ~/Ooo/modules/hosts/jake/pkgs.nix";
         screenrec = "wl-screenrec --low-power off --audio";
         screenrec-history = "wl-screenrec --low-power off --audio --history 30 &";

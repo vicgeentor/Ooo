@@ -20,8 +20,7 @@ new_session() {
     tmux new-session -s "$1" -c "$2" -d
 }
 
-new_session_systemd() {
-    # app2unit -- tmux new-session -s "$1" -c "$2" "$SHELL"
+new_session2() {
     tmux new-session -s "$1" -c "$2" "$SHELL"
 }
 
@@ -36,7 +35,7 @@ if has_session "$name"; then
 else
     debug "Creating new session $name"
     if no_tmux; then
-        new_session_systemd "$name" "$directory"
+        new_session2 "$name" "$directory"
         tmux attach-session -t "$name"
     else
         new_session "$name" "$directory"

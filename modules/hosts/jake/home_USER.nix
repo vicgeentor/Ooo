@@ -6,7 +6,6 @@
         base
 
         alacritty
-        btop
         desktop-applications
         direnv
         dunst
