@@ -20,11 +20,11 @@
         markdown
         minecraft
         mpv
-        my-scripts
         nvim
         onedrive
         quickshell
         rofi
+        scripts
         stylix
         thunar
         tmux

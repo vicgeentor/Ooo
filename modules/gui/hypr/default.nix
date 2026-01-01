@@ -1,11 +1,7 @@
 { inputs, ... }:
 {
   flake.modules.nixos.hypr =
-    {
-      pkgs,
-      lib,
-      ...
-    }:
+    { pkgs, ... }:
     {
       programs.hyprland = {
         enable = true;
@@ -59,7 +55,7 @@
     {
       home.file = {
         ".config/hypr".source =
-          hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/hypr";
+          hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/hypr";
       };
 
       home.packages = with pkgs; [

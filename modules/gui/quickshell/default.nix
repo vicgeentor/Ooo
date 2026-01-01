@@ -10,7 +10,7 @@
         ];
         file = {
           ".config/quickshell".source =
-            hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/quickshell";
+            hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/quickshell";
         };
       };
       qt.enable = true;

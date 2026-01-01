@@ -24,7 +24,7 @@
         ];
         file = {
           ".config/nvim".source =
-            hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/nvim";
+            hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/other/nvim";
         };
       };
     };

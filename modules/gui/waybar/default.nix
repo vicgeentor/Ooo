@@ -15,9 +15,9 @@
       home = {
         file = {
           ".config/waybar/style.css".source =
-            hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/waybar/style.css";
+            hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/waybar/style.css";
           ".config/waybar/config".source =
-            hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/waybar/config";
+            hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/waybar/config";
         };
       };
     };

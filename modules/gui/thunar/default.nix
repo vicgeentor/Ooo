@@ -17,7 +17,7 @@
   flake.modules.homeManager.thunar = hmArgs: {
     home.file = {
       ".config/Thunar/uca.xml".source =
-        hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/thunar/uca.xml";
+        hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/thunar/uca.xml";
     };
   };
 }

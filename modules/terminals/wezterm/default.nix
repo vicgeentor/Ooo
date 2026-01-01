@@ -10,7 +10,7 @@
       };
       home.file = {
         ".config/wezterm".source =
-          hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/wezterm";
+          hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/terminals/wezterm";
       };
     };
 }
