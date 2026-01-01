@@ -5,6 +5,10 @@ Every non-declarative part of this sytem setup is listed in
 
 # Installation
 
+> [!IMPORTANT] Many of the home-manager modules rely on
+> symlinks to files in this repo. To ensure that these
+> symlinks work, the location of this repo should be ~/Ooo.
+
 ## With [nixos-anywhere](https://github.com/nix-community/nixos-anywhere)
 
 ```
