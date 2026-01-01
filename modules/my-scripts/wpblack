@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+wp "$HOME"/personal/Pictures/overig/black.jpg

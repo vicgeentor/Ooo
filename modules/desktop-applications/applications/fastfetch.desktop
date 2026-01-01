@@ -1,0 +1,7 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Name=Fastfetch
+Exec=ff-terminal
+Icon=nix-snowflake
+StartupWMClass=teams.com

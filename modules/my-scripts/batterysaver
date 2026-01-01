@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+# Arbitrary but unique message tag
+msgTag="Battery Saver"
+
+HYPRBATTERYSAVER=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+
+if [ "$HYPRBATTERYSAVER" = 1 ] ; then
+    hyprctl --batch "\
+        keyword animations:enabled 0;\
+        keyword decoration:shadow:enabled 0;\
+        keyword decoration:blur:enabled 0;\
+        keyword general:gaps_in 0;\
+        keyword general:gaps_out 0;\
+        keyword general:border_size 1;\
+        keyword decoration:rounding 0"
+    dunstify -a "$msgTag" -u low -i colors-chromagreen -h string:x-dunst-stack-tag:"$msgTag" "$msgTag" "on"
+    wprestart
+    exit
+fi
+
+hyprctl reload
+dunstify -a "$msgTag" -u low -i colors-chromared -h string:x-dunst-stack-tag:"$msgTag" "$msgTag" "off"
+wprestart

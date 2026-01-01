@@ -1,0 +1,47 @@
+{
+  inputs,
+  config,
+  ...
+}:
+{
+  flake.nixosConfigurations.jake = inputs.nixpkgs.lib.nixosSystem {
+    modules = with config.flake.modules.nixos; [
+      jake
+
+      base
+
+      acer-wmi
+      bluetooth
+      boot-screen-animation
+      btrfs
+      docker
+      ente-auth
+      fonts
+      formatting
+      fwupd
+      graphics
+      hypr
+      intel
+      keyd
+      laptop
+      nh
+      nix-ld
+      nvidia
+      nvidia-hybrid
+      nvim
+      polkit
+      python
+      sound
+      ssd
+      ssh
+      steam
+      stylix
+      systemdboot
+      tailscale
+      thunar
+      virtualisation
+      xdgportal
+      zsh
+    ];
+  };
+}

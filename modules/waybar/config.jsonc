@@ -1,0 +1,190 @@
+{
+  "height": 32,
+  "layer": "top",
+  "position": "top",
+  "margin": "0px 2px 4px 2px",
+  "reload_style_on_change": true,
+
+  "modules-left": [
+    "custom/rofi",
+    "custom/whitespace",
+    "tray",
+    "mpris"
+  ],
+  "modules-center": [
+    "hyprland/workspaces",
+    "custom/whitespace",
+    "custom/nextws"
+  ],
+  "modules-right": [
+    "pulseaudio#output",
+    "pulseaudio#input",
+    "backlight",
+    "custom/wl-gammarelay",
+    "memory",
+    "battery",
+    "clock"
+  ],
+
+  "backlight": {
+    "format": "{icon}",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "on-click-middle": "brightnessctl s 25%",
+    "on-click-right": "brightnessctl s 50%",
+    "tooltip-format": "{percent}%"
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-charging": "󱐌 {capacity}%",
+    "format-full": "",
+    "format-plugged": "",
+    "tooltip-format": "{capacity}%",
+    "interval": 10,
+    "states": {
+      "critical": 15,
+      "warning": 25
+    }
+  },
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "on-click": "xdg-open https://calendar.google.com > /dev/null 2>&1 &",
+    "calendar": {
+      "format": {
+        "days": "<span color='#ECC6D9'><b>{}</b></span>",
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>"
+      },
+      "mode": "month",
+      "mode-mon-col": 3,
+      "on-scroll": 1,
+      "weeks-pos": "right"
+    }
+  },
+  "custom/rofi": {
+    "format": "  ",
+    "on-click": "rofi -show drun -show-icons -run-command 'app2unit -- {cmd}'",
+    "tooltip": false
+  },
+  "custom/screenoff": {
+    "format": "󱠑",
+    "on-click": "sleep 0.1 && hyprctl dispatch dpms toggle",
+    "tooltip": false
+  },
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/whitespace": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/wl-gammarelay": {
+    "exec": "wl-gammarelay-rs watch {t}",
+    "format": "",
+    "on-click-middle": "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 3800",
+    "on-click-right": "busctl --user set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500",
+    "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100",
+    "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
+    "tooltip": true,
+    "tooltip-format": "{}K"
+  },
+  "custom/nextws": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Open next empty workspace",
+    "on-click": "nextws"
+  },
+  "hyprland/window": {
+    "format": "",
+    "hide-empty-text": true,
+    "max-length": 50,
+    "separate-outputs": true
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+  "memory": {
+    "format": "󰍛",
+    "on-click": "taskmanager"
+  },
+  "pulseaudio#input": {
+    "format": "{format_source}",
+    "format-source": "󰍬",
+    "format-source-muted": "󰍭",
+    "on-click": "pavucontrol",
+    "on-click-middle": "wpctl set-volume @DEFAULT_SOURCE@ 25%",
+    "on-click-right": "wpctl set-mute @DEFAULT_SOURCE@ toggle",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ 1%-",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SOURCE@ 1%+",
+    "tooltip-format": "{format_source}"
+  },
+  "pulseaudio#output": {
+    "format": "{icon}",
+    "format-icons": {
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ],
+      "headphone": "",
+      "headset": "",
+      "phone": "",
+      "portable": ""
+    },
+    "format-muted": "",
+    "tooltip-format": "{volume}%",
+    "on-click": "pavucontrol",
+    "on-click-middle": "wpctl set-volume @DEFAULT_SINK@ 25%",
+    "on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle"
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "on-click": "taskmanager",
+    "thermal-zone": 4
+  },
+  "tray": {
+    "icon-size": 16,
+    "reverse-direction": false,
+    "spacing": 6,
+    "show-passive-items": true,
+  },
+  "mpris": {
+    "format": "{status_icon} {title}",
+    "format-paused": "{status_icon} {title}",
+    "title-len": 30,
+    "status-icons": {
+      "default": "",
+      "paused": ""
+    },
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  }
+}

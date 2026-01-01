@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+if [ ! -d ~/mnt/sata ]; then
+  mkdir -p ~/mnt/sata
+fi
+
+sudo mount /dev/disk/by-label/SATA ~/mnt/sata
+
+cd ~/mnt/sata

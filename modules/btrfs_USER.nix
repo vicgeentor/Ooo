@@ -1,0 +1,55 @@
+{ config, ... }:
+{
+  flake.modules.nixos.btrfs =
+    { pkgs, ... }:
+    {
+      services.btrfs.autoScrub.enable = true;
+
+      systemd.services = {
+        "btrfs-balance" = {
+          description = "Balance block groups on a btrfs filesystem";
+          documentation = [ "man:btrfs-balance" ];
+          after = [
+            "fstrim.service"
+            "btrfs-trim.service"
+            "btrfs-scrub.service"
+          ];
+          script = ''
+            ${pkgs.btrfs-progs}/bin/btrfs balance start -dusage=0 /
+            ${pkgs.btrfs-progs}/bin/btrfs balance start -v -dusage=5 /
+            ${pkgs.btrfs-progs}/bin/btrfs balance start -musage=0 /
+            ${pkgs.btrfs-progs}/bin/btrfs balance start -v -musage=5 /
+          '';
+          serviceConfig = {
+            Type = "simple";
+            IOSchedulingClass = "idle";
+            CPUSchedulingPolicy = "idle";
+          };
+        };
+      };
+
+      systemd.timers = {
+        "btrfs-balance" = {
+          wantedBy = [ "timers.target" ];
+          timerConfig = {
+            OnCalendar = "weekly";
+            Persistent = "true";
+            Unit = "btrfs-balance.service";
+          };
+        };
+      };
+
+      services.snapper = {
+        configs = {
+          home = {
+            SUBVOLUME = "/home";
+            TIMELINE_CREATE = true;
+            TIMELINE_CLEANUP = true;
+            ALLOW_USERS = [ config.flake.meta.vic.username ];
+          };
+        };
+      };
+
+      virtualisation.docker.storageDriver = "btrfs";
+    };
+}

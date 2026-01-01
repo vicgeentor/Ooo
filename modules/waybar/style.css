@@ -1,0 +1,192 @@
+/* Colors */
+@define-color white #fbf2f2;
+@define-color rosewater #f4dbd6;
+@define-color flamingo #f0c6c6;
+@define-color pink #f5bde6;
+@define-color mauve #c6a0f6;
+@define-color red #ed8796;
+@define-color maroon #ee99a0;
+@define-color orange #e87d2e;
+@define-color peach #f5a97f;
+@define-color yellow #eed49f;
+@define-color green #a6da95;
+@define-color teal #8bd5ca;
+@define-color sky #91d7e3;
+@define-color sapphire #7dc4e4;
+@define-color blue #8aadf4;
+@define-color lavender #b7bdf8;
+@define-color text #cad3f5;
+@define-color subtext1 #b8c0e0;
+@define-color subtext0 #a5adcb;
+@define-color overlay2 #939ab7;
+@define-color overlay1 #8087a2;
+@define-color overlay0 #6e738d;
+@define-color surface2 #5b6078;
+@define-color surface1 #494d64;
+@define-color surface0 #363a4f;
+@define-color base #24273a;
+@define-color mantle #1e2030;
+@define-color crust #181926;
+@define-color crust2 #080808;
+
+/* Style */
+* {
+  font-family: "Ubuntu Nerd Font", sans-serif;
+  font-size: 15px;
+}
+
+window#waybar {
+  all:unset;
+  background: alpha(@crust, 0);
+  transition-property: background;
+  transition-duration: .5s;
+}
+
+window#waybar.empty {  
+  background: alpha(@crust, 0);
+}
+
+window#waybar.empty #window {
+  background: alpha(@crust, 0);
+}
+
+.modules-left,
+.modules-right,
+.modules-center {
+  background: alpha(@mantle, .9);
+  padding: 0 5px;
+  border-radius: 7px;
+  margin: 0 1px;
+}
+
+tooltip {
+  background: alpha(@mantle, .9);
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+}
+
+/* Hovering color on scrollable items */
+#backlight:hover,
+#custom-wl-gammarelay:hover,
+#pulseaudio.output:hover,
+#pulseaudio.input:hover {
+  background-color: @surface1;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: @overlay2;
+}
+
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#workspaces button.focused {
+  background-color: @lavender;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.active {
+  color: @white;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  color: @white;
+  background-color: #eb4d4b;
+}
+
+#mode {
+  background-color: #64727D;
+  box-shadow: inset 0 -3px #ffffff;
+}
+
+#pulseaudio.output,
+#pulseaudio.input,
+#backlight,
+#network,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#clock,
+#custom-wl-gammarelay,
+#custom-screenoff {
+  padding: 0 4px;
+  color: @subtext1;
+}
+
+#tray {
+  padding: 0 10px 0 0;
+}
+
+#custom-separator {
+  color: @surface2;
+}
+
+#custom-rofi {
+  color: @blue;
+}
+
+#custom-nextws {
+  color: @overlay2;
+}
+
+#battery.warning:not(.charging) {
+  color: #f53c3c;
+}
+
+#battery.critical:not(.charging) {
+  color: #000000;
+  background-color: #f53c3c;
+}
+
+#temperature.critical {
+  color: #000000;
+  background-color: #f53c3c;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#pulseaudio-slider {
+  min-height: 8px;
+  margin: 0px;
+  padding: 0 4px;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    background-color: @subtext1;
+}
+#pulseaudio-slider trough {
+    min-height: 8px;
+    min-width: 80px;
+    border-radius: 5px;
+    background-color: @crust2;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: @blue;
+}

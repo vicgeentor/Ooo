@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+dune build --watch
+
+dune clean

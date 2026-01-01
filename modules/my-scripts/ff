@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+while true; do
+  clear
+  fastfetch
+  sleep 60
+done
+
