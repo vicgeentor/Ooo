@@ -4,9 +4,9 @@
     hmArgs@{ pkgs, ... }:
     {
       home = {
-        packages = [
-          inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
-          pkgs.kdePackages.qtdeclarative # Contains qmlls and qmllint
+        packages = with pkgs; [
+          quickshell
+          kdePackages.qtdeclarative # Contains qmlls and qmllint
         ];
         file = {
           ".config/quickshell".source =
