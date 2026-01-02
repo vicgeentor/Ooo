@@ -3,6 +3,10 @@
   flake.modules.nixos.pangolin =
     nixosArgs@{ pkgs, ... }:
     {
+      age.secrets = {
+        pangolin.file = ../../_secrets/pangolin.age;
+        traefik.file = ../../_secrets/traefik.age;
+      };
       services.pangolin = {
         enable = true;
         package =

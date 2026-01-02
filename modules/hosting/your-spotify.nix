@@ -1,5 +1,6 @@
 {
   flake.modules.nixos.your-spotify = nixosArgs: {
+    age.secrets.your-spotify.file = ../../_secrets/your-spotify.age;
     services.your_spotify = {
       enable = true;
       enableLocalDB = true;

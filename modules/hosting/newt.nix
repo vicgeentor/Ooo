@@ -3,6 +3,7 @@
   flake.modules.nixos.newt =
     nixosArgs@{ pkgs, ... }:
     {
+      age.secrets.newt.file = ../../_secrets/newt.age;
       services.newt = {
         enable = true;
         package =
