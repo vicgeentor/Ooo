@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   flake.modules.nixos.pangolin =
-    { pkgs, ... }:
+    nixosArgs@{ pkgs, ... }:
     {
       services.pangolin = {
         enable = true;
@@ -22,12 +22,12 @@
         dashboardDomain = "admin.vicgeentor.nl";
         letsEncryptEmail = "victenbokum@gmail.com";
         openFirewall = true;
-        environmentFile = "/etc/nixos/secrets/pangolin.env";
+        environmentFile = nixosArgs.config.age.secrets.pangolin.path;
       };
 
       services.traefik = {
         package = inputs.nixpkgs-pangolin-stack.legacyPackages.${pkgs.stdenv.hostPlatform.system}.traefik;
-        environmentFiles = [ "/etc/nixos/secrets/traefik.env" ];
+        environmentFiles = [ nixosArgs.config.age.secrets.traefik.path ];
         staticConfigOptions = {
           entryPoints = {
             tcp-25565 = {

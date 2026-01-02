@@ -1,8 +1,8 @@
 {
-  flake.modules.nixos.your-spotify = {
+  flake.modules.nixos.your-spotify = nixosArgs: {
     enable = true;
     enableLocalDB = true;
-    spotifySecretFile = ../your_spotify.env; # TODO: agenix
+    spotifySecretFile = nixosArgs.config.age.secrets.your-spotify.path;
     settings = {
       SPOTIFY_PUBLIC = "11ce6df3ad974ebdb6c4d3c41728475b";
       API_ENDPOINT = "https://apispoti.vicgeentor.nl";

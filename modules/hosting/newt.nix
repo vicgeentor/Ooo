@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   flake.modules.nixos.newt =
-    { pkgs, ... }:
+    nixosArgs@{ pkgs, ... }:
     {
       services.newt = {
         enable = true;
@@ -11,7 +11,7 @@
         settings = {
           endpoint = "https://admin.vicgeentor.nl";
         };
-        environmentFile = "/etc/nixos/secrets/newt.env";
+        environmentFile = nixosArgs.config.age.secrets.newt.path;
       };
     };
 }
