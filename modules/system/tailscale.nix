@@ -1,10 +1,13 @@
 {
   flake.modules.nixos.tailscale =
-    { pkgs, ... }:
+    nixosArgs@{ pkgs, ... }:
     {
+      age.secrets.tailscale.file = ../../_secrets/tailscale.age;
+
       services.tailscale = {
         enable = true;
         useRoutingFeatures = "both";
+        authKeyFile = nixosArgs.config.age.secrets.tailscale.path;
       };
 
       # Start and stop command
