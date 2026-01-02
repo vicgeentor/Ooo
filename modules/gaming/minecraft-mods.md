@@ -3,10 +3,10 @@ Client mods:
 - [EntityCulling](https://modrinth.com/mod/NNAgCjsB)
 - [Fabric API](https://modrinth.com/mod/P7dR8mSH)
 - [Fabric Language Kotlin](https://modrinth.com/mod/Ha28R6CL)
-- [FerriteCore](https://modrinth.com/mod/uXXizFIs)
+- [FerriteCore](https://modrinth.com/mod/ferrite-core)
 - [ImmediatelyFast](https://modrinth.com/mod/5ZwdcRci)
 - [Journeymap](https://modrinth.com/mod/lfHFW1mp)
-- [Lithium](https://modrinth.com/mod/gvQqBUqZ)
+- [Lithium](https://modrinth.com/mod/lithium)
 - [Mod Menu](https://modrinth.com/mod/mOgUt4GM)
 - [Placeholder API](https://modrinth.com/mod/eXts2L7r)
 - [Sodium](https://modrinth.com/mod/AANobbMI)
@@ -17,13 +17,11 @@ Client mods:
 Server mods:
 
 - [C2ME](https://modrinth.com/mod/c2me-fabric)
-- [Fastload](https://modrinth.com/mod/fastload) Not updated
-- [FerriteCore](https://modrinth.com/mod/uXXizFIs)
-- [Krypton](https://modrinth.com/mod/krypton) Not updated
-- [Lithium](https://modrinth.com/mod/gvQqBUqZ)
-- [ModernFix](https://modrinth.com/mod/modernfix) Not
-  updated
-- [Noisium](https://modrinth.com/mod/noisium) Not updated
+- [Fabric API](https://modrinth.com/mod/P7dR8mSH)
+- [FerriteCore](https://modrinth.com/mod/ferrite-core)
+- [Krypton](https://modrinth.com/mod/krypton) Yet to install
+- [Lithium](https://modrinth.com/mod/lithium)
+- [Resourceful Config](https://modrinth.com/mod/resourceful-config)
 - [ScalableLux](https://modrinth.com/mod/scalablelux)
 - [ServerCore](https://modrinth.com/mod/servercore)
-- [StructureLayoutOptimizer](https://modrinth.com/mod/structure-layout-optimizer)
+- [Structure Layout Optimizer](https://modrinth.com/mod/structure-layout-optimizer)

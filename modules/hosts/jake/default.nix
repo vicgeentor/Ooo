@@ -31,6 +31,7 @@
       nvim
       polkit
       python
+      secrets
       sound
       ssd
       ssh
