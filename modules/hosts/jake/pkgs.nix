@@ -1,9 +1,11 @@
 { inputs, ... }:
+
 {
   flake.modules.nixos.jake =
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
+        inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
         bash-language-server
         bitwarden-desktop
         brightnessctl

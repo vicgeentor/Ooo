@@ -24,6 +24,7 @@
       intel
       keyd
       laptop
+      networkmanager
       nh
       nix-ld
       nvidia
@@ -31,7 +32,6 @@
       nvim
       polkit
       python
-      secrets
       sound
       ssd
       ssh

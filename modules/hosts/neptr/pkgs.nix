@@ -1,6 +1,9 @@
 {
-  flake.modules.nixos.neptr = {
-    environment.systemPackages = [
-    ];
-  };
+  flake.modules.nixos.neptr =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = [
+        pkgs.vim
+      ];
+    };
 }

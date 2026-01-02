@@ -30,10 +30,7 @@
       };
 
       networking = {
-        networkmanager = {
-          enable = true;
-          dns = "systemd-resolved";
-        };
+        networkmanager.dns = "systemd-resolved";
         useNetworkd = true;
       };
 

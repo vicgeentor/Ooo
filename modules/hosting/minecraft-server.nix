@@ -17,14 +17,16 @@
           autoStart = true;
 
           serverProperties = {
-            server-port = 25565;
             difficulty = "normal";
             gamemode = "survival";
             max-players = 8;
             motd = "vic's mc servertj";
+            server-port = 25565;
             white-list = true;
-            view-distance = 16;
-            simulation-distance = 12;
+            view-distance = 14;
+            simulation-distance = 10;
+            pause-when-empty-seconds = 10;
+            level-seed = 5521138531714585408;
           };
 
           whitelist = {
@@ -60,6 +62,10 @@
                   url = "https://cdn.modrinth.com/data/uXXizFIs/versions/eRLwt73x/ferritecore-8.0.3-fabric.jar";
                   sha512 = "vmAFQ+SZtZKG+UCfRkl1cK3FGTmuY+qhKsKeZ3jaJ9jHxs0LM0DYvMocyZzmF3mxqPUrmQ+eTpqTqpxkgpBSMQ==";
                 };
+                Krypton = pkgs.fetchurl {
+                  url = "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar";
+                  sha512 = "Tc1yKNGJDd/HjJn/KEtF+c9Aqud+9jWTCOJtBvoNk4NlJVaWr0zBLVJMRsSIbNzRkmjBZaK/Cig1IC/oV9pcqw==";
+                };
                 Lithium = pkgs.fetchurl {
                   url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/gl30uZvp/lithium-fabric-0.21.2%2Bmc1.21.11.jar";
                   sha512 = "lGJVEAE+DarxwuK22KRjyTL/YiD5G6WwzV+GhlghXwRtlNB7NGVmD1dsTcJ6WqGD373ByTA/EYlLWyWh3Gw7tg==";
@@ -86,14 +92,5 @@
         };
       };
 
-      # Start and stop command
-      environment.systemPackages = [
-        (pkgs.writeShellScriptBin "mc-server-start" ''
-          sudo systemctl start minecraft-server-vicgeentor
-        '')
-        (pkgs.writeShellScriptBin "mc-server-stop" ''
-          sudo systemctl stop minecraft-server-vicgeentor
-        '')
-      ];
     };
 }

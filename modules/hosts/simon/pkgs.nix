@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.bonnibel =
+  flake.modules.nixos.simon =
     { pkgs, ... }:
     {
       environment.systemPackages = [
