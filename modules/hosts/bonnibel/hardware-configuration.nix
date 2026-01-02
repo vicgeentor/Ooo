@@ -12,18 +12,13 @@
         (modulesPath + "/virtualisation/digital-ocean-config.nix")
       ];
 
-      boot.loader = {
-        grub = {
-          # no need to set devices, disko will add all devices that have a EF02 partition to the list already
-          # devices = [ ];
-          efiSupport = true;
-          efiInstallAsRemovable = true;
-        };
-      };
       # do not use DHCP, as DigitalOcean provisions IPs using cloud-init
       networking.useDHCP = lib.mkForce false;
 
       nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
+      # NOTE: Disabling for now: mpack does not build as of 2 januari 2026
+      virtualisation.digitalOcean.seedEntropy = false;
 
       # Disables all modules that do not work with NixOS
       services.cloud-init = {

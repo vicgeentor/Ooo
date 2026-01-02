@@ -12,7 +12,7 @@
 
       pangolin
       ssh
-      tailscale
+      tailscale # WARNING: Make sure to start with `tailscale up --accept-dns=false --netfilter-mode=nodivert` for pangolin to work
     ];
   };
 }

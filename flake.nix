@@ -5,6 +5,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-pangolin-stack.url = "github:NixOS/nixpkgs/fb7944c166a3b630f177938e478f0378e64ce108";
 
     agenix = {
       url = "github:ryantm/agenix";

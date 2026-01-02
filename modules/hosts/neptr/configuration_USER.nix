@@ -3,7 +3,6 @@
     { lib, ... }:
     {
 
-      # Required
       networking.hostName = "neptr";
       system.stateVersion = "25.11";
 

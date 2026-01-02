@@ -4,7 +4,6 @@
     { pkgs, ... }:
     {
 
-      # Required
       networking.hostName = "jake";
       system.stateVersion = "25.05";
 

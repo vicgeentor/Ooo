@@ -7,9 +7,6 @@
         useRoutingFeatures = "both";
       };
 
-      # Prevent autostart
-      # systemd.services.tailscaled.wantedBy = lib.mkForce [];
-
       # Start and stop command
       environment.systemPackages = [
         (pkgs.writeShellScriptBin "tailscale-start" ''
