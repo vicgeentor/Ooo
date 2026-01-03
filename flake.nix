@@ -1,5 +1,5 @@
 {
-  description = "Land of Ooo"; 
+  description = "Land of Ooo";
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
