@@ -10,6 +10,9 @@
         authKeyFile = nixosArgs.config.age.secrets.tailscale.path;
       };
 
+      # https://github.com/tailscale/tailscale/issues/3932
+      systemd.services.tailscaled.after = [ "wpa_supplicant.service" ];
+
       # Start and stop command
       environment.systemPackages = [
         (pkgs.writeShellScriptBin "tailscale-start" ''
