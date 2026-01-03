@@ -1,12 +1,12 @@
 # [Land of Ooo](https://adventuretime.fandom.com/wiki/Land_of_Ooo)
 
-# Dendritic Design Pattern
+## Dendritic Design Pattern
 
 This NixOS flake has been carefully constructed using the
 beautiful
 [dendritic design pattern](https://github.com/mightyiam/dendritic).
 
-# Setup
+## Setup
 
 The steps to correctly set up the systems in this repo are
 defined in [setup.md](./docs/setup.md).
@@ -14,37 +14,37 @@ defined in [setup.md](./docs/setup.md).
 Every non-declarative part of this sytem setup is listed in
 [imperative.md](./docs/imperative.md)
 
-# Systems
+## Systems
 
-## [jake](https://adventuretime.fandom.com/wiki/Jake)
+### [jake](https://adventuretime.fandom.com/wiki/Jake)
 
-Laptop that I use for everything.
+The laptop that I use for everything.
 
-## [bonnibel](https://adventuretime.fandom.com/wiki/Princess_Bubblegum)
+### [bonnibel](https://adventuretime.fandom.com/wiki/Princess_Bubblegum)
 
-My DigitalOcean droplet VPS that is running
+My DigitalOcean VPS that is running
 [Pangolin](https://github.com/fosrl/pangolin) through which
 all my web services running on different hosts (e.g.
 [simon](#simon)) are routed through a
 [Newt](https://github.com/fosrl/newt) tunnel.
 
-## [simon](https://adventuretime.fandom.com/wiki/Ice_King)
+### [simon](https://adventuretime.fandom.com/wiki/Ice_King)
 
-My home server that runs my web services:
+My home server that runs some web services:
 
 - [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
 - [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)
 - [your_spotify](https://github.com/Yooooomi/your_spotify)
 
-## [neptr](https://adventuretime.fandom.com/wiki/Neptr)
+### [neptr](https://adventuretime.fandom.com/wiki/Neptr)
 
 A virtual NixOS machine.
 
-## [bmo](https://adventuretime.fandom.com/wiki/BMO)
+### [bmo](https://adventuretime.fandom.com/wiki/BMO)
 
 My Android phone.
 
-# TODO
+## TODO
 
 For all hosts:
 
