@@ -16,6 +16,13 @@ in
     jake-vic
     bonnibel-system
   ];
+  
+  "password.age".publicKeys = [
+    jake-vic
+    bonnibel-system
+    jake-system
+    simon-system
+  ];
 
   "tailscale.age".publicKeys = [
     jake-vic
