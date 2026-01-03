@@ -2,7 +2,6 @@
 {
   imports = [
     inputs.treefmt-nix.flakeModule
-    inputs.git-hooks.flakeModule
   ];
 
   perSystem = {
@@ -28,8 +27,6 @@
         ];
       };
     };
-
-    pre-commit.settings.hooks.treefmt.enable = true;
   };
 
   flake.modules.nixos.formatting =
