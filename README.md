@@ -83,7 +83,7 @@ For [simon](#simon):
   [Prometheus](https://github.com/prometheus/prometheus)
 - Implement [Grafana](https://github.com/grafana/grafana)
 
-For [bonnibel](#simon):
+For [bonnibel](#bonnibel):
 
 - Implement
   [CrowdSec](https://docs.pangolin.net/self-host/community-guides/crowdsec)
