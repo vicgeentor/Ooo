@@ -1,6 +1,7 @@
 let
   bonnibel-system = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINB4wKQlCgdpcRDeDwCP2zFWMR5zW282V9ieQJQNg48v";
   simon-system = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDELcORAKNYJcOr1rSfXxxl73pYcGqXxUnSHIbphZ94m";
+  jake-system = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHXT5yrR/ahmtnboRuQe4H2wfZOdvKFAsOEbmMOXsh8Y";
 
   jake-vic = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHlItoZy7MALjM6h9CrEKFEZkYw5R7Clt5vB8RcEmFgH";
 in
@@ -19,6 +20,7 @@ in
   "tailscale.age".publicKeys = [
     jake-vic
     bonnibel-system
+    jake-system
     simon-system
   ];
 
