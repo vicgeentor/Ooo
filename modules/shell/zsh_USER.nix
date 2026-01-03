@@ -84,7 +84,6 @@
         odsync = "onedrive --sync";
 
         # NixOS
-        rebuild = "nh os switch";
         update = "nix flake update --flake ~/Ooo";
         clean = "nh clean all --keep 10";
         optimise = "sudo nix-store --optimise --verbose"; # If both garbage collecting and optimising, run this after garbage collecting

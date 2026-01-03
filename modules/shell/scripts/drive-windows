@@ -6,4 +6,4 @@ fi
 
 sudo mount /dev/disk/by-id/ata-WD_Blue_SA510_2.5_1000GB_24435Y4A6Z02-part3 ~/mnt/windows
 
-cd ~/mnt/windows/Users/vic/
+cd ~/mnt/windows/Users/vic/ || exit
