@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-cd $HOME/Git/vicgeentor/nixos
-git add .
-git commit -m "automated dev commit"
+cd "$HOME"/Ooo || exit
+git add --all
+git commit -m "Automated commit"
 git push
