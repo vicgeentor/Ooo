@@ -17,12 +17,11 @@
       '';
     };
 
-    # Minecraft raw TCP stream through pangolin
     networking.firewall.allowedTCPPorts = [
       22
       80
       443
-      25565
+      25565 # Minecraft raw TCP stream through pangolin
     ];
     networking.firewall.allowedUDPPorts = [
       21820
