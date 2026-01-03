@@ -1,4 +1,3 @@
-{ inputs, ... }:
 {
   flake.modules.homeManager.quickshell =
     hmArgs@{ pkgs, ... }:
@@ -15,4 +14,6 @@
       };
       qt.enable = true;
     };
+
+  perSystem.treefmt.programs.qmlformat.enable = true;
 }

@@ -53,7 +53,6 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undodir"
 
-
 -- Formatting options
 vim.opt.formatoptions:remove("o")
 vim.opt.formatoptions:remove("t")
@@ -72,18 +71,18 @@ vim.diagnostic.config({ virtual_text = false, virtual_lines = false })
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = "*",
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = "*",
 })
 
 -- Only loading strudel.nvim when opening *.str files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = "*.str",
-  callback = function()
-    vim.bo.filetype = "javascript"
-    require("strudel")
-  end,
+	pattern = "*.str",
+	callback = function()
+		vim.bo.filetype = "javascript"
+		require("strudel")
+	end,
 })

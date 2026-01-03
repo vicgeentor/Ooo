@@ -84,4 +84,7 @@
         };
       };
     };
+
+  perSystem.treefmt.programs.yamlfmt.enable = true;
+
 }

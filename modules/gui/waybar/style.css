@@ -36,13 +36,13 @@
 }
 
 window#waybar {
-  all:unset;
+  all: unset;
   background: alpha(@crust, 0);
   transition-property: background;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
-window#waybar.empty {  
+window#waybar.empty {
   background: alpha(@crust, 0);
 }
 
@@ -53,14 +53,14 @@ window#waybar.empty #window {
 .modules-left,
 .modules-right,
 .modules-center {
-  background: alpha(@mantle, .9);
+  background: alpha(@mantle, 0.9);
   padding: 0 5px;
   border-radius: 7px;
   margin: 0 1px;
 }
 
 tooltip {
-  background: alpha(@mantle, .9);
+  background: alpha(@mantle, 0.9);
 }
 
 button {
@@ -90,7 +90,6 @@ button:hover {
   color: @overlay2;
 }
 
-
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.7);
 }
@@ -111,7 +110,7 @@ button:hover {
 }
 
 #mode {
-  background-color: #64727D;
+  background-color: #64727d;
   box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -171,22 +170,22 @@ label:focus {
 }
 
 #pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background-image: none;
-    border: none;
-    box-shadow: none;
-    background-color: @subtext1;
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  background-color: @subtext1;
 }
 #pulseaudio-slider trough {
-    min-height: 8px;
-    min-width: 80px;
-    border-radius: 5px;
-    background-color: @crust2;
+  min-height: 8px;
+  min-width: 80px;
+  border-radius: 5px;
+  background-color: @crust2;
 }
 #pulseaudio-slider highlight {
-    min-width: 10px;
-    border-radius: 5px;
-    background-color: @blue;
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: @blue;
 }

@@ -19,6 +19,7 @@
           luajitPackages.luarocks
           nodejs
           ripgrep
+          stylua
           tree-sitter
           yarn
         ];
@@ -28,4 +29,6 @@
         };
       };
     };
+
+  perSystem.treefmt.programs.stylua.enable = true;
 }

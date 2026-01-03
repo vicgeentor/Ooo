@@ -9,4 +9,6 @@
         python313Packages.mdformat-gfm
       ];
     };
+
+  perSystem.treefmt.programs.mdformat.enable = true;
 }

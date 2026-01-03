@@ -22,6 +22,8 @@
 
     ghostty.url = "github:ghostty-org/ghostty";
 
+    git-hooks.url = "github:cachix/git-hooks.nix";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

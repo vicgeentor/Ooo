@@ -13,4 +13,6 @@
           hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/terminals/wezterm";
       };
     };
+
+  perSystem.treefmt.programs.stylua.enable = true;
 }

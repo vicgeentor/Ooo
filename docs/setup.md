@@ -1,8 +1,3 @@
-# Imperative steps for system setup
-
-Every non-declarative part of this sytem setup is listed in
-[imperative.md](./imperative.md)
-
 # Installation
 
 > [!IMPORTANT] Many of the home-manager modules rely on
@@ -12,14 +7,7 @@ Every non-declarative part of this sytem setup is listed in
 ## With [nixos-anywhere](https://github.com/nix-community/nixos-anywhere)
 
 ```
-nix run github:nix-community/nixos-anywhere -- --flake <FLAKE LOCATION>.#<CONFIGURATION NAME> --target-host root@<TARGET IP> -i <PRIVATE SSH KEY LOCATION>
-```
-
-You can then ssh into or login to your new system and set
-the user password with:
-
-```
-passwd
+nix run github:nix-community/nixos-anywhere -- --flake <PATH TO THIS FLAKE>.#<CONFIGURATION NAME> --target-host root@<TARGET IP> -i <PATH TO PRIVATE SSH KEY>
 ```
 
 ## Imperative installation
@@ -46,14 +34,13 @@ prevent memory overflow):
 sudo nixos-install --no-root-passwd --max-jobs 2 --cores 2 --flake /path/to/flake#hostname
 ```
 
-Set password:
-
-```
-sudo nixos-enter --root /mnt -c 'passwd <username>'
-```
-
 Reboot:
 
 ```
 reboot
 ```
+
+# Imperative steps for setup
+
+Every non-declarative part of this sytem setup is listed in
+[imperative.md](./imperative.md)

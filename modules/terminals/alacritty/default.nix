@@ -11,4 +11,6 @@
           hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/terminals/alacritty/alacritty.toml";
       };
     };
+
+  perSystem.treefmt.programs.toml-sort.enable = true;
 }

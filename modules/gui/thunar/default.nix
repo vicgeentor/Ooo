@@ -20,4 +20,6 @@
         hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/thunar/uca.xml";
     };
   };
+
+  perSystem.treefmt.programs.xmllint.enable = true;
 }

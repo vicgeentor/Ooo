@@ -27,5 +27,10 @@
       21820
       51820
     ];
+
+    # don’t shutdown when power button is short-pressed
+    services.logind.extraConfig = ''
+      HandlePowerKey=ignore
+    '';
   };
 }
