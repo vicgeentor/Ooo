@@ -5,9 +5,7 @@
     system.stateVersion = "24.11";
 
     services.tailscale.extraUpFlags = [
-      "--accept-dns=false"
       "--netfilter-mode=nodivert"
-      "--ssh"
     ];
 
     boot = {

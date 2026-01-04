@@ -8,6 +8,10 @@
         enable = true;
         useRoutingFeatures = "both";
         authKeyFile = nixosArgs.config.age.secrets.tailscale.path;
+        extraUpFlags = [
+          "--accept-dns=false"
+          "--ssh"
+        ];
       };
 
       # https://github.com/tailscale/tailscale/issues/3932
