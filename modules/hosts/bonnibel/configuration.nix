@@ -4,11 +4,6 @@
     networking.hostName = "bonnibel";
     system.stateVersion = "25.11";
 
-    services.tailscale.extraUpFlags = [
-      "--netfilter-mode=nodivert"
-      "--accept-dns=false"
-    ];
-
     boot.loader = {
       grub = {
         efiSupport = true;
@@ -22,14 +17,9 @@
 
     # Minecraft raw TCP stream through pangolin
     networking.firewall.allowedTCPPorts = [
-      22
-      80
-      443
       25565
     ];
-    networking.firewall.allowedUDPPorts = [
-      21820
-      51820
-    ];
+
+    nix.optimise.dates = [ "05:00" ];
   };
 }

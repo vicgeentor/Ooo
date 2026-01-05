@@ -9,6 +9,7 @@
         useRoutingFeatures = "both";
         authKeyFile = nixosArgs.config.age.secrets.tailscale.path;
         extraUpFlags = [
+          "--netfilter-mode=nodivert"
           "--ssh"
         ];
       };

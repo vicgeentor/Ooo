@@ -35,9 +35,5 @@
       };
 
       services.resolved.enable = true;
-
-      environment.systemPackages = [ pkgs.unixtools.ifconfig ];
-
-      users.users.${config.flake.meta.vic.username}.extraGroups = [ "networkmanager" ];
     };
 }

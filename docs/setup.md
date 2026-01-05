@@ -1,6 +1,7 @@
 # Installation
 
-> [!IMPORTANT] Many of the home-manager modules rely on
+> [!IMPORTANT]
+> Many of the home-manager modules rely on
 > symlinks to files in this repo. To ensure that these
 > symlinks work, the location of this repo should be ~/Ooo.
 
@@ -39,6 +40,10 @@ Reboot:
 ```
 reboot
 ```
+
+# Setting up users
+
+For setting up a new user, 
 
 # Imperative steps for setup
 

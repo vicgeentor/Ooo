@@ -23,6 +23,7 @@
         gnumake
         google-chrome
         gtk3 # Just for `gtk-launch <.desktop file>`
+        unixtools.ifconfig
         imagemagick
         inkscape
         jq

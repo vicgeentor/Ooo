@@ -5,7 +5,10 @@
       channel.enable = false;
       registry.nixpkgs.flake = inputs.nixpkgs;
       nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-      optimise.automatic = true;
+      optimise = {
+        automatic = true;
+        dates = [ "05:00" ];
+      };
       settings = {
         experimental-features = [
           "nix-command"

@@ -8,5 +8,7 @@
     };
 
     hardware.enableAllFirmware = true;
+
+    services.logind.settings.Login.HandlePowerKey = "ignore";
   };
 }

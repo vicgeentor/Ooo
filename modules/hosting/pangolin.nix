@@ -7,6 +7,19 @@
         pangolin.file = ../../_secrets/pangolin.age;
         traefik.file = ../../_secrets/traefik.age;
       };
+
+      networking.firewall = {
+        allowedTCPPorts = [
+          22
+          80
+          443
+        ];
+        allowedUDPPorts = [
+          21820
+          51820
+        ];
+      };
+
       services.pangolin = {
         enable = true;
         package =

@@ -18,7 +18,11 @@
             isNormalUser = true;
             hashedPasswordFile = nixosArgs.config.age.secrets.password.path;
             home = "/home/${config.flake.meta.vic.username}";
-            extraGroups = [ "input" ];
+            extraGroups = [
+              "input"
+              "systemd-journal"
+              "wheel"
+            ];
           };
         };
 
