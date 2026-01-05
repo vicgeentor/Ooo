@@ -28,6 +28,6 @@
     ];
 
     # don’t shutdown when power button is short-pressed
-    services.logind.powerKey = "ignore";
+    services.logind.settings.Login.HandlePowerKey = "ignore";
   };
 }
