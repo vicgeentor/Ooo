@@ -13,7 +13,6 @@
         fzf
         ghostty
         hypr
-        minecraft
         mpv
         nvim
         onedrive

@@ -114,6 +114,7 @@
         screenrec = "wl-screenrec --low-power off --audio";
         screenrec-history = "wl-screenrec --low-power off --audio --history 30 &";
         screenrec-history-get = "killall -USR1 wl-screenrec";
+        keep-screen-on = "systemd-inhibit --what=handle-lid-switch hypridle";
       };
     };
   };

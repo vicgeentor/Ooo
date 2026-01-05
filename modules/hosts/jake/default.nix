@@ -28,6 +28,7 @@
       latex
       libreoffice
       markdown
+      minecraft
       networkmanager
       nh
       nix-ld
