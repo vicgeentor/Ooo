@@ -11,7 +11,15 @@
       };
 
       environment.systemPackages = with pkgs; [
+        grimblast # Hyprland wrapper for grim and slurp
+        hypridle
+        hyprlock
+        hyprls
+        hyprpaper
+        hyprpicker # Color picker
         hyprpolkitagent
+        hyprprop # xprop for Hyprland
+        inputs.hyprshutdown.packages.${pkgs.stdenv.hostPlatform.system}.default
         wl-clipboard # Clipboard manager
         wl-gammarelay-rs # blue light filter
         wl-screenrec
@@ -50,27 +58,16 @@
       };
     };
 
-  flake.modules.homeManager.hypr =
-    hmArgs@{ pkgs, ... }:
-    {
-      home.file = {
-        ".config/hypr".source =
-          hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/hypr";
-      };
-
-      home.packages = with pkgs; [
-        grimblast # Hyprland wrapper for grim and slurp
-        hyprpicker # Color picker
-        hyprprop # xprop for Hyprland
-        hyprpaper
-        inputs.hyprshutdown.packages.${pkgs.stdenv.hostPlatform.system}.default
-        hyprlock
-        hypridle
-      ];
-      programs.zsh.profileExtra = ''
-        if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]; then
-          exec start-hyprland
-        fi
-      '';
+  flake.modules.homeManager.hypr = hmArgs: {
+    home.file = {
+      ".config/hypr".source =
+        hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/hypr";
     };
+
+    programs.zsh.profileExtra = ''
+      if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]; then
+        exec start-hyprland
+      fi
+    '';
+  };
 }

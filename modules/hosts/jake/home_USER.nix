@@ -13,10 +13,6 @@
         fzf
         ghostty
         hypr
-        javascript
-        latex
-        libreoffice
-        markdown
         minecraft
         mpv
         nvim

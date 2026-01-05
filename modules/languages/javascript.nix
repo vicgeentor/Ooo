@@ -1,8 +1,8 @@
 {
-  flake.modules.homeManager.javascript =
+  flake.modules.nixos.javascript =
     { pkgs, ... }:
     {
-      home.packages = with pkgs; [
+      environment.systemPackages = with pkgs; [
         nodejs
         typescript-language-server
         yarn

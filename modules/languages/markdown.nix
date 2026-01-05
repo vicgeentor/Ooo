@@ -1,8 +1,8 @@
 {
-  flake.modules.homeManager.markdown =
+  flake.modules.nixos.markdown =
     { pkgs, ... }:
     {
-      home.packages = with pkgs; [
+      environment.systemPackages = with pkgs; [
         pandoc
         python313Packages.mdformat
         python313Packages.mdformat-frontmatter

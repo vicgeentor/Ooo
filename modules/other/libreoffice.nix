@@ -1,8 +1,8 @@
 {
-  flake.modules.homeManager.libreoffice =
+  flake.modules.nixos.libreoffice =
     { pkgs, ... }:
     {
-      home.packages = with pkgs; [
+      environment.systemPackages = with pkgs; [
         libreoffice
         hunspell
         hunspellDicts.en_US

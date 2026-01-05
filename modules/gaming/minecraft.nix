@@ -1,7 +1,7 @@
 {
-  flake.modules.homeManager.minecraft =
+  flake.modules.nixos.minecraft =
     { pkgs, ... }:
     {
-      home.packages = [ pkgs.prismlauncher ];
+      environment.systemPackages = [ pkgs.prismlauncher ];
     };
 }

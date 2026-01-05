@@ -22,8 +22,12 @@
       graphics
       hypr
       intel
+      javascript
       keyd
       laptop
+      latex
+      libreoffice
+      markdown
       networkmanager
       nh
       nix-ld

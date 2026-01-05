@@ -1,8 +1,8 @@
 {
-  flake.modules.homeManager.latex =
+  flake.modules.nixos.latex =
     { pkgs, ... }:
     {
-      home.packages = with pkgs; [
+      environment.systemPackages = with pkgs; [
         texlive.combined.scheme-full
         ltex-ls-plus
         aspell # Spell checker
