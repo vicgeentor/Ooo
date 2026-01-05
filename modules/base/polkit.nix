@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.polkit = {
+  flake.modules.nixos.base = {
     security.polkit = {
       enable = true;
 
@@ -7,7 +7,7 @@
       extraConfig = ''
         polkit.addRule(function(action, subject) {
           if (
-            subject.isInGroup("users")
+            subject.isInGroup("wheel")
               && (
                 # reboot and poweroff
                 action.id == "org.freedesktop.login1.reboot" ||

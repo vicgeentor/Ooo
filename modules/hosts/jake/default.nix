@@ -35,7 +35,6 @@
       nvidia
       nvidia-hybrid
       nvim
-      polkit
       python
       sound
       ssd
