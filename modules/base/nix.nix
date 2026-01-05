@@ -5,6 +5,7 @@
       channel.enable = false;
       registry.nixpkgs.flake = inputs.nixpkgs;
       nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+      optimise.automatic = true;
       settings = {
         experimental-features = [
           "nix-command"
