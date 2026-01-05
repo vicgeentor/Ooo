@@ -9,7 +9,6 @@
         useRoutingFeatures = "both";
         authKeyFile = nixosArgs.config.age.secrets.tailscale.path;
         extraUpFlags = [
-          "--accept-dns=false"
           "--ssh"
         ];
       };

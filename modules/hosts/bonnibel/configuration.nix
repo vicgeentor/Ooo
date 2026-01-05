@@ -6,6 +6,7 @@
 
     services.tailscale.extraUpFlags = [
       "--netfilter-mode=nodivert"
+      "--accept-dns=false"
     ];
 
     boot.loader = {

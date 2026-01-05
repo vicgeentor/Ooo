@@ -6,6 +6,7 @@
 
     services.tailscale.extraUpFlags = [
       "--netfilter-mode=nodivert"
+      "--accept-dns=false"
     ];
 
     boot = {
@@ -27,8 +28,6 @@
     ];
 
     # don’t shutdown when power button is short-pressed
-    services.logind.extraConfig = ''
-      HandlePowerKey=ignore
-    '';
+    services.logind.powerKey = "ignore";
   };
 }
