@@ -15,7 +15,6 @@ return {
 				build = "make install_jsregexp",
 			},
 			"saadparwaiz1/cmp_luasnip",
-			"R-nvim/cmp-r",
 			"micangl/cmp-vimtex",
 		},
 		config = function(_, opts)
@@ -38,7 +37,6 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "path" },
 					{ name = "buffer" },
-					{ name = "cmp_r" },
 					{ name = "luasnip" },
 					{ name = "vimtex" },
 				}),
@@ -55,9 +53,6 @@ return {
 					end,
 				},
 			})
-
-			-- R autocompletion
-			require("cmp_r").setup({})
 		end,
 	},
 }
