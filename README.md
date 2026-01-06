@@ -88,5 +88,9 @@ For [bonnibel](#bonnibel):
 - Implement
   [CrowdSec](https://docs.pangolin.net/self-host/community-guides/crowdsec)
 - Better DDoS protection
+
+Other:
+
 - Spin up a mail server with
   [simple-nixos-mailserver](https://nixos-mailserver.readthedocs.io)
+  on a host that allows port 25 and 465 to be open
