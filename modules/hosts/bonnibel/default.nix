@@ -10,7 +10,6 @@
 
       base
 
-      mailserver
       pangolin
       ssh
       tailscale

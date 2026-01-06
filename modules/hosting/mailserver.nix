@@ -1,3 +1,4 @@
+# See https://nixos-mailserver.readthedocs.io/en/latest/setup-guide.html for DNS setup.
 { inputs, ... }:
 {
   flake.modules.nixos.mailserver = nixosArgs: {
