@@ -8,6 +8,12 @@
       cloudflare-dns-api.file = ../../_secrets/cloudflare-dns-api.age;
     };
 
+    networking.firewall.allowedTCPPorts = [
+      25 # SMTP
+      587 # submission
+      993 # IMAPS
+    ];
+
     security.acme = {
       acceptTerms = true;
       defaults.email = "security@vicgeentor.nl";
@@ -26,13 +32,14 @@
       fqdn = "mail.vicgeentor.nl";
       domains = [ "vicgeentor.nl" ];
       x509.useACMEHost = nixosArgs.config.mailserver.fqdn;
+      dmarcReporting.enable = true;
 
       # A list of all login accounts. To create the password hashes, use
       # nix-shell -p mkpasswd --run 'mkpasswd -s'
       loginAccounts = {
         "vic@vicgeentor.nl" = {
-          hashedPasswordFile = nixosArgs.config.age.secrets.vicgeentor-mail.path;
-          aliases = [ "me@vicgeentor.nl" ];
+          hashedPasswordFile = nixosArgs.config.age.secrets.vicgeentor-mail-password.path;
+          aliases = [ "@vicgeentor.nl" ];
         };
       };
     };
