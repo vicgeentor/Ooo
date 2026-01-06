@@ -7,6 +7,11 @@ let
 in
 {
 
+  "cloudflare-dns-api.age".publicKeys = [
+    jake-vic
+    bonnibel-system
+  ];
+
   "newt.age".publicKeys = [
     jake-vic
     simon-system
@@ -31,7 +36,7 @@ in
     simon-system
   ];
 
-  "traefik.age".publicKeys = [
+  "vicgeentor-mail-password.age".publicKeys = [
     jake-vic
     bonnibel-system
   ];

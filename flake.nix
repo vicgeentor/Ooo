@@ -50,6 +50,8 @@
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
+    simple-nixos-mailserver.url = "gitlab:simple-nixos-mailserver/nixos-mailserver";
+
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";

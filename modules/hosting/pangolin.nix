@@ -1,11 +1,11 @@
 { inputs, ... }:
 {
   flake.modules.nixos.pangolin =
-    nixosArgs@{ pkgs, ... }:
+    nixosArgs@{ pkgs, lib, ... }:
     {
       age.secrets = {
         pangolin.file = ../../_secrets/pangolin.age;
-        traefik.file = ../../_secrets/traefik.age;
+        cloudflare-dns-api.file = lib.mkDefault ../../_secrets/cloudflare-dns-api.age;
       };
 
       networking.firewall = {
@@ -44,7 +44,7 @@
 
       services.traefik = {
         package = inputs.nixpkgs-pangolin-stack.legacyPackages.${pkgs.stdenv.hostPlatform.system}.traefik;
-        environmentFiles = [ nixosArgs.config.age.secrets.traefik.path ];
+        environmentFiles = [ nixosArgs.config.age.secrets.cloudflare-dns-api.path ];
         staticConfigOptions = {
           entryPoints = {
             tcp-25565 = {
