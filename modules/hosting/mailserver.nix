@@ -9,9 +9,10 @@
     };
 
     networking.firewall.allowedTCPPorts = [
-      25 # SMTP
-      587 # submission
-      993 # IMAPS
+      25
+      465
+      587
+      993
     ];
 
     security.acme = {
