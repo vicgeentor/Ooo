@@ -43,7 +43,7 @@ reboot
 
 # Setting up users
 
-For setting up a new user, 
+For setting up a new user,
 
 # Imperative steps for setup
 
