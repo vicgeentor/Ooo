@@ -65,7 +65,7 @@ CustomMouseArea {
     animate: true
     text: {
       let temp = ScreenTemp.temp;
-      if (temp === 6500)
+      if (temp >= 6500)
         return "light_mode";
       else
         return "mode_night";
@@ -73,6 +73,8 @@ CustomMouseArea {
     font.family: Appearance.font.family.material
     color: {
       let temp = ScreenTemp.temp;
+      if (temp > 6500)
+        return Colors.palette.green;
       if (temp === 6500)
         return Colors.palette.m3onSurface;
       else if (temp >= 2000)
