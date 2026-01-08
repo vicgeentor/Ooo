@@ -54,6 +54,10 @@ For all hosts:
   [impermanence](https://github.com/nix-community/impermanence)
 - Start using
   [Nixos Facter](https://github.com/nix-community/nixos-facter)
+- Backup all important files with
+  [restic](https://github.com/restic/restic),
+  [rclone](https://github.com/rclone/rclone) and Google
+  Drive.
 
 For [jake](#jake):
 
@@ -75,8 +79,6 @@ For [simon](#simon):
 - Switch to BTRFS for snapshotting and checksumming (with
   subvolumes for nix store, immich, etc.)
 - Add a drive to for RAID1 redundancy
-- Add a backup solution like
-  [restic](https://github.com/restic/restic)
 - See where I can add
   [Redis](https://github.com/redis/redis) caching
 - Implement
