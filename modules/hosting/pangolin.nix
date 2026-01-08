@@ -37,7 +37,7 @@
         dnsProvider = "cloudflare";
         baseDomain = "vicgeentor.nl";
         dashboardDomain = "admin.vicgeentor.nl";
-        letsEncryptEmail = "victenbokum@gmail.com";
+        letsEncryptEmail = "security@vicgeentor.nl";
         openFirewall = true;
         environmentFile = nixosArgs.config.age.secrets.pangolin.path;
       };

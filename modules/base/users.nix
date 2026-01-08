@@ -2,7 +2,7 @@
 {
   flake = {
     meta.vic = {
-      email = "victenbokum@gmail.com";
+      email = "github@vicgeentor.nl";
       name = "vicgeentor";
       username = "vic";
       editor = "nvim";
