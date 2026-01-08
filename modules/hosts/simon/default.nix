@@ -15,7 +15,7 @@
       networkmanager
       newt
       ssh
-      # stirling-pdf # NOTE: removing until the weasyprint package (dependency of stirling-pdf) is fixed
+      stirling-pdf
       systemdboot
       tailscale
       your-spotify
