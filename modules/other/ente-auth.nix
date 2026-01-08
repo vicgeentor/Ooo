@@ -1,8 +1,5 @@
 {
-  flake.modules.nixos.ente-auth =
-    { pkgs, ... }:
-    {
-      environment.systemPackages = [ pkgs.ente-auth ];
-      services.gnome.gnome-keyring.enable = true;
-    };
+  flake.modules.nixos.ente-auth = {
+    programs.ente-auth.enable = true;
+  };
 }
