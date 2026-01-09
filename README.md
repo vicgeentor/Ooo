@@ -62,9 +62,6 @@ For all hosts:
 For [jake](#jake):
 
 - Make HDMI support great
-- Use
-  [lanzaboote](https://github.com/nix-community/lanzaboote)
-  for secure boot
 - Re-install system with better drive encryption
 
 For [simon](#simon):

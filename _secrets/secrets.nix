@@ -22,13 +22,6 @@ in
     bonnibel-system
   ];
 
-  "password.age".publicKeys = [
-    jake-vic
-    bonnibel-system
-    jake-system
-    simon-system
-  ];
-
   "tailscale.age".publicKeys = [
     jake-vic
     bonnibel-system
@@ -39,6 +32,13 @@ in
   "vicgeentor-mail-password.age".publicKeys = [
     jake-vic
     bonnibel-system
+  ];
+
+  "vic-user-password.age".publicKeys = [
+    jake-vic
+    bonnibel-system
+    jake-system
+    simon-system
   ];
 
   "your-spotify.age".publicKeys = [

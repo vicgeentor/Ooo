@@ -43,7 +43,96 @@ reboot
 
 # Setting up users
 
-For setting up a new user,
+For setting up a new user, you can follow these steps:
+
+1. Inside [users.nix](../modules/base/users.nix), add an
+   attribute set `meta.<USERNAME>` to `flake`:
+
+   ```nix
+   {
+     flake = {
+       meta.<USERNAME> = {
+         email = "<EMAIL>";
+         username = "<USERNAME>";
+         editor = "<EDITOR>";
+       };
+     # ...
+     };
+   }
+   ```
+
+2. Inside [users.nix](../modules/base/users.nix), add an
+   age-encrypted hashed password file to
+   `modules.nixos.base`:
+
+   ```nix
+   {
+     flake = {
+       # ...
+       modules = {
+         nixos.base = nixosArgs: {
+           age.secrets.<USERNAME>-user-password.file = ../../_secrets/<USERNAME>-user-password.age;
+           # ...
+         };
+       };
+     };
+   }
+   ```
+
+   To make this file, go to the [\_secrets](../_secrets)
+   directory in the root of this repo, add an attribute
+   `"<USERNAME>-user-password.age"` to
+   [secrets.nix](../_secrets/secrets.nix) and run
+   `agenix -e <USERNAME>-user-password.age` and paste the
+   hashed password made with the `mkpasswd` inside of the
+   editor that opens up. See the
+   [agenix documentation](https://github.com/ryantm/agenix#tutorial)
+   for more info about this.
+
+   > [!IMPORTANT]
+   > This file should contain a hashed password
+   > made with the `mkpasswd` command. It should **not**
+   > contain a plain text password.
+
+3. Inside [users.nix](../modules/base/users.nix), add an
+   attribute set to the `users` attribute and add the user
+   to `nix.settings.trusted-users`:
+
+   ```nix
+   {
+     flake = {
+       # ...
+       modules = {
+         nixos.base = nixosArgs: {
+           # ...
+           users = {
+             # ...
+             users = {
+               ${config.flake.meta.<USERNAME>.username} = {
+                 isNormalUser = true;
+                 hashedPasswordFile = nixosArgs.config.age.secrets.<USERNAME>-user-password.path;
+                 home = "/home/${config.flake.meta.<USERNAME>.username}";
+                 extraGroups = [
+                   "input"
+                   "systemd-journal"
+                   "wheel"
+                   "<OTHER_GROUP>"
+                 ];
+               }
+             };
+           };
+           
+           nix.settings.trusted-users = [ config.flake.meta.<USERNAME>.username ];
+         };
+       };
+     };
+   }
+   ```
+
+4. In every file that ends with `_USER.nix`, you may want to
+   add some attributes of the `config.flake.meta.<USERNAME>`
+   set to appropriate modules. Inside these files, you can
+   see how this is already being done for the user `vic`.
 
 # Imperative steps for setup
 
