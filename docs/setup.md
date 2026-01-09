@@ -1,6 +1,7 @@
 # Installation
 
-> [!IMPORTANT] Many of the home-manager modules rely on
+> [!IMPORTANT]
+> Many of the home-manager modules rely on
 > symlinks to files in this repo. To ensure that these
 > symlinks work, the location of this repo should be ~/Ooo.
 
@@ -89,7 +90,8 @@ For setting up a new user, you can follow these steps:
    [agenix documentation](https://github.com/ryantm/agenix#tutorial)
    for more info about this.
 
-> [!IMPORTANT] This file should contain a hashed password
+> [!IMPORTANT]
+> This file should contain a hashed password
 > made with the `mkpasswd` command. It should **not**
 > contain a plain text password.
 
