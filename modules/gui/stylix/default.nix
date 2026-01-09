@@ -76,7 +76,7 @@
           waybar.enable = false;
           wezterm.enable = false;
         };
-        iconTheme = {
+        icons = {
           enable = true;
           package = pkgs.papirus-icon-theme;
           light = "Papirus";

@@ -31,6 +31,6 @@
   flake.modules.nixos.formatting =
     { pkgs, ... }:
     {
-      environment.systemPackages = [ pkgs.nixfmt-rfc-style ];
+      environment.systemPackages = [ pkgs.nixfmt ];
     };
 }
