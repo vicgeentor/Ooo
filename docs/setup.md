@@ -89,10 +89,10 @@ For setting up a new user, you can follow these steps:
    [agenix documentation](https://github.com/ryantm/agenix#tutorial)
    for more info about this.
 
-   > [!IMPORTANT]
-   > This file should contain a hashed password
-   > made with the `mkpasswd` command. It should **not**
-   > contain a plain text password.
+> [!IMPORTANT]
+> This file should contain a hashed password
+> made with the `mkpasswd` command. It should **not**
+> contain a plain text password.
 
 3. Inside [users.nix](../modules/base/users.nix), add an
    attribute set to the `users` attribute and add the user
