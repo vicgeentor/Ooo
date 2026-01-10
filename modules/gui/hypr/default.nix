@@ -14,7 +14,6 @@
         grimblast # Hyprland wrapper for grim and slurp
         hypridle
         hyprlock
-        hyprls
         hyprpaper
         hyprpicker # Color picker
         hyprpolkitagent

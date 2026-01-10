@@ -89,7 +89,6 @@ return {
 			vim.lsp.enable("clangd")
 			vim.lsp.enable("gdscript")
 			vim.lsp.enable("hls")
-			vim.lsp.enable("hyprls")
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("ltex_plus")
 			vim.lsp.enable("nixd")
@@ -112,14 +111,6 @@ return {
 								rename = { config = { crossModule = true } },
 							},
 						},
-					},
-				},
-			})
-			vim.lsp.config("hyprls", {
-				settings = {
-					hyprls = {
-						preferIgnoreFile = true, -- set to false to prefer `hyprls.ignore`
-						ignore = { "hypridle.conf", "hyprlock.conf", "hyprpaper.conf" },
 					},
 				},
 			})
