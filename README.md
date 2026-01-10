@@ -48,10 +48,6 @@ My Android phone.
 
 For all hosts:
 
-- Implement
-  [preservation](https://github.com/nix-community/preservation)
-  or
-  [impermanence](https://github.com/nix-community/impermanence)
 - Start using
   [Nixos Facter](https://github.com/nix-community/nixos-facter)
 - Backup all important files with
