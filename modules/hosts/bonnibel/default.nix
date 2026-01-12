@@ -14,7 +14,6 @@
       pangolin
       ssh
       tailscale
-      tailscale-exit-node
     ];
   };
 }
