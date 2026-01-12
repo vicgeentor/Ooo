@@ -25,13 +25,29 @@
         package =
           inputs.nixpkgs-pangolin-stack.legacyPackages.${pkgs.stdenv.hostPlatform.system}.fosrl-pangolin;
         settings = {
+          app = {
+            log_failed_attempts = true;
+            save_logs = true;
+          };
           domains.domain1 = {
             prefer_wildcard_cert = true;
+          };
+          email = {
+            smtp_host = "mail-eu.smtp2go.com";
+            smtp_port = 2525;
+            smtp_user = "vic@vicgeentor.nl";
+            smtp-secure = true;
+            no-reply = "pangolin-no-reply@vicgeentor.nl";
           };
           flags = {
             allow_raw_resources = true;
             disable_signup_without_invite = true;
+            disable-user-create-org = true;
             enable_integration_api = true;
+          };
+          server = {
+            dashboard_session_length_hours = 1;
+            resource_session_length_hours = 1;
           };
         };
         dnsProvider = "cloudflare";
