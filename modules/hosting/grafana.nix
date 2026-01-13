@@ -1,8 +1,18 @@
 {
   flake.modules.nixos.grafana = nixosArgs: {
     age.secrets = {
-      grafana.file = ../../_secrets/grafana.age;
-      vicgeentor-mail-password.file = ../../_secrets/vicgeentor-mail-password.age;
+      grafana = {
+        file = ../../_secrets/grafana.age;
+        mode = "770";
+        owner = "grafana";
+        group = "grafana";
+      };
+      vicgeentor-mail-password-grafana = {
+        file = ../../_secrets/vicgeentor-mail-password-grafana.age;
+        mode = "770";
+        owner = "grafana";
+        group = "grafana";
+      };
     };
 
     services.grafana = {
@@ -23,7 +33,7 @@
         smtp = {
           enabled = true;
           user = "vic@vicgeentor.nl";
-          password = "$__file{${nixosArgs.config.age.secrets.vicgeentor-mail-password.path}}";
+          password = "$__file{${nixosArgs.config.age.secrets.vicgeentor-mail-password-grafana.path}}";
           host = "mail-eu.smtp2go.com:2525";
           from_address = "grafana-no-reply@vicgeentor.nl";
         };

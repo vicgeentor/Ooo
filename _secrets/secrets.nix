@@ -37,6 +37,10 @@ in
   "vicgeentor-mail-password.age".publicKeys = [
     jake-vic
     bonnibel-system
+  ];
+
+  "vicgeentor-mail-password-grafana.age".publicKeys = [
+    jake-vic
     simon-system
   ];
 
