@@ -28,6 +28,9 @@ all my web services running on different hosts (e.g.
 [simon](#simon)) are routed through a
 [Newt](https://github.com/fosrl/newt) tunnel.
 
+It also runs a receiving email server using
+[nixos-mailserver](https://gitlab.com/simple-nixos-mailserver/nixos-mailserver)
+
 ### [simon](https://adventuretime.fandom.com/wiki/Ice_King)
 
 My home server that runs some web services:
@@ -53,7 +56,12 @@ For all hosts:
 - Backup all important files with
   [restic](https://github.com/restic/restic),
   [rclone](https://github.com/rclone/rclone) and Google
-  Drive.
+  Drive:
+  - email
+  - your_spotify
+  - immich
+  - dawarich
+  - etc.
 
 For [jake](#jake):
 
@@ -74,9 +82,7 @@ For [simon](#simon):
 - Add a drive to for RAID1 redundancy
 - See where I can add
   [Redis](https://github.com/redis/redis) caching
-- Implement
-  [Prometheus](https://github.com/prometheus/prometheus)
-- Implement [Grafana](https://github.com/grafana/grafana)
+- Set up Jellyfin, Jellyseerr, Sonarr, Radarr, and VPN.
 
 For [bonnibel](#bonnibel):
 

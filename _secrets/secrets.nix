@@ -12,6 +12,11 @@ in
     bonnibel-system
   ];
 
+  "grafana.age".publicKeys = [
+    jake-vic
+    simon-system
+  ];
+
   "newt.age".publicKeys = [
     jake-vic
     simon-system

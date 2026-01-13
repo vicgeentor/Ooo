@@ -5,6 +5,5 @@ flake="$HOME/Ooo"
 if [[ $# -eq 0 ]] ; then
   nh os switch "$flake" -H jake
 else
-  # --use-substitutes: copy directly from caches to host instead of through invocation host (i.e. laptop)
-  nh os switch "$flake" -H "$1" --target-host root@"$1" # --use-substitutes
+  nh os switch "$flake" -H "$1" --target-host root@"$1"
 fi
