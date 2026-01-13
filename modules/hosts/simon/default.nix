@@ -11,6 +11,7 @@
       base
 
       fwupd
+      grafana
       minecraft-server
       networkmanager
       newt
