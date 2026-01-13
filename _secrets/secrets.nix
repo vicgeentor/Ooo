@@ -37,6 +37,7 @@ in
   "vicgeentor-mail-password.age".publicKeys = [
     jake-vic
     bonnibel-system
+    simon-system
   ];
 
   "vic-user-password.age".publicKeys = [
