@@ -1,0 +1,208 @@
+arp       Enable the arp collector (default: enabled).
+
+bcache    Enable the bcache collector (default: enabled).
+
+bonding   Enable the bonding collector (default:
+          enabled).
+btrfs     Enable the btrfs collector (default: enabled).
+
+buddyinfo  
+          Enable the buddyinfo collector (default:
+          disabled).
+
+cgroups   Enable the cgroups collector (default:
+          disabled).
+
+conntrack  
+          Enable the conntrack collector (default:
+          enabled).
+
+cpu       Enable the cpu collector (default: enabled).
+
+cpu_vulnerabilities  
+          Enable the cpu_vulnerabilities collector
+          (default: disabled).
+
+cpufreq   Enable the cpufreq collector (default:
+          enabled).
+
+diskstats  
+          Enable the diskstats collector (default:
+          enabled).
+
+dmi       Enable the dmi collector (default: enabled).
+
+drbd      Enable the drbd collector (default: disabled).
+
+drm       Enable the drm collector (default: disabled).
+
+edac      Enable the edac collector (default: enabled).
+
+entropy   Enable the entropy collector (default:
+          enabled).
+
+ethtool   Enable the ethtool collector (default:
+          disabled).
+
+fibrechannel  
+          Enable the fibrechannel collector (default:
+          enabled).
+
+filefd    Enable the filefd collector (default: enabled).
+
+filesystem  
+          Enable the filesystem collector (default:
+          enabled).
+
+hwmon     Enable the hwmon collector (default: enabled).
+
+infiniband  
+          Enable the infiniband collector (default:
+          enabled).
+
+interrupts  
+          Enable the interrupts collector (default:
+          disabled).
+
+ipvs      Enable the ipvs collector (default: enabled).
+
+ksmd      Enable the ksmd collector (default: disabled).
+
+lnstat    Enable the lnstat collector (default:
+          disabled).
+
+loadavg   Enable the loadavg collector (default:
+          enabled).
+
+logind    Enable the logind collector (default:
+          disabled).
+
+mdadm     Enable the mdadm collector (default: enabled).
+
+meminfo   Enable the meminfo collector (default:
+          enabled).
+
+meminfo_numa  
+          Enable the meminfo_numa collector (default:
+          disabled).
+
+mountstats  
+          Enable the mountstats collector (default:
+          disabled).
+
+netclass  Enable the netclass collector (default:
+          enabled).
+
+netdev    Enable the netdev collector (default: enabled).
+
+netstat   Enable the netstat collector (default:
+          enabled).
+
+network_route  
+          Enable the network_route collector (default:
+          disabled).
+
+nfs       Enable the nfs collector (default: enabled).
+
+nfsd      Enable the nfsd collector (default: enabled).
+
+ntp       Enable the ntp collector (default: disabled).
+
+nvme      Enable the nvme collector (default: enabled).
+
+os        Enable the os collector (default: enabled).
+
+pcidevice  
+          Enable the pcidevice collector (default:
+          disabled).
+
+perf      Enable the perf collector (default: disabled).
+
+powersupplyclass  
+          Enable the powersupplyclass collector (default:
+          enabled).
+
+pressure  Enable the pressure collector (default:
+          enabled).
+
+processes  
+          Enable the processes collector (default:
+          disabled).
+
+qdisc     Enable the qdisc collector (default: disabled).
+
+rapl      Enable the rapl collector (default: enabled).
+
+runit     Enable the runit collector (default: disabled).
+
+schedstat  
+          Enable the schedstat collector (default:
+          enabled).
+
+selinux   Enable the selinux collector (default:
+          enabled).
+
+slabinfo  Enable the slabinfo collector (default:
+          disabled).
+
+sockstat  Enable the sockstat collector (default:
+          enabled).
+
+softirqs  Enable the softirqs collector (default:
+          disabled).
+
+softnet   Enable the softnet collector (default:
+          enabled).
+
+stat      Enable the stat collector (default: enabled).
+
+supervisord  
+          Enable the supervisord collector (default:
+          disabled).
+
+swap      Enable the swap collector (default: disabled).
+
+sysctl    Enable the sysctl collector (default:
+          disabled).
+
+systemd   Enable the systemd collector (default:
+          disabled).
+
+tapestats  
+          Enable the tapestats collector (default:
+          enabled).
+
+tcpstat   Enable the tcpstat collector (default:
+          disabled).
+
+textfile  Enable the textfile collector (default:
+          enabled).
+
+thermal_zone  
+          Enable the thermal_zone collector (default:
+          enabled).
+
+time      Enable the time collector (default: enabled).
+
+timex     Enable the timex collector (default: enabled).
+
+udp_queues  
+          Enable the udp_queues collector (default:
+          enabled).
+
+uname     Enable the uname collector (default: enabled).
+
+vmstat    Enable the vmstat collector (default: enabled).
+
+watchdog  Enable the watchdog collector (default:
+          enabled).
+
+wifi      Enable the wifi collector (default: disabled).
+
+xfrm      Enable the xfrm collector (default: disabled).
+
+xfs       Enable the xfs collector (default: enabled).
+
+zfs       Enable the zfs collector (default: enabled).
+
+zoneinfo  Enable the zoneinfo collector (default:

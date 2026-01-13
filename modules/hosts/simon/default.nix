@@ -14,6 +14,7 @@
       minecraft-server
       networkmanager
       newt
+      prometheus
       ssh
       stirling-pdf
       systemdboot
