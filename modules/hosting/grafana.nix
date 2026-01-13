@@ -18,7 +18,7 @@
           enable_gzip = true;
         };
         security = {
-          secret_key = "$__file{${nixosArgs.config.age.secrets.gragana.path}}";
+          secret_key = "$__file{${nixosArgs.config.age.secrets.grafana.path}}";
         };
         smtp = {
           enabled = true;
