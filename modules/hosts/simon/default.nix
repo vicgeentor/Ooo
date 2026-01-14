@@ -15,6 +15,7 @@
       minecraft-server
       networkmanager
       newt
+      nixarr
       prometheus
       ssh
       stirling-pdf
