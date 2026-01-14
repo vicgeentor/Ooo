@@ -122,7 +122,7 @@ For setting up a new user, you can follow these steps:
                }
              };
            };
-           
+
            nix.settings.trusted-users = [ config.flake.meta.<USERNAME>.username ];
          };
        };
