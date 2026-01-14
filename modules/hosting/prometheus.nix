@@ -24,7 +24,6 @@
         enabledCollectors = [
 
           # enabled by default (but here using a whitelist approach)
-          "boottime"
           "cpu"
           "cpufreq"
           "diskstats"
@@ -56,13 +55,11 @@
           "dmi"
           "edac"
           "entropy"
-          "exec"
           "fibrechannel"
           "filefd"
           "infiniband"
           "ipvs"
           "mdadm"
-          "netisr"
           "nfs"
           "nfsd"
           "pressure"
@@ -74,7 +71,6 @@
           "stat"
           "tapestats"
           "textfile"
-          "thermal"
           "timex"
           "udp_queues"
           "vmstat"

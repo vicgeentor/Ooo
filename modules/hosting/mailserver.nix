@@ -7,8 +7,9 @@
       imports = [ inputs.simple-nixos-mailserver.nixosModules.default ];
 
       age.secrets = {
-        vicgeentor-mail-password.file = ../../_secrets/vicgeentor-mail-password.age;
+        email-password-vic-at-vicgeentornl.file = ../../_secrets/email-password-vic-at-vicgeentornl.age;
         cloudflare-dns-api.file = ../../_secrets/cloudflare-dns-api.age;
+        smtp-sasl-password-maps.file = ../../_secrets/smtp-sasl-password-maps.age;
       };
 
       networking.firewall.allowedTCPPorts = [
@@ -20,7 +21,7 @@
 
       services.postfix.settings.main = {
         smtp_sasl_auth_enable = "yes";
-        smtp_sasl_password_maps = "static:vicgeentor.nl:Diaphragm-Eastcoast-Femur-Clapper9-Reptile";
+        smtp_sasl_password_maps = "hash:${nixosArgs.config.age.secrets.smtp_sasl_password_maps.path}";
         smtp_sasl_security_options = "noanonymous";
         smtp_tls_security_level = lib.mkForce "may";
         header_size_limit = 4096000;
@@ -52,7 +53,7 @@
         # nix-shell -p mkpasswd --run 'mkpasswd -s'
         loginAccounts = {
           "vic@vicgeentor.nl" = {
-            hashedPasswordFile = nixosArgs.config.age.secrets.vicgeentor-mail-password.path;
+            hashedPasswordFile = nixosArgs.config.age.secrets.email-password-vic-at-vicgeentornl.path;
             aliases = [ "@vicgeentor.nl" ];
           };
         };

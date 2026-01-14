@@ -32,10 +32,11 @@
         };
         smtp = {
           enabled = true;
-          user = "vic@vicgeentor.nl";
+          user = "vicgeentor.nl";
           password = "$__file{${nixosArgs.config.age.secrets.vicgeentor-mail-password-grafana.path}}";
           host = "mail-eu.smtp2go.com:2525";
           from_address = "grafana-no-reply@vicgeentor.nl";
+          startTLS_policy = "MandatoryStartTLS";
         };
       };
     };
