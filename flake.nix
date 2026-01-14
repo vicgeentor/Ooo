@@ -38,6 +38,8 @@
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
+    nixarr.url = "github:rasmus-kirk/nixarr";
+
     nix-devshells = {
       url = "github:vicgeentor/nix-devshells";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -56,6 +56,11 @@ in
     simon-system
   ];
 
+  "wg-nixarr-conf.age".publicKeys = [
+    jake-vic
+    simon-system
+  ];
+
   "your-spotify.age".publicKeys = [
     jake-vic
     simon-system
