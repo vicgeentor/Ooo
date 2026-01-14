@@ -55,10 +55,12 @@
         uiPort = 4451;
 
         vpn.enable = true;
-        peerPort = 51820; # Forwarded port in wg-nixarr-conf
+        peerPort = 39726; # Forwarded port in wg-nixarr-conf
 
         extraSettings = {
-          rpc-whitelist-enabled = false; # Safe because only accessing through Tailscale
+          # Safe because only accessing through Tailscale
+          rpc-whitelist-enabled = false;
+          rpc-host-whitelist-enabled = false;
         };
       };
     };

@@ -2,8 +2,9 @@
   flake.modules.nixos.simon =
     { pkgs, ... }:
     {
-      environment.systemPackages = [
-        pkgs.vim
+      environment.systemPackages = with pkgs; [
+        vim
+        tmux
       ];
     };
 }
