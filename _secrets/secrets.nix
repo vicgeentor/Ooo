@@ -17,6 +17,11 @@ in
     bonnibel-system
   ];
 
+  "email-password-vic-at-vicgeentornl-grafana.age".publicKeys = [
+    jake-vic
+    simon-system
+  ];
+
   "grafana.age".publicKeys = [
     jake-vic
     simon-system
@@ -41,12 +46,6 @@ in
 
   "smtp-sasl-password-maps.age".publicKeys = [
     jake-vic
-    simon-system
-  ];
-
-  "vicgeentor-mail-password.age".publicKeys = [
-    jake-vic
-    bonnibel-system
     simon-system
   ];
 

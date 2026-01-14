@@ -7,8 +7,8 @@
         owner = "grafana";
         group = "grafana";
       };
-      vicgeentor-mail-password-grafana = {
-        file = ../../_secrets/vicgeentor-mail-password-grafana.age;
+      email-password-vic-at-vicgeentornl-grafana = {
+        file = ../../_secrets/email-password-vic-at-vicgeentornl-grafana.age;
         mode = "770";
         owner = "grafana";
         group = "grafana";
@@ -32,8 +32,8 @@
         };
         smtp = {
           enabled = true;
-          user = "vicgeentor.nl";
-          password = "$__file{${nixosArgs.config.age.secrets.vicgeentor-mail-password-grafana.path}}";
+          user = "vic@vicgeentor.nl";
+          password = "$__file{${nixosArgs.config.age.secrets.email-password-vic-at-vicgeentornl-grafana.path}}";
           host = "mail-eu.smtp2go.com:2525";
           from_address = "grafana-no-reply@vicgeentor.nl";
           startTLS_policy = "MandatoryStartTLS";
