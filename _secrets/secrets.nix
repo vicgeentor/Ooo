@@ -46,7 +46,7 @@ in
 
   "smtp-sasl-password-maps.age".publicKeys = [
     jake-vic
-    simon-system
+    bonnibel-system
   ];
 
   "vic-user-password.age".publicKeys = [
