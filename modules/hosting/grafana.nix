@@ -15,12 +15,10 @@
       };
     };
 
+    # Dashboard that I use for the node exporter: https://grafana.com/grafana/dashboards/1860-node-exporter-full/
     services.grafana = {
       enable = true;
       settings = {
-        dashboards = {
-          min_refresh_interval = "1s";
-        };
         server = {
           http_addr = "127.0.0.1";
           http_port = 3030;
