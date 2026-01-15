@@ -10,12 +10,12 @@
 
       base
 
+      arr-stack
       fwupd
       grafana
       minecraft-server
       networkmanager
       newt
-      nixarr
       prometheus
       ssh
       stirling-pdf

@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.nixarr = nixosArgs: {
+  flake.modules.nixos.arr-stack = nixosArgs: {
     imports = [ inputs.nixarr.nixosModules.default ];
 
     age.secrets.wg-conf.file = ../../_secrets/wg-conf.age;
@@ -67,6 +67,10 @@
         };
         privateTrackers.cross-seed.enable = true;
       };
+    };
+    services.flaresolverr = {
+      enable = true;
+      port = 4452;
     };
   };
 }
