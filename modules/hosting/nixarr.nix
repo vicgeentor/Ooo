@@ -11,6 +11,10 @@
       vpn = {
         enable = true;
         wgConf = nixosArgs.config.age.secrets.wg-conf.path;
+        vpnTestService = {
+          enable = true;
+          port = 19271;
+        };
       };
 
       jellyfin.enable = true; # port = 8096
@@ -56,12 +60,12 @@
 
         vpn.enable = true;
         peerPort = 19271;
-
         extraSettings = {
           # Safe because only accessing through Tailscale
           rpc-whitelist-enabled = false;
           rpc-host-whitelist-enabled = false;
         };
+        privateTrackers.cross-seed.enable = true;
       };
     };
   };
