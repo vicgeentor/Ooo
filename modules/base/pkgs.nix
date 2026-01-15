@@ -7,6 +7,7 @@
         git
         killall
         pciutils
+        tmux
       ];
     };
 }
