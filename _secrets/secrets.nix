@@ -56,7 +56,7 @@ in
     simon-system
   ];
 
-  "wg-nixarr-conf.age".publicKeys = [
+  "wg-conf.age".publicKeys = [
     jake-vic
     simon-system
   ];

@@ -3,14 +3,14 @@
   flake.modules.nixos.nixarr = nixosArgs: {
     imports = [ inputs.nixarr.nixosModules.default ];
 
-    age.secrets.wg-nixarr-conf.file = ../../_secrets/wg-nixarr-conf.age;
+    age.secrets.wg-conf.file = ../../_secrets/wg-conf.age;
 
     nixarr = {
       enable = true;
 
       vpn = {
         enable = true;
-        wgConf = nixosArgs.config.age.secrets.wg-nixarr-conf.path;
+        wgConf = nixosArgs.config.age.secrets.wg-conf.path;
       };
 
       jellyfin.enable = true; # port = 8096
@@ -55,7 +55,7 @@
         uiPort = 4451;
 
         vpn.enable = true;
-        peerPort = 39726; # Forwarded port in wg-nixarr-conf
+        peerPort = 19271;
 
         extraSettings = {
           # Safe because only accessing through Tailscale
