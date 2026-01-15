@@ -37,6 +37,11 @@ in
     bonnibel-system
   ];
 
+  "recyclarr-yaml.age".publicKeys = [
+    jake-vic
+    simon-system
+  ];
+
   "tailscale.age".publicKeys = [
     jake-vic
     bonnibel-system

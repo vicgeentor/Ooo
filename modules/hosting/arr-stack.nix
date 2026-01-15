@@ -3,7 +3,10 @@
   flake.modules.nixos.arr-stack = nixosArgs: {
     imports = [ inputs.nixarr.nixosModules.default ];
 
-    age.secrets.wg-conf.file = ../../_secrets/wg-conf.age;
+    age.secrets = {
+      wg-conf.file = ../../_secrets/wg-conf.age;
+      recyclarr-yaml.file = ../../_secrets/recyclarr-yaml.age;
+    };
 
     nixarr = {
       enable = true;
@@ -65,7 +68,11 @@
           rpc-whitelist-enabled = false;
           rpc-host-whitelist-enabled = false;
         };
-        privateTrackers.cross-seed.enable = true;
+      };
+
+      recyclarr = {
+        enable = true;
+        configFile = nixosArgs.config.age.secrets.recyclarr-yaml.path;
       };
     };
     services.flaresolverr = {
