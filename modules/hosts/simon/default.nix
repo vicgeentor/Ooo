@@ -13,9 +13,11 @@
       arr-stack
       fwupd
       grafana
+      graphics
       minecraft-server
       networkmanager
       newt
+      nvidia
       prometheus
       ssh
       stirling-pdf

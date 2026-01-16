@@ -1,96 +1,119 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.arr-stack = nixosArgs: {
-    imports = [ inputs.nixarr.nixosModules.default ];
+  flake.modules.nixos.arr-stack =
+    nixosArgs@{ pkgs, ... }:
+    {
+      imports = [ inputs.nixarr.nixosModules.default ];
 
-    age.secrets = {
-      wg-conf.file = ../../_secrets/wg-conf.age;
-      recyclarr-yaml = {
-        file = ../../_secrets/recyclarr-yaml.age;
-        mode = "770";
-        owner = "recyclarr";
-        group = "recyclarr";
+      age.secrets = {
+        wg-conf.file = ../../_secrets/wg-conf.age;
+        recyclarr-yaml = {
+          file = ../../_secrets/recyclarr-yaml.age;
+          mode = "770";
+          owner = "recyclarr";
+          group = "recyclarr";
+        };
+        transmission-settings-json = {
+          file = ../../_secrets/transmission-settings-json.age;
+          mode = "770";
+          owner = "transmission";
+          group = "media";
+        };
       };
-      transmission-settings-json = {
-        file = ../../_secrets/transmission-settings-json.age;
-        mode = "770";
-        owner = "transmission";
-        group = "media";
-      };
-    };
 
-    nixarr = {
-      enable = true;
-
-      vpn = {
+      nixarr = {
         enable = true;
-        wgConf = nixosArgs.config.age.secrets.wg-conf.path;
-        vpnTestService = {
+
+        vpn = {
           enable = true;
-          port = 19271;
+          wgConf = nixosArgs.config.age.secrets.wg-conf.path;
+          vpnTestService = {
+            enable = true;
+            port = 19271;
+          };
+        };
+
+        jellyfin.enable = true; # port = 8096
+
+        bazarr = {
+          enable = true;
+          port = 4444;
+        };
+
+        jellyseerr = {
+          enable = true;
+          port = 4445;
+        };
+
+        lidarr = {
+          enable = true;
+          port = 4446;
+        };
+
+        prowlarr = {
+          enable = true;
+          port = 4447;
+        };
+
+        radarr = {
+          enable = true;
+          port = 4448;
+        };
+
+        sonarr = {
+          enable = true;
+          port = 4450;
+        };
+
+        transmission = {
+          enable = true;
+          uiPort = 4451;
+
+          vpn.enable = true;
+          peerPort = 19271;
+          credentialsFile = nixosArgs.config.age.secrets.transmission-settings-json.path;
+          extraSettings = {
+            # Safe because only accessing through Tailscale
+            rpc-whitelist-enabled = false;
+            rpc-host-whitelist-enabled = false;
+            rpc-authentication-required = true;
+          };
+        };
+
+        recyclarr = {
+          enable = true;
+          configFile = nixosArgs.config.age.secrets.recyclarr-yaml.path;
         };
       };
-
-      jellyfin.enable = true; # port = 8096
-
-      bazarr = {
+      services.flaresolverr = {
         enable = true;
-        port = 4444;
+        port = 4452;
       };
-
-      jellyseerr = {
-        enable = true;
-        port = 4445;
-      };
-
-      lidarr = {
-        enable = true;
-        port = 4446;
-      };
-
-      prowlarr = {
-        enable = true;
-        port = 4447;
-      };
-
-      radarr = {
-        enable = true;
-        port = 4448;
-      };
-
-      readarr = {
-        enable = true;
-        port = 4449;
-      };
-
-      sonarr = {
-        enable = true;
-        port = 4450;
-      };
-
-      transmission = {
-        enable = true;
-        uiPort = 4451;
-
-        vpn.enable = true;
-        peerPort = 19271;
-        credentialsFile = nixosArgs.config.age.secrets.transmission-settings-json.path;
-        extraSettings = {
-          # Safe because only accessing through Tailscale
-          rpc-whitelist-enabled = false;
-          rpc-host-whitelist-enabled = false;
-          rpc-authentication-required = true;
+      services.jellyfin = {
+        hardwareAcceleration = {
+          enable = true;
+          device = "/dev/nvidia0";
+          type = "nvenc";
+        };
+        transcoding = {
+          enableHardwareEncoding = true;
+          hardwareEncodingCodecs = {
+            hevc = true;
+          };
+          hardwareDecodingCodecs = {
+            h264 = true;
+            hevc = true;
+            hevc10bit = true;
+            mpeg2 = true;
+            vc1 = true;
+            vp9 = true;
+          };
         };
       };
-
-      recyclarr = {
-        enable = true;
-        configFile = nixosArgs.config.age.secrets.recyclarr-yaml.path;
-      };
+      users.users.jellyfin.extraGroups = [
+        "video"
+        "render"
+      ];
+      environment.systemPackages = [ pkgs.jellyfin-ffmpeg ];
     };
-    services.flaresolverr = {
-      enable = true;
-      port = 4452;
-    };
-  };
 }

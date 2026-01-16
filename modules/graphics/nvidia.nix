@@ -1,18 +1,13 @@
 {
   flake.modules.nixos.nvidia =
-    {
-      pkgs,
-      config,
-      ...
-    }:
+    nixosArgs@{ pkgs, ... }:
     {
       services.xserver.videoDrivers = [ "nvidia" ];
       hardware = {
         nvidia = {
           modesetting.enable = true;
-          powerManagement.enable = true;
           open = true;
-          package = config.boot.kernelPackages.nvidiaPackages.beta;
+          package = nixosArgs.config.boot.kernelPackages.nvidiaPackages.beta;
         };
         graphics.extraPackages = [ pkgs.nvidia-vaapi-driver ];
       };

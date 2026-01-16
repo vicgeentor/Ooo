@@ -5,6 +5,8 @@
       powerManagement.enable = true;
       services.thermald.enable = true;
 
+      hardware.nvidia.powerManagement.enable = true;
+
       environment.systemPackages = [ pkgs.auto-cpufreq ];
       services.auto-cpufreq = {
         enable = true;

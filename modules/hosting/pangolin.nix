@@ -47,7 +47,6 @@
           };
           server = {
             dashboard_session_length_hours = 1;
-            resource_session_length_hours = 1;
           };
         };
         dnsProvider = "cloudflare";
