@@ -42,6 +42,11 @@ in
     simon-system
   ];
 
+  "smtp-sasl-password-maps.age".publicKeys = [
+    jake-vic
+    bonnibel-system
+  ];
+
   "tailscale.age".publicKeys = [
     jake-vic
     bonnibel-system
@@ -49,9 +54,9 @@ in
     simon-system
   ];
 
-  "smtp-sasl-password-maps.age".publicKeys = [
+  "transmission-settings-json.age".publicKeys = [
     jake-vic
-    bonnibel-system
+    simon-system
   ];
 
   "vic-user-password.age".publicKeys = [

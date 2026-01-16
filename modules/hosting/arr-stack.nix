@@ -5,7 +5,18 @@
 
     age.secrets = {
       wg-conf.file = ../../_secrets/wg-conf.age;
-      recyclarr-yaml.file = ../../_secrets/recyclarr-yaml.age;
+      recyclarr-yaml = {
+        file = ../../_secrets/recyclarr-yaml.age;
+        mode = "770";
+        owner = "recyclarr";
+        group = "recyclarr";
+      };
+      transmission-settings-json = {
+        file = ../../_secrets/transmission-settings-json.age;
+        mode = "770";
+        owner = "transmission";
+        group = "media";
+      };
     };
 
     nixarr = {
@@ -63,10 +74,12 @@
 
         vpn.enable = true;
         peerPort = 19271;
+        credentialsFile = nixosArgs.config.age.secrets.transmission-settings-json.path;
         extraSettings = {
           # Safe because only accessing through Tailscale
           rpc-whitelist-enabled = false;
           rpc-host-whitelist-enabled = false;
+          rpc-authentication-required = true;
         };
       };
 
