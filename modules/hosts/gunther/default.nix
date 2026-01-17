@@ -10,7 +10,11 @@
 
       base
 
+      btrfs
+      fwupd
+      ssd
       ssh
+      systemdboot
       tailscale
     ];
   };
