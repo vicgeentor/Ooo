@@ -85,11 +85,14 @@
           configFile = nixosArgs.config.age.secrets.recyclarr-yaml.path;
         };
       };
+
       services.flaresolverr = {
         enable = true;
         port = 4452;
       };
+
       services.jellyfin = {
+        # forceEncodingConfig = true;
         hardwareAcceleration = {
           enable = true;
           device = "/dev/nvidia0";
@@ -113,6 +116,7 @@
       users.users.jellyfin.extraGroups = [
         "video"
         "render"
+        "jellyfin"
       ];
       environment.systemPackages = [ pkgs.jellyfin-ffmpeg ];
     };
