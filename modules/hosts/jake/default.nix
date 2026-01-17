@@ -45,6 +45,7 @@
       tailscale
       thunar
       virtualisation
+      vpn
       xdgportal
       zsh
     ];
