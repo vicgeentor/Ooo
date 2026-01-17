@@ -16,7 +16,6 @@
       graphics
       minecraft-server
       networkmanager
-      newt
       nvidia
       prometheus
       ssh
