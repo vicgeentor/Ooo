@@ -7,7 +7,7 @@
       extraConfig = ''
         polkit.addRule(function(action, subject) {
           if (
-            subject.isInGroup("wheel")
+            subject.isInGroup("users")
               && (
                 # reboot and poweroff
                 action.id == "org.freedesktop.login1.reboot" ||

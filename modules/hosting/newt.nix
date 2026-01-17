@@ -1,9 +1,8 @@
 { inputs, ... }:
 {
   flake.modules.nixos.newt =
-    nixosArgs@{ pkgs, ... }:
+    { pkgs, ... }:
     {
-      age.secrets.newt.file = ../../_secrets/newt.age;
       services.newt = {
         enable = true;
         package =
@@ -12,7 +11,6 @@
         settings = {
           endpoint = "https://admin.vicgeentor.nl";
         };
-        environmentFile = nixosArgs.config.age.secrets.newt.path;
       };
     };
 }

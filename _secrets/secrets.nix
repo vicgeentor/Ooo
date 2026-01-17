@@ -28,7 +28,12 @@ in
     simon-system
   ];
 
-  "newt.age".publicKeys = [
+  "newt-gunter.age".publicKeys = [
+    jake-vic
+    gunter-system
+  ];
+
+  "newt-simon.age".publicKeys = [
     jake-vic
     simon-system
   ];

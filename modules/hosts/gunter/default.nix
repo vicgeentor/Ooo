@@ -12,6 +12,7 @@
 
       btrfs
       fwupd
+      minecraft-server-two
       ssd
       ssh
       systemdboot
