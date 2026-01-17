@@ -39,6 +39,12 @@ My home server that runs some web services:
 - [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)
 - [your_spotify](https://github.com/Yooooomi/your_spotify)
 
+### [gunter](https://adventuretime.fandom.com/wiki/gunter)
+
+Another home server that runs some web services:
+
+- [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
+
 ### [neptr](https://adventuretime.fandom.com/wiki/Neptr)
 
 A virtual NixOS machine.

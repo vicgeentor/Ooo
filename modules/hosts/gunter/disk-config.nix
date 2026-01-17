@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.gunther = {
+  flake.modules.nixos.gunter = {
     imports = [ inputs.disko.nixosModules.disko ];
     disko.devices = {
       disk = {

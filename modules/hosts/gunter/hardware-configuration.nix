@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.gunther =
+  flake.modules.nixos.gunter =
     {
       config,
       lib,

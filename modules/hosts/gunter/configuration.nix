@@ -1,7 +1,7 @@
 {
-  flake.modules.nixos.gunther = {
+  flake.modules.nixos.gunter = {
 
-    networking.hostName = "gunther";
+    networking.hostName = "gunter";
     system.stateVersion = "26.05";
 
     boot.loader.efi.canTouchEfiVariables = true;
