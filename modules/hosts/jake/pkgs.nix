@@ -36,6 +36,7 @@
         pavucontrol # Audio controls
         pinta # Paint
         playerctl # Needed for pausing, skipping songs, etc.
+        protonvpn-cli
         protonvpn-gui
         qimgv # Image viewer
         qbittorrent

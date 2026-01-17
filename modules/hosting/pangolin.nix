@@ -13,6 +13,10 @@
           22
           80
           443
+
+          # Minecraft raw TCP stream through pangolin
+          25565
+          25575
         ];
         allowedUDPPorts = [
           21820
@@ -62,8 +66,12 @@
         environmentFiles = [ nixosArgs.config.age.secrets.cloudflare-dns-api.path ];
         staticConfigOptions = {
           entryPoints = {
+            # Minecraft raw TCP streams through pangolin
             tcp-25565 = {
               address = ":25565/tcp";
+            };
+            tcp-25575 = {
+              address = ":25575/tcp";
             };
           };
         };
