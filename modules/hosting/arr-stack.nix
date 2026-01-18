@@ -92,10 +92,10 @@
       };
 
       services.jellyfin = {
-        # forceEncodingConfig = true;
+        forceEncodingConfig = true;
         hardwareAcceleration = {
           enable = true;
-          device = "/dev/nvidia0";
+          device = "/dev/dri/renderD128";
           type = "nvenc";
         };
         transcoding = {
@@ -114,10 +114,24 @@
         };
       };
       users.users.jellyfin.extraGroups = [
+        "jellyfin"
         "video"
         "render"
-        "jellyfin"
       ];
       environment.systemPackages = [ pkgs.jellyfin-ffmpeg ];
+
+      # Fixes for NVIDIA hardware transcoding
+      systemd.services.jellyfin = {
+        serviceConfig = {
+          PrivateDevices = false;
+          DeviceAllow = [
+            "/dev/nvidia0 rwm"
+            "/dev/nvidiactl rwm"
+            "/dev/nvidia-uvm rwm"
+            "/dev/nvidia-uvm-tools rwm"
+            "/dev/dri rwm"
+          ];
+        };
+      };
     };
 }
