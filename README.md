@@ -36,7 +36,6 @@ It also runs a receiving email server using
 My home server that runs some web services:
 
 - [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
-- [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)
 - [your_spotify](https://github.com/Yooooomi/your_spotify)
 
 ### [gunter](https://adventuretime.fandom.com/wiki/gunter)
@@ -44,6 +43,7 @@ My home server that runs some web services:
 Another home server that runs some web services:
 
 - [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
+- [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)
 
 ### [neptr](https://adventuretime.fandom.com/wiki/Neptr)
 

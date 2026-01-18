@@ -77,6 +77,11 @@
             rpc-whitelist-enabled = false;
             rpc-host-whitelist-enabled = false;
             rpc-authentication-required = true;
+
+            peer-limit-global = 400;
+            peer-limit-per-torrent = 70;
+            ratio-limit = 2;
+            ratio-limit-enabled = true;
           };
         };
 

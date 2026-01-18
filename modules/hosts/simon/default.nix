@@ -19,7 +19,6 @@
       nvidia
       prometheus
       ssh
-      stirling-pdf
       systemdboot
       tailscale
       your-spotify
