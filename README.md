@@ -79,8 +79,6 @@ For [simon](#simon):
   - [immich](https://github.com/immich-app/immich)
   - [Dawarich](https://github.com/Freika/dawarich)
   - [FreshRSS](https://github.com/FreshRSS/FreshRSS)
-  - [audiobookshelf](https://github.com/advplyr/audiobookshelf)
-  - File storage
   - Probably more
 - Switch to BTRFS for snapshotting and checksumming (with
   subvolumes for nix store, immich, etc.)
