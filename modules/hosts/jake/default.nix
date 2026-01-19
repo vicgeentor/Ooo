@@ -23,6 +23,7 @@
       hypr
       intel
       javascript
+      jellyfin-client
       keyd
       laptop
       latex
