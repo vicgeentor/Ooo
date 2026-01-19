@@ -29,12 +29,16 @@
         relay_destination_concurrency_limit = 20;
       };
 
-      security.acme.certs.${nixosArgs.config.mailserver.fqdn} = {
-        dnsProvider = "cloudflare";
-        environmentFile = nixosArgs.config.age.secrets.cloudflare-dns-api.path;
+      security.acme = {
+        acceptTerms = true;
+        defaults.email = "security@vicgeentor.nl";
+        certs.${nixosArgs.config.mailserver.fqdn} = {
+          dnsProvider = "cloudflare";
+          environmentFile = nixosArgs.config.age.secrets.cloudflare-dns-api.path;
 
-        dnsResolver = "1.1.1.1:53"; # Cloudflare's public resolver
-        dnsPropagationCheck = true;
+          dnsResolver = "1.1.1.1:53"; # Cloudflare's public resolver
+          dnsPropagationCheck = true;
+        };
       };
 
       mailserver = {

@@ -10,7 +10,6 @@
 
       base
 
-      acme
       arr-stack
       fwupd
       grafana

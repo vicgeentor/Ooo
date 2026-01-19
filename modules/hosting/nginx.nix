@@ -1,9 +1,19 @@
 {
-  flake.modules.nixos.nginx = {
-    networking.firewall.allowedTCPPorts = [
-      80
-      443
-    ];
+  flake.modules.nixos.nginx = nixosArgs: {
+    age.secrets.cloudflare-dns-api.file = ../../_secrets/cloudflare-dns-api.age;
+
+    security.acme = {
+      acceptTerms = true;
+      defaults.email = "security@vicgeentor.nl";
+      certs."victb.nl" = {
+        domain = "*.victb.nl";
+        dnsProvider = "cloudflare";
+        environmentFile = nixosArgs.config.age.secrets.cloudflare-dns-api.path;
+        dnsResolver = "1.1.1.1:53";
+        dnsPropagationCheck = true;
+        group = "nginx";
+      };
+    };
 
     services.nginx = {
       enable = true;
@@ -15,7 +25,7 @@
       virtualHosts = {
         "bazarr.victb.nl" = {
           forceSSL = true;
-          enableACME = true;
+          useACMEHost = "victb.nl";
 
           locations."/" = {
             proxyPass = "http://localhost:4444";
@@ -24,7 +34,7 @@
         };
         "lidarr.victb.nl" = {
           forceSSL = true;
-          enableACME = true;
+          useACMEHost = "victb.nl";
 
           locations."/" = {
             proxyPass = "http://localhost:4446";
@@ -33,7 +43,7 @@
         };
         "prowlarr.victb.nl" = {
           forceSSL = true;
-          enableACME = true;
+          useACMEHost = "victb.nl";
 
           locations."/" = {
             proxyPass = "http://localhost:4447";
@@ -42,7 +52,7 @@
         };
         "radarr.victb.nl" = {
           forceSSL = true;
-          enableACME = true;
+          useACMEHost = "victb.nl";
 
           locations."/" = {
             proxyPass = "http://localhost:4448";
@@ -51,7 +61,7 @@
         };
         "sonarr.victb.nl" = {
           forceSSL = true;
-          enableACME = true;
+          useACMEHost = "victb.nl";
 
           locations."/" = {
             proxyPass = "http://localhost:4450";
@@ -60,7 +70,7 @@
         };
         "trans.victb.nl" = {
           forceSSL = true;
-          enableACME = true;
+          useACMEHost = "victb.nl";
 
           locations."/" = {
             proxyPass = "http://localhost:4451";

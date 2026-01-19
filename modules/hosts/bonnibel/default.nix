@@ -10,7 +10,6 @@
 
       base
 
-      acme
       mailserver
       pangolin
       ssh

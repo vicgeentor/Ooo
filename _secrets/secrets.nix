@@ -11,6 +11,7 @@ in
   "cloudflare-dns-api.age".publicKeys = [
     jake-vic
     bonnibel-system
+    simon-system
   ];
 
   "email-password-vic-at-vicgeentornl.age".publicKeys = [
