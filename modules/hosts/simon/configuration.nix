@@ -7,6 +7,7 @@
       networking.hostName = "simon";
       system.stateVersion = "24.11";
       hardware.facter.reportPath = ./facter.json;
+      hardware.facter.detected.bluetooth.enable = false;
 
       boot = {
         loader.efi.canTouchEfiVariables = true;

@@ -826,7 +826,6 @@
         "fpu_exception": false,
         "cpuid_level": 13,
         "write_protect": false,
-        "tlb_size": 32701,
         "clflush_size": 64,
         "cache_alignment": 64,
         "address_sizes": {
@@ -998,7 +997,7 @@
           "value": 133
         },
         "slot": {
-          "bus": 5,
+          "bus": 0,
           "number": 0
         },
         "base_class": {
@@ -1011,37 +1010,32 @@
           "name": "Disk",
           "value": 0
         },
-        "vendor": {
-          "hex": "0000",
-          "name": "SAMSUNG",
-          "value": 0
-        },
         "device": {
           "hex": "0000",
-          "name": "SSD CM85",
+          "name": "ST2000DM001-1ER1",
           "value": 0
         },
         "revision": {
           "hex": "0000",
-          "name": "3D2Q",
+          "name": "CC25",
           "value": 0
         },
-        "serial": "S1C7NYAFA01159",
-        "model": "SAMSUNG SSD CM85",
+        "serial": "Z4Z1F1S9",
+        "model": "ST2000DM001-1ER1",
         "sysfs_id": "/class/block/sdb",
-        "sysfs_bus_id": "5:0:0:0",
-        "sysfs_device_link": "/devices/pci0000:00/0000:00:1f.2/ata6/host5/target5:0:0/5:0:0:0",
+        "sysfs_bus_id": "0:0:0:0",
+        "sysfs_device_link": "/devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0",
         "unix_device_names": [
-          "/dev/disk/by-id/ata-SAMSUNG_SSD_CM851_mSATA_32GB_S1C7NYAFA01159",
-          "/dev/disk/by-id/wwn-0x5002538500000000",
-          "/dev/disk/by-path/pci-0000:00:1f.2-ata-6",
-          "/dev/disk/by-path/pci-0000:00:1f.2-ata-6.0",
+          "/dev/disk/by-id/ata-ST2000DM001-1ER164_Z4Z1F1S9",
+          "/dev/disk/by-id/wwn-0x5000c50079cbda35",
+          "/dev/disk/by-path/pci-0000:00:1f.2-ata-1",
+          "/dev/disk/by-path/pci-0000:00:1f.2-ata-1.0",
           "/dev/sdb"
         ],
         "resources": [
           {
             "type": "disk_geo",
-            "cylinders": 3892,
+            "cylinders": 243201,
             "heads": 255,
             "sectors": 63,
             "size": "0x0",
@@ -1050,7 +1044,7 @@
           {
             "type": "size",
             "unit": "sectors",
-            "value_1": 62533296,
+            "value_1": 3907029168,
             "value_2": 512
           }
         ],
@@ -1227,7 +1221,7 @@
           "value": 133
         },
         "slot": {
-          "bus": 0,
+          "bus": 5,
           "number": 0
         },
         "base_class": {
@@ -1240,32 +1234,37 @@
           "name": "Disk",
           "value": 0
         },
+        "vendor": {
+          "hex": "0000",
+          "name": "SAMSUNG",
+          "value": 0
+        },
         "device": {
           "hex": "0000",
-          "name": "ST2000DM001-1ER1",
+          "name": "SSD CM85",
           "value": 0
         },
         "revision": {
           "hex": "0000",
-          "name": "CC25",
+          "name": "3D2Q",
           "value": 0
         },
-        "serial": "Z4Z1F1S9",
-        "model": "ST2000DM001-1ER1",
+        "serial": "S1C7NYAFA01159",
+        "model": "SAMSUNG SSD CM85",
         "sysfs_id": "/class/block/sda",
-        "sysfs_bus_id": "0:0:0:0",
-        "sysfs_device_link": "/devices/pci0000:00/0000:00:1f.2/ata1/host0/target0:0:0/0:0:0:0",
+        "sysfs_bus_id": "5:0:0:0",
+        "sysfs_device_link": "/devices/pci0000:00/0000:00:1f.2/ata6/host5/target5:0:0/5:0:0:0",
         "unix_device_names": [
-          "/dev/disk/by-id/ata-ST2000DM001-1ER164_Z4Z1F1S9",
-          "/dev/disk/by-id/wwn-0x5000c50079cbda35",
-          "/dev/disk/by-path/pci-0000:00:1f.2-ata-1",
-          "/dev/disk/by-path/pci-0000:00:1f.2-ata-1.0",
+          "/dev/disk/by-id/ata-SAMSUNG_SSD_CM851_mSATA_32GB_S1C7NYAFA01159",
+          "/dev/disk/by-id/wwn-0x5002538500000000",
+          "/dev/disk/by-path/pci-0000:00:1f.2-ata-6",
+          "/dev/disk/by-path/pci-0000:00:1f.2-ata-6.0",
           "/dev/sda"
         ],
         "resources": [
           {
             "type": "disk_geo",
-            "cylinders": 243201,
+            "cylinders": 3892,
             "heads": 255,
             "sectors": 63,
             "size": "0x0",
@@ -1274,7 +1273,7 @@
           {
             "type": "size",
             "unit": "sectors",
-            "value_1": 3907029168,
+            "value_1": 62533296,
             "value_2": 512
           }
         ],
@@ -1493,8 +1492,8 @@
           "value": 32903
         },
         "device": {
-          "hex": "8000",
-          "value": 32768
+          "hex": "8008",
+          "value": 32776
         },
         "revision": {
           "hex": "0000",
@@ -1502,7 +1501,7 @@
           "value": 0
         },
         "model": "Hub",
-        "sysfs_id": "/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1:1.0",
+        "sysfs_id": "/devices/pci0000:00/0000:00:1a.0/usb2/2-1/2-1:1.0",
         "sysfs_bus_id": "2-1:1.0",
         "resources": [
           {
@@ -1549,7 +1548,7 @@
         "driver_modules": [
           "usbcore"
         ],
-        "module_alias": "usb:v8087p8000d0005dc09dsc00dp01ic09isc00ip00in00"
+        "module_alias": "usb:v8087p8008d0005dc09dsc00dp01ic09isc00ip00in00"
       },
       {
         "index": 39,
@@ -1717,7 +1716,7 @@
       },
       {
         "index": 42,
-        "attached_to": 23,
+        "attached_to": 24,
         "class_list": [
           "usb",
           "hub"
@@ -1751,9 +1750,9 @@
           "name": "6.12",
           "value": 0
         },
-        "serial": "0000:00:1a.0",
+        "serial": "0000:00:1d.0",
         "model": "Linux 6.12.63 ehci_hcd EHCI Host Controller",
-        "sysfs_id": "/devices/pci0000:00/0000:00:1a.0/usb1/1-0:1.0",
+        "sysfs_id": "/devices/pci0000:00/0000:00:1d.0/usb1/1-0:1.0",
         "sysfs_bus_id": "1-0:1.0",
         "resources": [
           {
@@ -1828,8 +1827,8 @@
           "value": 32903
         },
         "device": {
-          "hex": "8008",
-          "value": 32776
+          "hex": "8000",
+          "value": 32768
         },
         "revision": {
           "hex": "0000",
@@ -1837,7 +1836,7 @@
           "value": 0
         },
         "model": "Hub",
-        "sysfs_id": "/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1:1.0",
+        "sysfs_id": "/devices/pci0000:00/0000:00:1d.0/usb1/1-1/1-1:1.0",
         "sysfs_bus_id": "1-1:1.0",
         "resources": [
           {
@@ -1884,11 +1883,11 @@
         "driver_modules": [
           "usbcore"
         ],
-        "module_alias": "usb:v8087p8008d0005dc09dsc00dp01ic09isc00ip00in00"
+        "module_alias": "usb:v8087p8000d0005dc09dsc00dp01ic09isc00ip00in00"
       },
       {
         "index": 44,
-        "attached_to": 24,
+        "attached_to": 23,
         "class_list": [
           "usb",
           "hub"
@@ -1922,9 +1921,9 @@
           "name": "6.12",
           "value": 0
         },
-        "serial": "0000:00:1d.0",
+        "serial": "0000:00:1a.0",
         "model": "Linux 6.12.63 ehci_hcd EHCI Host Controller",
-        "sysfs_id": "/devices/pci0000:00/0000:00:1d.0/usb2/2-0:1.0",
+        "sysfs_id": "/devices/pci0000:00/0000:00:1a.0/usb2/2-0:1.0",
         "sysfs_bus_id": "2-0:1.0",
         "resources": [
           {
@@ -2145,7 +2144,7 @@
         "resources": [
           {
             "type": "hwaddr",
-            "address": 99
+            "address": 100
           },
           {
             "type": "phwaddr",
@@ -2255,7 +2254,7 @@
     ],
     "network_interface": [
       {
-        "index": 46,
+        "index": 45,
         "attached_to": 26,
         "class_list": [
           "network_interface"
@@ -2279,7 +2278,7 @@
         "resources": [
           {
             "type": "hwaddr",
-            "address": 99
+            "address": 100
           },
           {
             "type": "phwaddr",
@@ -2296,7 +2295,7 @@
         ]
       },
       {
-        "index": 47,
+        "index": 48,
         "attached_to": 12,
         "class_list": [
           "network_interface"
@@ -2337,7 +2336,7 @@
         ]
       },
       {
-        "index": 51,
+        "index": 49,
         "attached_to": 0,
         "class_list": [
           "network_interface"
