@@ -29,7 +29,6 @@
                   type = "btrfs";
                   extraArgs = [ "-f" ];
                   subvolumes = {
-                    # Subvolume name is different from mountpoint
                     "/root" = {
                       mountpoint = "/";
                       mountOptions = [
@@ -38,7 +37,6 @@
                       ];
 
                     };
-                    # Subvolume name is the same as the mountpoint
                     "/home" = {
                       mountpoint = "/home";
                       mountOptions = [

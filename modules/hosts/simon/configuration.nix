@@ -1,14 +1,12 @@
 {
   flake.modules.nixos.simon =
-    nixosArgs@{
-      pkgs,
-      lib,
-      ...
-    }:
+    nixosArgs@{ lib, ... }:
     {
 
+      # These three are required
       networking.hostName = "simon";
       system.stateVersion = "24.11";
+      hardware.facter.reportPath = ./facter.json;
 
       boot = {
         loader.efi.canTouchEfiVariables = true;
