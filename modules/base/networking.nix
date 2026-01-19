@@ -1,6 +1,7 @@
 {
   flake.modules.nixos.base = {
     networking = {
+      useDHCP = true; # NOTE: disable manually for specific hosts
       networkmanager.dns = "systemd-resolved";
       nameservers = [
         "1.1.1.1#one.one.one.one"
