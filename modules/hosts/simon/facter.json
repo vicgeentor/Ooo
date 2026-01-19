@@ -2144,7 +2144,7 @@
         "resources": [
           {
             "type": "hwaddr",
-            "address": 100
+            "address": 54
           },
           {
             "type": "phwaddr",
@@ -2278,7 +2278,7 @@
         "resources": [
           {
             "type": "hwaddr",
-            "address": 100
+            "address": 54
           },
           {
             "type": "phwaddr",
