@@ -10,13 +10,14 @@
 
       base
 
+      acme
       arr-stack
-      caddy
       fwupd
       grafana
       graphics
       minecraft-server
       networkmanager
+      nginx
       nvidia
       prometheus
       ssh
