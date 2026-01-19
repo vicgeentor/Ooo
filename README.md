@@ -57,8 +57,6 @@ My Android phone.
 
 For all hosts:
 
-- Start using
-  [Nixos Facter](https://github.com/nix-community/nixos-facter)
 - Backup all important files with
   [restic](https://github.com/restic/restic),
   [rclone](https://github.com/rclone/rclone) and Google
@@ -67,6 +65,7 @@ For all hosts:
   - your_spotify
   - immich
   - dawarich
+  - minecraft server world
   - etc.
 
 For [jake](#jake):
@@ -88,7 +87,6 @@ For [simon](#simon):
 - Add a drive to for RAID1 redundancy
 - See where I can add
   [Redis](https://github.com/redis/redis) caching
-- Set up Jellyfin, Jellyseerr, Sonarr, Radarr, and VPN.
 
 For [bonnibel](#bonnibel):
 
