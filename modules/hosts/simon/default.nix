@@ -11,6 +11,7 @@
       base
 
       arr-stack
+      caddy
       fwupd
       grafana
       graphics
