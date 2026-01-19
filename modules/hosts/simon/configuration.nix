@@ -17,6 +17,7 @@
       };
 
       hardware = {
+        bluetooth.enable = false;
         nvidia = {
           open = lib.mkForce false;
           nvidiaPersistenced = true;
