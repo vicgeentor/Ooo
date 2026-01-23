@@ -7,8 +7,8 @@
       spotifySecretFile = nixosArgs.config.age.secrets.your-spotify.path;
       settings = {
         SPOTIFY_PUBLIC = "11ce6df3ad974ebdb6c4d3c41728475b";
-        API_ENDPOINT = "https://apispoti.vicgeentor.nl";
-        CLIENT_ENDPOINT = "https://spoti.vicgeentor.nl";
+        API_ENDPOINT = "https://apispoti.vicgeentor.nl"; # port 8080
+        CLIENT_ENDPOINT = "https://spoti.vicgeentor.nl"; # port 80
         PORT = 8080;
       };
       nginxVirtualHost = "localhost:80";
