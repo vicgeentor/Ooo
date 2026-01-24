@@ -138,5 +138,10 @@
           ];
         };
       };
+
+      # https://github.com/NixOS/nixpkgs/issues/98904#issuecomment-716656576
+      systemd.services.transmission.serviceConfig = {
+        BindReadOnlyPaths = "/run/systemd/resolve/stub-resolv.conf";
+      };
     };
 }

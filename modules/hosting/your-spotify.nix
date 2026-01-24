@@ -11,7 +11,7 @@
         CLIENT_ENDPOINT = "https://spoti.vicgeentor.nl"; # port 80
         PORT = 8080;
       };
-      nginxVirtualHost = "localhost:80";
+      # nginxVirtualHost = "localhost:80";
     };
   };
 }

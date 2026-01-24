@@ -11,10 +11,7 @@
             type = "gpt";
             partitions = {
               ESP = {
-                priority = 1;
-                name = "ESP";
-                start = "1M";
-                end = "128M";
+                size = "512M";
                 type = "EF00";
                 content = {
                   type = "filesystem";
@@ -57,6 +54,13 @@
                       swap = {
                         swapfile.size = "8G";
                       };
+                    };
+                  };
+
+                  mountpoint = "/partition-root";
+                  swap = {
+                    swapfile = {
+                      size = "8G";
                     };
                   };
                 };
