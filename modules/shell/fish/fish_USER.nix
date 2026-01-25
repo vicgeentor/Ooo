@@ -26,10 +26,14 @@
       programs = {
         tmux.shell = "${pkgs.fish}/bin/fish";
         ghostty.enableFishIntegration = true;
-        wezterm.enableFishIntegration = true;
         zoxide.enableFishIntegration = true;
         direnv.enableFishIntegration = true;
         nix-index.enableFishIntegration = false;
+      };
+
+      home.file = {
+        "~/.config/fish/functions/fish_prompt.fish".source =
+          hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/shell/fish/fish_prompt.fish";
       };
 
       programs.fish = {

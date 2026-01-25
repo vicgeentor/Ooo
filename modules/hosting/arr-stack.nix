@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   flake.modules.nixos.arr-stack =
-    nixosArgs@{ pkgs, ... }:
+    nixosArgs@{ pkgs, lib, ... }:
     {
       imports = [ inputs.nixarr.nixosModules.default ];
 
@@ -130,7 +130,7 @@
         # Fixes for NVIDIA hardware transcoding
         jellyfin = {
           serviceConfig = {
-            UMask = "0002"; # https://github.com/nix-media-server/nixarr/issues/130
+            UMask = lib.mkForce "0002"; # https://github.com/nix-media-server/nixarr/issues/130
             PrivateDevices = false;
             DeviceAllow = [
               "/dev/nvidia0 rwm"
