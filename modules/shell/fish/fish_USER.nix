@@ -20,8 +20,7 @@
     };
 
   flake.modules.homeManager.fish =
-    hmArgs:
-    { pkgs, ... }:
+    hmArgs@{ pkgs, ... }:
     {
       programs = {
         tmux.shell = "${pkgs.fish}/bin/fish";
@@ -32,7 +31,7 @@
       };
 
       home.file = {
-        "~/.config/fish/functions/fish_prompt.fish".source =
+        ".config/fish/functions/fish_prompt.fish".source =
           hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/shell/fish/fish_prompt.fish";
       };
 
@@ -58,6 +57,7 @@
           gc = "git commit";
           gs = "git status";
           gaa = "git add --all";
+          gp = "git push";
 
           # Tmux
           t = "tmux";
@@ -83,7 +83,7 @@
           reboot = "hyprshutdown -t 'Restarting...' --post-cmd 'reboot'";
           goto = "source";
           open = "xdg-open";
-          valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/fish_USER.nix";
+          valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/fish/fish_USER.nix";
           view = "qimgv";
           ev = "silent evince";
           thu = "silent thunar .";
