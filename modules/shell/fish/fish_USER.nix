@@ -45,6 +45,7 @@
           "ctrl-f" = {
             command = "tmux-sessionizer";
             repaint = true;
+            silent = true;
           };
           "ctrl-t" = {
             command = "tmux attach";
