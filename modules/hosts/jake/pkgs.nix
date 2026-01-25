@@ -9,6 +9,7 @@
         bash-language-server
         bitwarden-desktop
         brightnessctl
+        cowsay
         discord
         efibooteditor
         element-desktop
@@ -17,6 +18,7 @@
         eza # ls replacement
         fd # Finding files
         ffmpeg
+        (fortune.override { withOffensive = true; })
         ghostscript
         gimp3
         glib

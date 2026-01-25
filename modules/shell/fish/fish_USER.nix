@@ -4,9 +4,6 @@
     { pkgs, ... }:
     {
       programs.fish.enable = true;
-      users = {
-        defaultUserShell = pkgs.fish;
-      };
 
       programs.bash = {
         interactiveShellInit = ''
@@ -37,20 +34,30 @@
 
       programs.fish = {
         enable = true;
+        interactiveShellInit = ''
+          set fish_greeting # Disable greeting
+
+          function fish_greeting
+            # fortune | cowsay | sed 's/^/    /'
+          end
+        '';
         binds = {
           "ctrl-f".command = "tmux-sessionizer";
           "ctrl-t".command = "tmux attach";
           "●".command = "tmux-home";
         };
-        shellAbbrs = {
-          vim = "nvim";
-          vi = "vim";
-          svim = "sudo nvim";
-          gvim = "vim --listen ~/.cache/nvim/godot.pipe .";
-
-          # ls
+        shellAliases = {
+          cp = "cp -v";
+          mv = "mv -v";
           ls = "eza -lh --group-directories-first --icons=auto";
           ll = "ls -a";
+          R = "R --save --quiet";
+        };
+        shellAbbrs = {
+          vim = "nvim";
+          vi = "nvim";
+          svim = "sudo nvim";
+          gvim = "nvim --listen ~/.cache/nvim/godot.pipe .";
 
           # Git
           g = "git";
@@ -87,10 +94,7 @@
           view = "qimgv";
           ev = "silent evince";
           thu = "silent thunar .";
-          R = "R --save --quiet";
           pf = "fd --type f | fzf | xargs ${config.flake.meta.vic.editor}";
-          cp = "cp -v";
-          mv = "mv -v";
           godot = "godot4 --display-driver wayland";
           vpak = "${config.flake.meta.vic.editor} ~/Ooo/modules/hosts/jake/pkgs.nix";
           screenrec = "wl-screenrec --low-power off --audio";
