@@ -68,6 +68,7 @@
         enableReleaseChecks = false; # Remove warning message
         targets = {
           dunst.enable = false;
+          fish.enable = false;
           ghostty.enable = false;
           hyprland.enable = false;
           neovim.enable = false;
