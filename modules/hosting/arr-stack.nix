@@ -125,23 +125,31 @@
       ];
       environment.systemPackages = [ pkgs.jellyfin-ffmpeg ];
 
-      # Fixes for NVIDIA hardware transcoding
-      systemd.services.jellyfin = {
-        serviceConfig = {
-          PrivateDevices = false;
-          DeviceAllow = [
-            "/dev/nvidia0 rwm"
-            "/dev/nvidiactl rwm"
-            "/dev/nvidia-uvm rwm"
-            "/dev/nvidia-uvm-tools rwm"
-            "/dev/dri rwm"
-          ];
+      # systemd service fixes
+      systemd.services = {
+        # Fixes for NVIDIA hardware transcoding
+        jellyfin = {
+          serviceConfig = {
+            UMask = "0002"; # https://github.com/nix-media-server/nixarr/issues/130
+            PrivateDevices = false;
+            DeviceAllow = [
+              "/dev/nvidia0 rwm"
+              "/dev/nvidiactl rwm"
+              "/dev/nvidia-uvm rwm"
+              "/dev/nvidia-uvm-tools rwm"
+              "/dev/dri rwm"
+            ];
+          };
         };
-      };
 
-      # https://github.com/NixOS/nixpkgs/issues/98904#issuecomment-716656576
-      systemd.services.transmission.serviceConfig = {
-        BindReadOnlyPaths = "/run/systemd/resolve/stub-resolv.conf";
+        # https://github.com/NixOS/nixpkgs/issues/98904#issuecomment-716656576
+        transmission.serviceConfig.BindReadOnlyPaths = "/run/systemd/resolve/stub-resolv.conf";
+
+        # https://github.com/nix-media-server/nixarr/issues/130
+        bazarr.serviceConfig.UMask = "0002";
+        lidarr.serviceConfig.UMask = "0002";
+        radarr.serviceConfig.UMask = "0002";
+        sonarr.serviceConfig.UMask = "0002";
       };
     };
 }
