@@ -15,6 +15,7 @@
         targets = {
           chromium.enable = false;
           console.enable = false;
+          fish.enable = false;
           plymouth.enable = false;
         };
         polarity = "dark";

@@ -42,9 +42,20 @@
           end
         '';
         binds = {
-          "ctrl-f".command = "tmux-sessionizer";
-          "ctrl-t".command = "tmux attach";
-          "●".command = "tmux-home";
+          "ctrl-f" = {
+            command = "tmux-sessionizer";
+            repaint = true;
+          };
+          "ctrl-t" = {
+            command = "tmux attach";
+            repaint = true;
+            silent = true;
+          };
+          "●" = {
+            command = "tmux-home";
+            repaint = true;
+            silent = true;
+          };
         };
         shellAliases = {
           cp = "cp -v";
