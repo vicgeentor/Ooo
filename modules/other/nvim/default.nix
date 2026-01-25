@@ -6,6 +6,11 @@
       environment.systemPackages = [
         inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
+
+      environment.sessionVariables = {
+        EDITOR = "nvim";
+        VISUAL = "nvim";
+      };
     };
 
   flake.modules.homeManager.nvim =

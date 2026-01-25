@@ -4,7 +4,6 @@
     {
       programs.tmux = {
         enable = true;
-        shell = "${pkgs.zsh}/bin/zsh";
         shortcut = "b";
         baseIndex = 1;
         mouse = true;

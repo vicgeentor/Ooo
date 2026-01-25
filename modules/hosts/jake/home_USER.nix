@@ -10,6 +10,7 @@
         direnv
         dunst
         fastfetch
+        fish
         fzf
         ghostty
         hypr
@@ -23,7 +24,6 @@
         thunar
         tmux
         zoxide
-        zsh
       ];
     };
   };

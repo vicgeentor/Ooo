@@ -16,6 +16,7 @@
       btrfs
       docker
       ente-auth
+      fish
       fonts
       formatting
       fwupd
@@ -48,7 +49,7 @@
       virtualisation
       vpn
       xdgportal
-      zsh
+      zen-browser
     ];
   };
 }

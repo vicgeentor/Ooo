@@ -50,7 +50,6 @@
         wget
         yt-dlp
         zapzap # Whatsapp
-        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.twilight
         zip
         zotero-beta
       ];

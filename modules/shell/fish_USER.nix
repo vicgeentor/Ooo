@@ -1,70 +1,45 @@
 { config, ... }:
 {
-  flake.modules.nixos.zsh =
+  flake.modules.nixos.fish =
     { pkgs, ... }:
     {
-      programs.zsh.enable = true;
-      environment.pathsToLink = [ "/share/zsh" ];
-
+      programs.fish.enable = true;
       users = {
-        defaultUserShell = pkgs.zsh;
+        defaultUserShell = pkgs.fish;
+      };
+
+      programs.bash = {
+        interactiveShellInit = ''
+          if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+          then
+            shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+            exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+          fi
+        '';
       };
     };
 
-  flake.modules.homeManager.zsh =
+  flake.modules.homeManager.fish =
     hmArgs:
     { pkgs, ... }:
     {
       programs = {
-        tmux.shell = "${pkgs.zsh}/bin/zsh";
-        ghostty.enableZshIntegration = true;
-        wezterm.enableZshIntegration = true;
-        zoxide.enableZshIntegration = true;
-        direnv.enableZshIntegration = true;
-        nix-index.enableZshIntegration = false;
+        tmux.shell = "${pkgs.fish}/bin/fish";
+        ghostty.enableFishIntegration = true;
+        wezterm.enableFishIntegration = true;
+        zoxide.enableFishIntegration = true;
+        direnv.enableFishIntegration = true;
+        nix-index.enableFishIntegration = false;
       };
 
-      programs.zsh = {
+      programs.fish = {
         enable = true;
-        enableCompletion = true;
-        autocd = true;
-        dotDir = "${hmArgs.config.home.homeDirectory}/.config/zsh";
-        initContent = ''
-          # Keybindings
-          bindkey -s ^f "tmux-sessionizer\n"
-          bindkey -s ^t "tmux attach\n"
-          bindkey -s ● "tmux-home\n"
-
-          # Fixes slow git autocompletion
-          __git_files () {
-            _wanted files expl 'local files' _files
-          }
-
-          # Keep history of `cd` as in with `pushd` and make `cd -<TAB>` work.
-          setopt auto_pushd
-          setopt pushd_ignore_dups
-          setopt pushd_minus
-
-          # Nobody need flow control anymore.
-          setopt noflowcontrol
-
-          cd . # tmux-sessionizer fix that fixes the current dir not showing in the prompt
-        '';
-        oh-my-zsh = {
-          enable = true;
-          plugins = [
-            "git"
-            "sudo"
-            "direnv"
-          ];
-          theme = "robbyrussell";
+        binds = {
+          "ctrl-f".command = "tmux-sessionizer";
+          "ctrl-t".command = "tmux attach";
+          "●".command = "tmux-home";
         };
-        sessionVariables = {
-          DIRSTACKSIZE = 16;
-          HYPHEN_INSENSITIVE = "true";
-        };
-        shellAliases = {
-          # Vim
+        shellAbbrs = {
           vim = "nvim";
           vi = "vim";
           svim = "sudo nvim";
@@ -104,7 +79,7 @@
           reboot = "hyprshutdown -t 'Restarting...' --post-cmd 'reboot'";
           goto = "source";
           open = "xdg-open";
-          valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/zsh_USER.nix";
+          valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/fish_USER.nix";
           view = "qimgv";
           ev = "silent evince";
           thu = "silent thunar .";

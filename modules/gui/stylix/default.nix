@@ -18,7 +18,6 @@
           plymouth.enable = false;
         };
         polarity = "dark";
-        # CHANGE THIS FOR DEFAULT WALLPAPER, ALONG WITH $HOME/Ooo/modules/hypr/hyprpaper.conf
         image = ./cats.jpg;
         base16Scheme = customSchemeFile;
         fonts = {

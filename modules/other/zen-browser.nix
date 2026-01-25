@@ -1,0 +1,11 @@
+{ inputs, ... }:
+{
+  flake.modules.nixos.zen-browser =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = [
+        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.twilight
+      ];
+      environment.sessionVariables.BROWSER = "zen";
+    };
+}

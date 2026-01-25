@@ -55,6 +55,14 @@
         trusted-substituters = [ "https://hyprland.cachix.org" ];
         trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
       };
+
+      programs.bash = {
+        loginShellInit = ''
+          if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]; then
+            exec start-hyprland
+          fi
+        '';
+      };
     };
 
   flake.modules.homeManager.hypr = hmArgs: {
