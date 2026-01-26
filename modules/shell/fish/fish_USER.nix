@@ -57,6 +57,14 @@
             repaint = true;
             silent = true;
           };
+          "ctrl-y" = {
+            command = "accept-autosuggestion";
+            operate = "preset";
+          };
+          "alt-s" = {
+            erase = true;
+            operate = "preset";
+          };
         };
         shellAliases = {
           cp = "cp -v";
