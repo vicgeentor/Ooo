@@ -17,6 +17,7 @@
         stalled-download-timeout = 10000;
         max-jobs = 6;
         warn-dirty = false;
+        builders-use-substitutes = true;
         substituters = [
           "https://nix-community.cachix.org"
         ];
