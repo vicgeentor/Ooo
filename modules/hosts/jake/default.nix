@@ -46,7 +46,6 @@
       systemdboot
       tailscale
       thunar
-      virtualisation
       vpn
       xdgportal
       zen-browser
