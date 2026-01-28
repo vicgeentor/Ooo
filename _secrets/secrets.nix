@@ -39,6 +39,11 @@ in
     simon-system
   ];
 
+  "ocis.age".publicKeys = [
+    jake-vic
+    gunter-system
+  ];
+
   "pangolin.age".publicKeys = [
     jake-vic
     bonnibel-system
