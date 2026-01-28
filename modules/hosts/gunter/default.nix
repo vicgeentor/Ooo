@@ -11,6 +11,7 @@
       base
 
       btrfs
+      collabora
       fwupd
       minecraft-server-two
       ssd
