@@ -1,6 +1,6 @@
 {
   flake.modules.nixos.owncloud = {
-    services.owncloud = {
+    services.ocis = {
       enable = true;
     };
   };
