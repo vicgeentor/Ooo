@@ -56,6 +56,7 @@ in
 
   "rclone-gdrive-conf.age".publicKeys = [
     jake-vic
+    jake-system
   ];
 
   "smtp-sasl-password-maps.age".publicKeys = [
