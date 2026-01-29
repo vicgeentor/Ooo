@@ -54,6 +54,10 @@ in
     simon-system
   ];
 
+  "rclone-gdrive-conf.age".publicKeys = [
+    jake-vic
+  ];
+
   "smtp-sasl-password-maps.age".publicKeys = [
     jake-vic
     bonnibel-system
