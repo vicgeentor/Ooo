@@ -38,6 +38,7 @@
       nvidia-hybrid
       nvim
       python
+      rclone
       sound
       ssd
       ssh
