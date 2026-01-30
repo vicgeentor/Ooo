@@ -92,6 +92,7 @@
 
           # Syncing
           odsync = "onedrive --sync";
+          gdsync = "rclone bisync gdrive:/ /home/vic/drive/my-drive";
 
           # NixOS
           update = "nix flake update --flake ~/Ooo";
