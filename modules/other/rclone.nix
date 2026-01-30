@@ -4,11 +4,11 @@
 # `rclone config` using the secrets inside ../../_secrets/rclone-gdrive-conf.age
 #
 # Syncing:
-# First run: `rclone bisync gdrive:/ /home/vic/drive/my-drive --resync`
-# Every other run (without --resync): `rclone bisync gdrive:/ /home/vic/drive/my-drive`
+# First run: `rclone bisync gdrive:/ /home/vic/drive/my-drive --resync --verbose`
+# Every other run (without --resync): `rclone bisync gdrive:/ /home/vic/drive/my-drive --verbose`
 #
 # Deduplication:
-# `rclone dedup gdrive:/`
+# `rclone dedup gdrive:/ --verbose`
 {
   flake.modules.nixos.rclone =
     { pkgs, ... }:
