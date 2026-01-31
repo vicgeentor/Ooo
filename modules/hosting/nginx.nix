@@ -32,15 +32,6 @@
             proxyWebsockets = true;
           };
         };
-        "lidarr.victb.nl" = {
-          forceSSL = true;
-          useACMEHost = "victb.nl";
-
-          locations."/" = {
-            proxyPass = "http://localhost:4446";
-            proxyWebsockets = true;
-          };
-        };
         "prowlarr.victb.nl" = {
           forceSSL = true;
           useACMEHost = "victb.nl";

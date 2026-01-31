@@ -45,11 +45,6 @@
           port = 4445;
         };
 
-        lidarr = {
-          enable = true;
-          port = 4446;
-        };
-
         prowlarr = {
           enable = true;
           port = 4447;
@@ -147,7 +142,6 @@
 
         # https://github.com/nix-media-server/nixarr/issues/130
         bazarr.serviceConfig.UMask = "0002";
-        lidarr.serviceConfig.UMask = "0002";
         radarr.serviceConfig.UMask = "0002";
         sonarr.serviceConfig.UMask = "0002";
       };
