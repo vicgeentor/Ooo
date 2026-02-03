@@ -7,7 +7,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-pangolin-stack.url = "github:NixOS/nixpkgs/fb7944c166a3b630f177938e478f0378e64ce108";
-    nixpkgs-tdarr.url = "github:NixOS/Mistyttm/nixpkgs?ref=add-tdarr";
+    nixpkgs-tdarr.url = "github:Mistyttm/nixpkgs/add-tdarr";
 
     agenix = {
       url = "github:ryantm/agenix";
