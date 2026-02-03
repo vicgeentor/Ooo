@@ -10,6 +10,8 @@
 
       base
 
+      tdarr-test # REMOVE: when merged
+
       acer-wmi
       bluetooth
       boot-screen-animation
