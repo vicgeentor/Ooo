@@ -1,11 +1,10 @@
 # Setup:
-# `mkdir -p ~/drive/my-drive`
-# `mkdir -p ~/drive/shared-with-me with`
+# `mkdir -p ~/personal`
 # `rclone config` using the secrets inside ../../_secrets/rclone-gdrive-conf.age
 #
 # Syncing:
-# First run: `rclone bisync gdrive:/ /home/vic/drive/my-drive --resync --verbose`
-# Every other run (without --resync): `rclone bisync gdrive:/ /home/vic/drive/my-drive --verbose`
+# First run: `rclone bisync gdrive:/ /home/vic/personal --verbose --resync`
+# Every other run (without --resync): `rclone bisync gdrive:/ /home/vic/personal --verbose`
 #
 # Deduplication:
 # `rclone dedup gdrive:/ --verbose`

@@ -1296,11 +1296,11 @@
     },
     "nixpkgs-tdarr": {
       "locked": {
-        "lastModified": 1770089452,
-        "narHash": "sha256-9blhVPdLU5yiuhWglADdzOf+2krBUbbxeUe8M2BuZik=",
+        "lastModified": 1770209022,
+        "narHash": "sha256-nSH7k1zoYa8Mztcnanpkp1czDrrJEbcMqq/wscLamno=",
         "owner": "Mistyttm",
         "repo": "nixpkgs",
-        "rev": "562ac11ce794410c1649f404b504098af3756f6d",
+        "rev": "aed93dc29612a8f73e2021f5d4ae34c2e0fb4d44",
         "type": "github"
       },
       "original": {

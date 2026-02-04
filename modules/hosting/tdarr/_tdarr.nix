@@ -39,7 +39,6 @@ let
       healthcheckgpuWorkers = nodeCfg.workers.healthcheckGPU;
       healthcheckcpuWorkers = nodeCfg.workers.healthcheckCPU;
     }
-    // cfg.extraNodeConfig
     // nodeCfg.extraConfig;
 
   serverDataDir = "${cfg.dataDir}/server";
@@ -289,12 +288,6 @@ in
       );
     };
 
-    extraNodeConfig = mkOption {
-      type = types.attrs;
-      default = { };
-      description = "Extra configuration options for Tdarr nodes (applied to all nodes)";
-    };
-
     user = mkOption {
       type = types.str;
       default = "tdarr";
@@ -369,7 +362,6 @@ in
                     allowUnmappedNodes = cfg.server.allowUnmappedNodes;
                     cronPluginUpdate = cfg.server.cronPluginUpdate;
                   }
-                  // cfg.extraServerConfig
                   // cfg.server.extraConfig
                 )
               )
@@ -414,6 +406,6 @@ in
 
   meta = {
     maintainers = with maintainers; [ mistyttm ];
-    doc = ./tdarr.md;
+    # doc = ./tdarr.md;
   };
 }

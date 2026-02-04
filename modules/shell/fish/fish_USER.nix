@@ -92,7 +92,7 @@
 
           # Syncing
           odsync = "onedrive --sync";
-          gdsync = "rclone bisync gdrive:/ /home/vic/drive/my-drive --verbose";
+          gdsync = "rclone bisync gdrive:/ ${hmArgs.config.home.homeDirectory}/personal --verbose";
 
           # NixOS
           update = "nix flake update --flake ~/Ooo";

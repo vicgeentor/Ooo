@@ -16,7 +16,6 @@
         hypr
         mpv
         nvim
-        onedrive
         quickshell
         rofi
         scripts

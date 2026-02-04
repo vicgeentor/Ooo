@@ -14,7 +14,7 @@
         ];
       };
 
-      environment.sessionVariables.FILE_PICKER = "zen";
+      environment.sessionVariables.FILE_PICKER = "thunar";
     };
   flake.modules.homeManager.thunar = hmArgs: {
     home.file = {
