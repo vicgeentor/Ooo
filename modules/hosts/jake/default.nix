@@ -10,7 +10,7 @@
 
       base
 
-      tdarr-test # REMOVE: when merged
+      # tdarr-test # REMOVE: when merged
 
       acer-wmi
       bluetooth
