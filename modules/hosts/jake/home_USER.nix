@@ -13,10 +13,10 @@
         fish
         fzf
         ghostty
-        hypr
+        # hypr
         mpv
         nvim
-        quickshell
+        # quickshell
         rofi
         scripts
         stylix

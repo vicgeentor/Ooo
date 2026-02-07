@@ -16,6 +16,7 @@
       bluetooth
       boot-screen-animation
       btrfs
+      dms-shell
       docker
       ente-auth
       fish
@@ -23,7 +24,7 @@
       formatting
       fwupd
       graphics
-      hypr
+      # hypr
       intel
       javascript
       jellyfin-client
@@ -35,6 +36,7 @@
       minecraft
       networkmanager
       nh
+      niri
       nix-ld
       nvidia
       nvidia-hybrid
