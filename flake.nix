@@ -8,6 +8,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-pangolin-stack.url = "github:NixOS/nixpkgs/fb7944c166a3b630f177938e478f0378e64ce108";
     nixpkgs-tdarr.url = "github:Mistyttm/nixpkgs/add-tdarr";
+    nixpkgs-master.url = "github:NixOS/nixpkgs/11af6acba5af17ed671e48b2d7ce34e5ef369deb";
 
     agenix = {
       url = "github:ryantm/agenix";
@@ -41,7 +42,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     nixarr = {
-      url = "github:rasmus-kirk/nixarr";
+      url = "github:vicgeentor/nixarr/fix-package-option";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

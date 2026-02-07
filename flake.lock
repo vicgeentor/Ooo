@@ -1221,15 +1221,16 @@
         "website-builder": "website-builder"
       },
       "locked": {
-        "lastModified": 1765731404,
-        "narHash": "sha256-eIEh60iK0L4X7UHj7dOZWZEkmWRA1H7ovjVJsfrPavQ=",
-        "owner": "rasmus-kirk",
+        "lastModified": 1770497424,
+        "narHash": "sha256-RTyyeuvK84WqFah0qUoyq28o2oM7yBfkFIHjFu5h0hc=",
+        "owner": "vicgeentor",
         "repo": "nixarr",
-        "rev": "204da9209ad4e921c3562a6bca5ac8ad5b6ed9bc",
+        "rev": "c95a949b1262f99206d1a131ee980d3782e54412",
         "type": "github"
       },
       "original": {
-        "owner": "rasmus-kirk",
+        "owner": "vicgeentor",
+        "ref": "fix-package-option",
         "repo": "nixarr",
         "type": "github"
       }
@@ -1259,6 +1260,22 @@
       "original": {
         "owner": "nix-community",
         "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs-master": {
+      "locked": {
+        "lastModified": 1770496243,
+        "narHash": "sha256-80N96icg1MLnnWC19R9/IOWo0b4NE1O4ba4AUu6VNv4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "11af6acba5af17ed671e48b2d7ce34e5ef369deb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "11af6acba5af17ed671e48b2d7ce34e5ef369deb",
         "type": "github"
       }
     },
@@ -1454,6 +1471,7 @@
         "nix-minecraft": "nix-minecraft",
         "nixarr": "nixarr",
         "nixpkgs": "nixpkgs_5",
+        "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-pangolin-stack": "nixpkgs-pangolin-stack",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-tdarr": "nixpkgs-tdarr",
