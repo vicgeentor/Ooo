@@ -9,6 +9,13 @@
         fi
       '';
     };
-
   };
+
+  flake.modules.homeManager.niri = hmArgs: {
+    home.file = {
+      ".config/niri".source =
+        hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/gui/niri/config.kdl";
+    };
+  };
+
 }

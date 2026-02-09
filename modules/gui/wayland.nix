@@ -6,6 +6,7 @@
         wl-clipboard
         wl-screenrec
         xorg.xeyes # Run `xeyes` to show xwayland windows
+        xwayland-satellite
       ];
     };
 }

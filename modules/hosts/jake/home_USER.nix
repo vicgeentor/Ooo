@@ -15,6 +15,7 @@
         ghostty
         # hypr
         mpv
+        niri
         nvim
         # quickshell
         rofi
