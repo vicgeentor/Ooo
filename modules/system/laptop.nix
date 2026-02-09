@@ -9,7 +9,8 @@
 
       environment.systemPackages = [ pkgs.auto-cpufreq ];
       services.auto-cpufreq = {
-        enable = true;
+        # enable = true; # WARNING: check if this is compatible with dms-shell
+        enable = false;
         settings = {
           battery = {
             governor = "powersave";

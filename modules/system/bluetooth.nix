@@ -3,6 +3,8 @@
     hardware = {
       bluetooth.enable = true;
     };
-    services.blueman.enable = true;
+
+    # Not needed anymore with dms-shell
+    # services.blueman.enable = true;
   };
 }

@@ -52,6 +52,7 @@
       tailscale
       thunar
       vpn
+      wayland
       xdgportal
       zen-browser
     ];

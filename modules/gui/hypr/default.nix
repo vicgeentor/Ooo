@@ -19,10 +19,7 @@
         hyprpolkitagent
         hyprprop # xprop for Hyprland
         inputs.hyprshutdown.packages.${pkgs.stdenv.hostPlatform.system}.default
-        wl-clipboard # Clipboard manager
         wl-gammarelay-rs # blue light filter
-        wl-screenrec
-        xorg.xeyes # Run `xeyes` to show xwayland windows
       ];
 
       systemd = {
