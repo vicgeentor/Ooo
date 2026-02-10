@@ -110,7 +110,7 @@ binds {
 
     Mod+Return hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty" "+new-window"; }
     Mod+B hotkey-overlay-title="Open Browser: zen" { spawn "zen"; }
-    Mod+P hotkey-overlay-title="Run Application: rofi" { spawn "rofi" "-show" "drun" "-show-icons"; }
+    Mod+P hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
 
     Mod+G { spawn "google"; }
