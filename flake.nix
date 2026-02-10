@@ -21,6 +21,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     ghostty.url = "github:ghostty-org/ghostty";
@@ -40,6 +45,11 @@
     import-tree.url = "github:vic/import-tree";
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixarr = {
       url = "github:vicgeentor/nixarr/fix-package-option";

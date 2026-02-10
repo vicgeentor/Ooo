@@ -30,7 +30,6 @@
         inkscape
         jq
         mermaid-cli
-        networkmanagerapplet
         nixd # Nix lsp
         inputs.nix-devshells.packages.${pkgs.stdenv.hostPlatform.system}.default
         obs-studio

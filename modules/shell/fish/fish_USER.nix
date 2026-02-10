@@ -108,8 +108,8 @@
           virshoff = "sudo virsh net-destroy --network default";
 
           # Nice ones
-          off = "hyprshutdown -t 'Shutting down...' --post-cmd 'poweroff' || systemctl poweroff";
-          reboot = "hyprshutdown -t 'Restarting...' --post-cmd 'reboot' || systemctl reboot";
+          off = "systemctl poweroff";
+          reboot = "systemctl reboot";
           goto = "source";
           open = "xdg-open";
           valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/fish/fish_USER.nix";

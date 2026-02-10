@@ -13,8 +13,6 @@
           thunar-volman
         ];
       };
-
-      environment.sessionVariables.FILE_PICKER = "thunar";
     };
   flake.modules.homeManager.thunar = hmArgs: {
     home.file = {

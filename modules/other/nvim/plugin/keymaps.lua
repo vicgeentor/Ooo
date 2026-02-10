@@ -17,7 +17,7 @@ set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnos
 set(
 	"n",
 	"<leader>th",
-	"<CMD>silent !$FILE_PICKER .<CR>",
+	"<CMD>silent !thunar .<CR>",
 	{ desc = "Open file [e][x]plorer in working directory", silent = true }
 )
 

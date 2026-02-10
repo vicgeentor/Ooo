@@ -5,12 +5,14 @@
       powerManagement.enable = true;
       services.thermald.enable = true;
 
+      services.upower.enable = true;
+      services.power-profiles-daemon.enable = true;
+
       hardware.nvidia.powerManagement.enable = true;
 
       environment.systemPackages = [ pkgs.auto-cpufreq ];
       services.auto-cpufreq = {
-        # enable = true; # WARNING: check if this is compatible with dms-shell
-        enable = false;
+        enable = false; # TODO: check if this is compatible with dms-shell
         settings = {
           battery = {
             governor = "powersave";
@@ -25,6 +27,7 @@
 
       # batterylife check and notification
       systemd.user.timers."batterylife-check" = {
+        enable = false; # not needed anymore with dms-shell
         wantedBy = [ "timers.target" ];
         timerConfig = {
           OnBootSec = "5m";
