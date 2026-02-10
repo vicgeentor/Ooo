@@ -8,16 +8,15 @@
         alacritty
         desktop-applications
         direnv
+        dms-shell
         dunst
         fastfetch
         fish
         fzf
         ghostty
-        # hypr
         mpv
         niri
         nvim
-        # quickshell
         rofi
         scripts
         stylix

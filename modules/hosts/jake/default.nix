@@ -24,7 +24,6 @@
       formatting
       fwupd
       graphics
-      # hypr
       intel
       javascript
       jellyfin-client
