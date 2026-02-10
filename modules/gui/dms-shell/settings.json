@@ -105,15 +105,15 @@
       "width": 50
     }
   ],
-  "showWorkspaceIndex": true,
-  "showWorkspaceName": true,
+  "showWorkspaceIndex": false,
+  "showWorkspaceName": false,
   "showWorkspacePadding": false,
   "workspaceScrolling": false,
   "showWorkspaceApps": false,
   "maxWorkspaceIcons": 3,
   "groupWorkspaceApps": true,
   "workspaceFollowFocus": false,
-  "showOccupiedWorkspacesOnly": true,
+  "showOccupiedWorkspacesOnly": false,
   "reverseScrolling": false,
   "dwlShowAllTags": false,
   "workspaceColorMode": "default",
@@ -147,7 +147,7 @@
   "useAutoLocation": false,
   "weatherEnabled": false,
   "networkPreference": "wifi",
-  "vpnLastConnected": "",
+  "vpnLastConnected": "057d0b1c-fbcc-48bd-853d-7188bcba58cb",
   "iconTheme": "System Default",
   "cursorSettings": {
     "theme": "System Default",
@@ -207,7 +207,11 @@
   "launchPrefix": "",
   "brightnessDevicePins": {},
   "wifiNetworkPins": {},
-  "bluetoothDevicePins": {},
+  "bluetoothDevicePins": {
+    "preferredDevice": [
+      "14:3F:A6:46:F5:4C"
+    ]
+  },
   "audioInputDevicePins": {},
   "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
@@ -339,6 +343,10 @@
         },
         {
           "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "vpn",
           "enabled": true
         },
         {
