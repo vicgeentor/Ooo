@@ -11,7 +11,7 @@
 
       environment.systemPackages = [ pkgs.auto-cpufreq ];
       services.auto-cpufreq = {
-        enable = false; # TODO: check if this is compatible with dms-shell
+        enable = false; # TODO: check if this is compatible with dank
         settings = {
           battery = {
             governor = "powersave";
@@ -24,7 +24,7 @@
         };
       };
 
-      # not needed anymore with dms-shell
+      # not needed anymore with dank
       #   # batterylife check and notification
       #   systemd.user.timers."batterylife-check" = {
       #     enable = false;

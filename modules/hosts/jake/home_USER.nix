@@ -8,7 +8,7 @@
         alacritty
         desktop-applications
         direnv
-        dms-shell
+        dank
         dunst
         fastfetch
         fish

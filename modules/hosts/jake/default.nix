@@ -16,7 +16,7 @@
       bluetooth
       boot-screen-animation
       btrfs
-      dms-shell
+      dank
       docker
       ente-auth
       fish
