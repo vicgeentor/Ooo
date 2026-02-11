@@ -4,6 +4,7 @@
       bluetooth.enable = true;
     };
 
-    services.blueman.enable = true;
+    # Not needed anymore with dank
+    # services.blueman.enable = true;
   };
 }
