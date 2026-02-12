@@ -399,7 +399,7 @@
       "borderColor": "surfaceText",
       "borderOpacity": 1,
       "borderThickness": 1,
-      "widgetOutlineEnabled": true,
+      "widgetOutlineEnabled": false,
       "widgetOutlineColor": "surfaceText",
       "widgetOutlineOpacity": 0.1,
       "widgetOutlineThickness": 1,
