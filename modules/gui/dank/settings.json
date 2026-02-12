@@ -206,7 +206,11 @@
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
   "brightnessDevicePins": {},
-  "wifiNetworkPins": {},
+  "wifiNetworkPins": {
+    "preferredWifi": [
+      "civverig"
+    ]
+  },
   "bluetoothDevicePins": {
     "preferredDevice": [
       "14:3F:A6:46:F5:4C"
@@ -333,7 +337,11 @@
       ],
       "centerWidgets": [
         "music",
-        "clock",
+        {
+          "id": "clock",
+          "enabled": true,
+          "clockCompactMode": false
+        },
         "weather"
       ],
       "rightWidgets": [
