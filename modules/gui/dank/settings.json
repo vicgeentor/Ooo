@@ -335,6 +335,11 @@
         {
           "id": "workspaceSwitcher",
           "enabled": true
+        },
+        {
+          "id": "music",
+          "enabled": true,
+          "mediaSize": 0
         }
       ],
       "centerWidgets": [

@@ -6,6 +6,7 @@
     programs.dank-material-shell = {
       enable = true;
       systemd.enable = true;
+      enableAudioWavelength = false;
       enableCalendarEvents = false;
       enableDynamicTheming = false;
     };
