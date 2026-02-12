@@ -234,4 +234,13 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 }
 
-// workspace "comms"
+workspace "one"
+workspace "two"
+workspace "three"
+workspace "four"
+workspace "five"
+workspace "six"
+workspace "seven"
+workspace "eight"
+workspace "nine"
+workspace "ten"
