@@ -10,6 +10,7 @@
       enableCalendarEvents = false;
       enableDynamicTheming = false;
     };
+
   };
   flake.modules.homeManager.dank = hmArgs: {
     home.file = {
