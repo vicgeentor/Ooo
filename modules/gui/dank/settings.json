@@ -28,7 +28,7 @@
   "customAnimationDuration": 500,
   "wallpaperFillMode": "Fill",
   "blurredWallpaperLayer": false,
-  "blurWallpaperOnOverview": false,
+  "blurWallpaperOnOverview": true,
   "showLauncherButton": true,
   "showWorkspaceSwitcher": true,
   "showFocusedWindow": true,
@@ -358,15 +358,11 @@
           "enabled": true
         },
         {
-          "id": "vpn",
+          "id": "idleInhibitor",
           "enabled": true
         },
         {
           "id": "notificationButton",
-          "enabled": true
-        },
-        {
-          "id": "clipboard",
           "enabled": true
         },
         {
@@ -382,7 +378,7 @@
           "id": "controlCenterButton",
           "enabled": true,
           "showAudioPercent": false,
-          "showVpnIcon": false,
+          "showVpnIcon": true,
           "showBrightnessIcon": false,
           "showBrightnessPercent": false,
           "showMicIcon": false,

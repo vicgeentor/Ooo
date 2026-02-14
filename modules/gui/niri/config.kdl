@@ -7,7 +7,11 @@ spawn-sh-at-startup "thunar --daemon"
 spawn-sh-at-startup "systemctl --user enable --now app-com.mitchellh.ghostty.service"
 
 environment {
+  XDG_CURRENT_DESKTOP "niri"
+  QT_QPA_PLATFORM "wayland"
   ELECTRON_OZONE_PLATFORM_HINT "auto"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
 }
 
 input {
@@ -50,6 +54,8 @@ output "eDP-1" {
 
 layout {
     gaps 8
+
+    background-color "transparent"
 
     center-focused-column "never"
 
@@ -110,6 +116,13 @@ binds {
     Mod+B hotkey-overlay-title="Open Browser: zen" { spawn "zen"; }
     Mod+P hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
+
+    Mod+Alt+L { spawn "dms" "ipc" "call" "lock" "lock"; }
+    Alt+End { spawn "dms" "ipc" "call" "night" "toggle"; }
+    Mod+grave { spawn "dms" "ipc" "call" "notepad" "toggle"; }
+    Mod+T { spawn "dms" "ipc" "call" "processlist" "toggle"; }
+
+    // Mod+KP_6 { spawn "dms" "ipc" "call" "night" "temperature" "2500"; }
 
     Mod+G { spawn "google"; }
 
@@ -216,8 +229,6 @@ binds {
     Mod+Space       { toggle-window-floating; }
     Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
 
-    Mod+T { toggle-column-tabbed-display; }
-
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
@@ -230,6 +241,30 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Ctrl+Alt+Delete { quit; }
+}
+
+// Recommended rules by DankMaterialShell
+layer-rule {
+    match namespace="^quickshell$"
+    place-within-backdrop true
+}
+window-rule {
+    match app-id=r#"^org\.gnome\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id="Alacritty"
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="kitty"
+    draw-border-with-background false
+}
+window-rule {
+    match app-id=r#"org.quickshell$"#
+    open-floating true
 }
 
 workspace "one"
