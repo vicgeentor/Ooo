@@ -118,11 +118,17 @@ binds {
     Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
 
     Mod+Alt+L { spawn "dms" "ipc" "call" "lock" "lock"; }
-    Alt+End { spawn "dms" "ipc" "call" "night" "toggle"; }
     Mod+grave { spawn "dms" "ipc" "call" "notepad" "toggle"; }
     Mod+T { spawn "dms" "ipc" "call" "processlist" "toggle"; }
 
-    // Mod+KP_6 { spawn "dms" "ipc" "call" "night" "temperature" "2500"; }
+    // Numpad binds
+    Mod+KP_Delete { spawn "dms" "ipc" "call" "night" "toggle"; } // .
+    Mod+KP_End { spawn "dms" "ipc" "call" "night" "temperature" "6000"; } // 1
+    Mod+KP_Down { spawn "dms" "ipc" "call" "night" "temperature" "5000"; } // 2
+    Mod+KP_Next { spawn "dms" "ipc" "call" "night" "temperature" "4000"; } // 3
+    Mod+KP_Left { spawn "dms" "ipc" "call" "night" "temperature" "3500"; } // 4
+    Mod+KP_Begin { spawn "dms" "ipc" "call" "night" "temperature" "3000"; } // 5
+    Mod+KP_Right { spawn "dms" "ipc" "call" "night" "temperature" "2500"; } // 6
 
     Mod+G { spawn "google"; }
 
