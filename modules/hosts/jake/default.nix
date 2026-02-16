@@ -17,6 +17,7 @@
       boot-screen-animation
       btrfs
       dank
+      default-terminal
       docker
       ente-auth
       fish

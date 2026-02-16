@@ -9,6 +9,7 @@
         desktop-applications
         direnv
         dank
+        default-terminal
         dunst
         fastfetch
         fish
