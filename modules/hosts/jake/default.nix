@@ -16,6 +16,7 @@
       bluetooth
       boot-screen-animation
       btrfs
+      calibre
       dank
       default-terminal
       docker

@@ -5,12 +5,10 @@
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
-        aerc
         inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
         bash-language-server
         bitwarden-desktop
         brightnessctl
-        calibre
         cowsay
         discord
         efibooteditor
