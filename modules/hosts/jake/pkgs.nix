@@ -10,6 +10,7 @@
         bash-language-server
         bitwarden-desktop
         brightnessctl
+        calibre
         cowsay
         discord
         efibooteditor

@@ -26,10 +26,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dms-plugin-registry = {
-      url = "github:AvengeMedia/dms-plugin-registry";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # dms-plugin-registry = {
+    #   url = "github:AvengeMedia/dms-plugin-registry";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
@@ -57,7 +57,7 @@
     };
 
     nixarr = {
-      url = "github:vicgeentor/nixarr/fix-package-option";
+      url = "github:nix-media-server/nixarr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

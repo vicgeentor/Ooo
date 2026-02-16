@@ -4,4 +4,4 @@ Type=Application
 Name=Photopea
 Exec=google-chrome-stable --new-window --app=https://www.photopea.com/
 Icon=AdobePhotoshop
-StartupWMClass=photopea.com
+StartupWMClass=photopea

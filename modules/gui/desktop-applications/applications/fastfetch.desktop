@@ -4,4 +4,4 @@ Type=Application
 Name=Fastfetch
 Exec=ff-terminal
 Icon=nix-snowflake
-StartupWMClass=teams.com
+StartupWMClass=fastfetch

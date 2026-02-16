@@ -4,4 +4,4 @@ Type=Application
 Name=Taskmanager
 Exec=taskmanager
 Icon=btop
-StartupWMClass=teams.com
+StartupWMClass=taskmanager
