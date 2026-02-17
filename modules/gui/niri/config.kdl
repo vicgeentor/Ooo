@@ -117,9 +117,6 @@ binds {
   Mod+P hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
   Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
 
-  // Currently trying if I find this nice
-  Mod+Super_L hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
-
   Mod+Alt+L { spawn "dms" "ipc" "call" "lock" "lock"; }
   Mod+grave { spawn "dms" "ipc" "call" "notepad" "toggle"; }
   Mod+T { spawn "dms" "ipc" "call" "processlist" "toggle"; }
