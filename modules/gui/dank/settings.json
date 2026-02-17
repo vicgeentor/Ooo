@@ -358,10 +358,6 @@
           "enabled": true
         },
         {
-          "id": "idleInhibitor",
-          "enabled": true
-        },
-        {
           "id": "notificationButton",
           "enabled": true
         },

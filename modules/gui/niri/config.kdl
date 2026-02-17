@@ -2,7 +2,7 @@ prefer-no-csd
 
 screenshot-path "~/personal/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png"
 
-// NOTE: spawn-at-startup != spawn-sh-at-startup
+// spawn-at-startup != spawn-sh-at-startup
 spawn-sh-at-startup "thunar --daemon"
 spawn-sh-at-startup "systemctl --user enable --now app-com.mitchellh.ghostty.service"
 
@@ -15,264 +15,262 @@ environment {
 }
 
 input {
-    keyboard {
-        xkb {
-            layout "us"
-            options "compose:ralt"
-        }
-
-        repeat-delay 300
-        repeat-rate 30
-
-        numlock
+  keyboard {
+    xkb {
+      layout "us"
+      options "compose:ralt"
     }
 
-    touchpad {
-        tap
-        natural-scroll
-        scroll-factor 0.2
-    }
+    repeat-delay 300
+    repeat-rate 30
 
-    mouse {
-        accel-profile "flat"
-        scroll-factor 0.7
-    }
+    numlock
+  }
 
-    focus-follows-mouse max-scroll-amount="0%"
-    disable-power-key-handling
+  touchpad {
+    tap
+    natural-scroll
+    scroll-factor 0.2
+  }
+
+  mouse {
+    accel-profile "flat"
+    scroll-factor 0.7
+  }
+
+  focus-follows-mouse max-scroll-amount="0%"
+  disable-power-key-handling
 }
 
 output "eDP-1" {
-    mode "2560x1440@165.003"
-    scale 1.6
-    transform "normal"
-    focus-at-startup
-    hot-corners {
-        off
-    }
+  mode "2560x1440@165.003"
+  scale 1.6
+  transform "normal"
+  focus-at-startup
+  hot-corners {
+    off
+  }
 }
 
 layout {
-    gaps 8
+  gaps 8
 
-    background-color "transparent"
+  background-color "transparent"
 
-    center-focused-column "never"
+  center-focused-column "never"
 
-    // Mod+R
-    preset-column-widths {
-        proportion 0.5
-        proportion 1.0
-    }
+  // Mod+R
+  preset-column-widths {
+    proportion 0.5
+    proportion 1.0
+  }
 
-    preset-window-heights {
-        proportion 0.5
-        proportion 1.0
-    }
+  preset-window-heights {
+    proportion 0.5
+    proportion 1.0
+  }
 
-    // The windows themselves will decide their initial width.
-    default-column-width {}
+  // The windows themselves will decide their initial width.
+  default-column-width {}
 
-    focus-ring {
-        width 1
-        active-color "#d0d0d0"
-        inactive-color "#505050"
-    }
+  focus-ring {
+    width 1
+    active-color "#d0d0d0"
+    inactive-color "#505050"
+  }
 
-    border {
-        off
-        width 2
-        active-color "#ffc87f"
-        inactive-color "#505050"
-        urgent-color "#9b0000"
-    }
+  border {
+    off
+    width 2
+    active-color "#ffc87f"
+    inactive-color "#505050"
+    urgent-color "#9b0000"
+  }
 }
 
 hotkey-overlay {
-    skip-at-startup
+  skip-at-startup
 }
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+  match app-id=r#"^org\.wezfurlong\.wezterm$"#
+  default-column-width {}
 }
 
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
+  match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+  open-floating true
 }
 window-rule {
-    match app-id=r#"zen-twilight$"# title="^Picture-in-Picture$"
-    open-floating true
+  match app-id=r#"zen-twilight$"# title="^Picture-in-Picture$"
+  open-floating true
 }
 
 
 binds {
-    Mod+Shift+Slash { show-hotkey-overlay; }
+  Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty" "+new-window"; }
-    Mod+B hotkey-overlay-title="Open Browser: zen" { spawn "zen-twilight"; }
-    Mod+P hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
-    Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
+  Mod+Return hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty" "+new-window"; }
+  Mod+B hotkey-overlay-title="Open Browser: zen" { spawn "zen-twilight"; }
+  Mod+P hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+  Mod+E hotkey-overlay-title="Open File Manager: thunar" { spawn "thunar"; }
 
-    Mod+Alt+L { spawn "dms" "ipc" "call" "lock" "lock"; }
-    Mod+grave { spawn "dms" "ipc" "call" "notepad" "toggle"; }
-    Mod+T { spawn "dms" "ipc" "call" "processlist" "toggle"; }
+  // Currently trying if I find this nice
+  Mod+Super_L hotkey-overlay-title="App Launcher: Toggle" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
 
-    // Numpad binds
-    Mod+KP_Delete { spawn "dms" "ipc" "call" "night" "toggle"; } // .
-    Mod+KP_End { spawn "dms" "ipc" "call" "night" "temperature" "6000"; } // 1
-    Mod+KP_Down { spawn "dms" "ipc" "call" "night" "temperature" "5000"; } // 2
-    Mod+KP_Next { spawn "dms" "ipc" "call" "night" "temperature" "4000"; } // 3
-    Mod+KP_Left { spawn "dms" "ipc" "call" "night" "temperature" "3500"; } // 4
-    Mod+KP_Begin { spawn "dms" "ipc" "call" "night" "temperature" "3000"; } // 5
-    Mod+KP_Right { spawn "dms" "ipc" "call" "night" "temperature" "2500"; } // 6
+  Mod+Alt+L { spawn "dms" "ipc" "call" "lock" "lock"; }
+  Mod+grave { spawn "dms" "ipc" "call" "notepad" "toggle"; }
+  Mod+T { spawn "dms" "ipc" "call" "processlist" "toggle"; }
 
-    Mod+G { spawn "google"; }
+  // Numpad binds
+  Mod+KP_Delete { spawn "dms" "ipc" "call" "night" "toggle"; } // .
+  Mod+KP_End { spawn "dms" "ipc" "call" "night" "temperature" "6000"; } // 1
+  Mod+KP_Down { spawn "dms" "ipc" "call" "night" "temperature" "5000"; } // 2
+  Mod+KP_Next { spawn "dms" "ipc" "call" "night" "temperature" "4000"; } // 3
+  Mod+KP_Left { spawn "dms" "ipc" "call" "night" "temperature" "3500"; } // 4
+  Mod+KP_Begin { spawn "dms" "ipc" "call" "night" "temperature" "3000"; } // 5
+  Mod+KP_Right { spawn "dms" "ipc" "call" "night" "temperature" "2500"; } // 6
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    // My mic mute button does not work
-    Shift+F7     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  Mod+G { spawn "google"; }
 
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+ -l 1.0"; }
+  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
+  XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  // My mic mute button does not work
+  Shift+F7     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+  XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+  XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+  XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
+  XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
 
-    Mod+O repeat=false { toggle-overview; }
+  XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
 
-    Mod+Q repeat=false { close-window; }
+  Mod+O repeat=false { toggle-overview; }
 
-    Mod+H     { focus-column-left; }
-    Mod+L     { focus-column-right; }
+  Mod+Q repeat=false { close-window; }
 
-    Mod+J     { focus-workspace-down; }
-    Mod+K     { focus-workspace-up; }
+  Mod+H     { focus-column-left; }
+  Mod+L     { focus-column-right; }
 
-    Mod+Shift+H     { move-column-left; }
-    Mod+Shift+L     { move-column-right; }
+  Mod+J     { focus-workspace-down; }
+  Mod+K     { focus-workspace-up; }
 
-    Mod+Shift+J     { move-column-to-workspace-down; }
-    Mod+Shift+K     { move-column-to-workspace-up; }
+  Mod+Shift+H     { move-column-left; }
+  Mod+Shift+L     { move-column-right; }
 
-    Mod+Shift+U     { move-workspace-down; }
-    Mod+Shift+I     { move-workspace-up; }
+  Mod+Shift+J     { move-column-to-workspace-down; }
+  Mod+Shift+K     { move-column-to-workspace-up; }
 
-    Mod+Home { focus-column-first; }
-    Mod+End  { focus-column-last; }
-    Mod+Ctrl+Home { move-column-to-first; }
-    Mod+Ctrl+End  { move-column-to-last; }
+  Mod+Shift+U     { move-workspace-down; }
+  Mod+Shift+I     { move-workspace-up; }
 
-    Mod+Ctrl+H     { focus-monitor-left; }
-    Mod+Ctrl+J     { focus-monitor-down; }
-    Mod+Ctrl+K     { focus-monitor-up; }
-    Mod+Ctrl+L     { focus-monitor-right; }
+  Mod+Home { focus-column-first; }
+  Mod+End  { focus-column-last; }
+  Mod+Ctrl+Home { move-column-to-first; }
+  Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
-    Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
-    Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
-    Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
+  Mod+Ctrl+H     { focus-monitor-left; }
+  Mod+Ctrl+J     { focus-monitor-down; }
+  Mod+Ctrl+K     { focus-monitor-up; }
+  Mod+Ctrl+L     { focus-monitor-right; }
 
-    Mod+WheelScrollDown      { focus-column-right; }
-    Mod+WheelScrollUp       { focus-column-left; }
-    Mod+Shift+WheelScrollDown { move-column-right; }
-    Mod+Shift+WheelScrollUp  { move-column-left; }
+  Mod+Shift+Ctrl+H     { move-column-to-monitor-left; }
+  Mod+Shift+Ctrl+J     { move-column-to-monitor-down; }
+  Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
+  Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
-    Mod+5 { focus-workspace 5; }
-    Mod+6 { focus-workspace 6; }
-    Mod+7 { focus-workspace 7; }
-    Mod+8 { focus-workspace 8; }
-    Mod+9 { focus-workspace 9; }
-    Mod+0 { focus-workspace 10; }
-    Mod+Shift+1 { move-column-to-workspace 1; }
-    Mod+Shift+2 { move-column-to-workspace 2; }
-    Mod+Shift+3 { move-column-to-workspace 3; }
-    Mod+Shift+4 { move-column-to-workspace 4; }
-    Mod+Shift+5 { move-column-to-workspace 5; }
-    Mod+Shift+6 { move-column-to-workspace 6; }
-    Mod+Shift+7 { move-column-to-workspace 7; }
-    Mod+Shift+8 { move-column-to-workspace 8; }
-    Mod+Shift+9 { move-column-to-workspace 9; }
-    Mod+Shift+0 { move-column-to-workspace 10; }
+  Mod+WheelScrollDown      { focus-column-right; }
+  Mod+WheelScrollUp       { focus-column-left; }
+  Mod+Shift+WheelScrollDown { move-column-right; }
+  Mod+Shift+WheelScrollUp  { move-column-left; }
 
-    // The following binds move the focused window in and out of a column.
-    // If the window is alone, they will consume it into the nearby column to the side.
-    // If the window is already in a column, they will expel it out.
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
+  Mod+1 { focus-workspace 1; }
+  Mod+2 { focus-workspace 2; }
+  Mod+3 { focus-workspace 3; }
+  Mod+4 { focus-workspace 4; }
+  Mod+5 { focus-workspace 5; }
+  Mod+6 { focus-workspace 6; }
+  Mod+7 { focus-workspace 7; }
+  Mod+8 { focus-workspace 8; }
+  Mod+9 { focus-workspace 9; }
+  Mod+0 { focus-workspace 10; }
+  Mod+Shift+1 { move-column-to-workspace 1; }
+  Mod+Shift+2 { move-column-to-workspace 2; }
+  Mod+Shift+3 { move-column-to-workspace 3; }
+  Mod+Shift+4 { move-column-to-workspace 4; }
+  Mod+Shift+5 { move-column-to-workspace 5; }
+  Mod+Shift+6 { move-column-to-workspace 6; }
+  Mod+Shift+7 { move-column-to-workspace 7; }
+  Mod+Shift+8 { move-column-to-workspace 8; }
+  Mod+Shift+9 { move-column-to-workspace 9; }
+  Mod+Shift+0 { move-column-to-workspace 10; }
 
-    // Consume one window from the right to the bottom of the focused column.
-    Mod+Comma  { consume-window-into-column; }
-    // Expel the bottom window from the focused column to the right.
-    Mod+Period { expel-window-from-column; }
+  Mod+BracketLeft  { consume-or-expel-window-left; }
+  Mod+BracketRight { consume-or-expel-window-right; }
+  Mod+Comma  { consume-window-into-column; }
+  Mod+Period { expel-window-from-column; }
 
-    Mod+R { switch-preset-column-width; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
-    Mod+Ctrl+F { expand-column-to-available-width; }
+  Mod+R { switch-preset-column-width; }
+  Mod+Shift+R { switch-preset-window-height; }
+  Mod+Ctrl+R { reset-window-height; }
+  Mod+F { maximize-column; }
+  Mod+Shift+F { fullscreen-window; }
+  Mod+Ctrl+F { expand-column-to-available-width; }
 
-    Mod+C { center-column; }
-    Mod+Ctrl+C { center-visible-columns; }
+  Mod+C { center-column; }
+  Mod+Ctrl+C { center-visible-columns; }
 
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+  Mod+Minus { set-column-width "-10%"; }
+  Mod+Equal { set-column-width "+10%"; }
+  Mod+Shift+Minus { set-window-height "-10%"; }
+  Mod+Shift+Equal { set-window-height "+10%"; }
 
-    Mod+Space       { toggle-window-floating; }
-    Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
+  Mod+Space       { toggle-window-floating; }
+  Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+  Print { screenshot; }
+  Ctrl+Print { screenshot-screen; }
+  Alt+Print { screenshot-window; }
 
-    // Applications such as remote-desktop clients and software KVM switches may
-    // request that niri stops processing the keyboard shortcuts defined here
-    // so they may, for example, forward the key presses as-is to a remote machine.
-    // It's a good idea to bind an escape hatch to toggle the inhibitor,
-    // so a buggy application can't hold your session hostage.
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+  // Applications such as remote-desktop clients and software KVM switches may
+  // request that niri stops processing the keyboard shortcuts defined here
+  // so they may, for example, forward the key presses as-is to a remote machine.
+  // It's a good idea to bind an escape hatch to toggle the inhibitor,
+  // so a buggy application can't hold your session hostage.
+  Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Ctrl+Alt+Delete { quit; }
+  Ctrl+Alt+Delete { quit; }
 }
 
 // Recommended rules by DankMaterialShell
 layer-rule {
-    match namespace="^quickshell$"
-    place-within-backdrop true
+  match namespace="^quickshell$"
+  place-within-backdrop true
 }
 window-rule {
-    match app-id=r#"^org\.gnome\."#
-    draw-border-with-background false
-    geometry-corner-radius 12
-    clip-to-geometry true
+  match app-id=r#"^org\.gnome\."#
+  draw-border-with-background false
+  geometry-corner-radius 12
+  clip-to-geometry true
 }
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    match app-id="Alacritty"
-    match app-id="zen"
-    match app-id="com.mitchellh.ghostty"
-    match app-id="kitty"
-    draw-border-with-background false
+  match app-id=r#"^org\.wezfurlong\.wezterm$"#
+  match app-id="Alacritty"
+  match app-id="zen"
+  match app-id="com.mitchellh.ghostty"
+  match app-id="kitty"
+  draw-border-with-background false
 }
 window-rule {
-    match app-id=r#"org.quickshell$"#
-    open-floating true
+  match app-id=r#"org.quickshell$"#
+  open-floating true
 }
 
+// Static workspaces
 workspace "one"
 workspace "two"
 workspace "three"
