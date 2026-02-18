@@ -74,6 +74,7 @@
             rpc-host-whitelist-enabled = false;
             rpc-authentication-required = true;
 
+            download-queue-enabled = false;
             peer-limit-global = 400;
             peer-limit-per-torrent = 70;
             ratio-limit = 2;

@@ -64,7 +64,7 @@
       services.traefik = {
         package = inputs.nixpkgs-pangolin-stack.legacyPackages.${pkgs.stdenv.hostPlatform.system}.traefik;
         environmentFiles = [ nixosArgs.config.age.secrets.cloudflare-dns-api.path ];
-        staticConfigOptions = {
+        static.settings = {
           entryPoints = {
             # Minecraft raw TCP streams through pangolin
             tcp-25565 = {
@@ -75,6 +75,7 @@
             };
           };
         };
+        dynamic.dir = "/var/lib/traefik";
       };
     };
 }

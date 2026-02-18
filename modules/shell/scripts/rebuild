@@ -5,5 +5,5 @@ flake="$HOME/Ooo"
 if [[ $# -eq 0 ]] ; then
   nh os switch "$flake" -H jake
 else
-  nh os switch "$flake" -H "$1" --target-host root@"$1"
+  nh os switch "$flake" -H "$1" --target-host root@"$1" "${@:2}"
 fi

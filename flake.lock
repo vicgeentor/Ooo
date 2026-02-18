@@ -1342,17 +1342,17 @@
     },
     "nixpkgs-pangolin-stack": {
       "locked": {
-        "lastModified": 1767379071,
-        "narHash": "sha256-EgE0pxsrW9jp9YFMkHL9JMXxcqi/OoumPJYwf+Okucw=",
+        "lastModified": 1771447886,
+        "narHash": "sha256-nLpN0OyFG5metQDfc3kjPYJZSAWTkNIijJx2ndyhCCY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "fb7944c166a3b630f177938e478f0378e64ce108",
+        "rev": "fb700b8bade405f5e9b708a0182c3b3f8ed8a5b1",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "fb7944c166a3b630f177938e478f0378e64ce108",
+        "rev": "fb700b8bade405f5e9b708a0182c3b3f8ed8a5b1",
         "type": "github"
       }
     },

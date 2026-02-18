@@ -294,7 +294,7 @@
   "osdPowerProfileEnabled": true,
   "osdAudioOutputEnabled": true,
   "powerActionConfirm": true,
-  "powerActionHoldDuration": 0.5,
+  "powerActionHoldDuration": 0.25,
   "powerMenuActions": [
     "reboot",
     "logout",
