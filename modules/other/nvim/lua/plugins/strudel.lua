@@ -2,11 +2,11 @@ return {
 	{
 		"gruvw/strudel.nvim",
 		cmd = "StrudelLaunch",
-		build = "npm install",
+		build = "npm ci",
 		config = function()
 			local strudel = require("strudel")
 			strudel.setup({
-				browser_exec_path = "/etc/profiles/per-user/vic/bin/google-chrome-stable",
+				browser_exec_path = "/run/current-system/sw/bin/google-chrome-stable",
 				update_on_save = true,
 			})
 

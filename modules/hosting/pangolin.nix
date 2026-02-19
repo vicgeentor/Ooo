@@ -1,7 +1,6 @@
-{ inputs, ... }:
 {
   flake.modules.nixos.pangolin =
-    nixosArgs@{ pkgs, lib, ... }:
+    nixosArgs@{ lib, ... }:
     {
       age.secrets = {
         pangolin.file = ../../_secrets/pangolin.age;
@@ -26,8 +25,6 @@
 
       services.pangolin = {
         enable = true;
-        package =
-          inputs.nixpkgs-pangolin-stack.legacyPackages.${pkgs.stdenv.hostPlatform.system}.fosrl-pangolin;
         settings = {
           app = {
             log_failed_attempts = true;
@@ -62,9 +59,8 @@
       };
 
       services.traefik = {
-        package = inputs.nixpkgs-pangolin-stack.legacyPackages.${pkgs.stdenv.hostPlatform.system}.traefik;
         environmentFiles = [ nixosArgs.config.age.secrets.cloudflare-dns-api.path ];
-        static.settings = {
+        staticConfigOptions = {
           entryPoints = {
             # Minecraft raw TCP streams through pangolin
             tcp-25565 = {
@@ -75,7 +71,6 @@
             };
           };
         };
-        dynamic.dir = "/var/lib/traefik";
       };
     };
 }

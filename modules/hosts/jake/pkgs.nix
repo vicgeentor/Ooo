@@ -41,6 +41,7 @@
         qimgv # Image viewer
         qbittorrent
         R
+        servo
         signal-desktop
         spotify
         sshfs

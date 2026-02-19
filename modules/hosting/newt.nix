@@ -1,16 +1,11 @@
-{ inputs, ... }:
 {
-  flake.modules.nixos.newt =
-    { pkgs, ... }:
-    {
-      services.newt = {
-        enable = true;
-        package =
-          inputs.nixpkgs-pangolin-stack.legacyPackages.${pkgs.stdenv.hostPlatform.system}.fosrl-newt;
+  flake.modules.nixos.newt = {
+    services.newt = {
+      enable = true;
 
-        settings = {
-          endpoint = "https://admin.vicgeentor.nl";
-        };
+      settings = {
+        endpoint = "https://admin.vicgeentor.nl";
       };
     };
+  };
 }

@@ -37,7 +37,6 @@
 
         bazarr = {
           enable = true;
-          package = inputs.nixpkgs-master.legacyPackages.${pkgs.stdenv.hostPlatform.system}.bazarr;
           port = 4444;
         };
 
@@ -143,9 +142,9 @@
         transmission.serviceConfig.BindReadOnlyPaths = "/run/systemd/resolve/stub-resolv.conf";
 
         # https://github.com/nix-media-server/nixarr/issues/130
-        bazarr.serviceConfig.UMask = "0002";
-        radarr.serviceConfig.UMask = "0002";
-        sonarr.serviceConfig.UMask = "0002";
+        bazarr.serviceConfig.UMask = lib.mkForce "0002";
+        radarr.serviceConfig.UMask = lib.mkForce "0002";
+        sonarr.serviceConfig.UMask = lib.mkForce "0002";
       };
     };
 }
