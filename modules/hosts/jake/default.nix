@@ -27,7 +27,6 @@
       intel
       javascript
       jellyfin-client
-      kdeconnect
       keyd
       laptop
       latex
