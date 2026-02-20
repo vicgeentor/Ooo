@@ -345,7 +345,7 @@
       "field": "appName",
       "pattern": "Spotify",
       "matchType": "exact",
-      "action": "mute",
+      "action": "ignore",
       "urgency": "default"
     }
   ],
