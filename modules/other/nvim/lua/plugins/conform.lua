@@ -41,6 +41,13 @@ return {
 							"2",
 						},
 					},
+					typstyle = {
+						prepend_args = {
+							"--line-width",
+							"64",
+							"--wrap-text",
+						},
+					},
 				},
 				formatters_by_ft = {
 					html = { "djlint" },
@@ -51,6 +58,7 @@ return {
 					python = { "black" },
 					qml = { "qmlformat" },
 					tex = { "latexindent" },
+					typst = { "typstyle" },
 				},
 			})
 		end,

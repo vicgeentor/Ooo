@@ -96,6 +96,7 @@ return {
 			vim.lsp.enable("pyright")
 			vim.lsp.enable("qmlls")
 			vim.lsp.enable("ts_ls")
+			vim.lsp.enable("tinymist")
 			vim.lsp.enable("zls")
 
 			-- Additional setup

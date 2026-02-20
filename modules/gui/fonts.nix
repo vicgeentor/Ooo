@@ -17,6 +17,7 @@
           vista-fonts # Microsoft
           material-symbols
           ibm-plex
+          atkinson-hyperlegible-next
         ];
 
         fontconfig = {
