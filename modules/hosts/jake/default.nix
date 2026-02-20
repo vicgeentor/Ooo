@@ -50,6 +50,7 @@
       systemdboot
       tailscale
       thunar
+      typst
       vpn
       wayland
       xdgportal

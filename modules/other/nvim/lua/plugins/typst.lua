@@ -9,7 +9,7 @@ return {
 				-- open_cmd = "servo %s", -- might use this if some servo issues get fixed
 			})
 
-			vim.keymap.set("n", "<localLeader>t", "<cmd>TypstPreview<CR>", { desc = "Strudel Toggle Play/Pause" })
+			vim.keymap.set("n", "<localLeader>t", "<cmd>TypstPreview<CR>", { desc = "Typst preview" })
 		end,
 	},
 }
