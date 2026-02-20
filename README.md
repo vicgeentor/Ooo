@@ -76,15 +76,13 @@ For [jake](#jake):
 For [simon](#simon):
 
 - Host the following services:
-  - [immich](https://github.com/immich-app/immich)
   - [Dawarich](https://github.com/Freika/dawarich)
   - [FreshRSS](https://github.com/FreshRSS/FreshRSS)
-  - Probably more
 - Switch to BTRFS for snapshotting and checksumming (with
   subvolumes for nix store, immich, etc.)
-- Add a drive to for RAID1 redundancy
-- See where I can add
-  [Redis](https://github.com/redis/redis) caching
+- Add HDDs and make it nice:
+  - 2 drives for system with RAID1
+  - rest of the storage for /data/media
 
 For [bonnibel](#bonnibel):
 
