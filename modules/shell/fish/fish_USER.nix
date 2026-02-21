@@ -114,8 +114,8 @@
           open = "xdg-open";
           valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/fish/fish_USER.nix";
           view = "qimgv";
-          ev = "silent evince";
-          thu = "silent thunar .";
+          ev = "evince";
+          thu = "thunar .";
           pf = "fd --type f | fzf | xargs ${config.flake.meta.vic.editor}";
           godot = "godot4 --display-driver wayland";
           vpak = "${config.flake.meta.vic.editor} ~/Ooo/modules/hosts/jake/pkgs.nix";

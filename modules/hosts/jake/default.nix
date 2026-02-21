@@ -10,6 +10,8 @@
 
       base
 
+      tdarr # TESTING:
+
       acer-wmi
       bluetooth
       boot-screen-animation
