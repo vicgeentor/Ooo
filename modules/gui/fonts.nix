@@ -5,7 +5,7 @@
       fonts = {
         enableDefaultPackages = true;
         packages = with pkgs; [
-          nerd-fonts.atkynson-mono
+          nerd-fonts.iosevka-term
           nerd-fonts.jetbrains-mono
           nerd-fonts.ubuntu
           nerd-fonts.ubuntu-mono
