@@ -1,10 +1,15 @@
 { inputs, ... }:
 {
   flake.modules.nixos.tdarr =
-    { pkgs, ... }:
+    let
+      pkgs-tdarr = import inputs.nixpkgs-tdarr {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
+    in
     {
       environment.systemPackages = [
-        inputs.nixpkgs-tdarr.legacyPackages.${pkgs.stdenv.hostPlatform.system}.tdarr
+        pkgs-tdarr.tdarr
       ];
     };
 }

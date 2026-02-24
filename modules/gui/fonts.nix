@@ -5,19 +5,21 @@
       fonts = {
         enableDefaultPackages = true;
         packages = with pkgs; [
+          nerd-fonts.atkynson-mono
           nerd-fonts.jetbrains-mono
           nerd-fonts.ubuntu
           nerd-fonts.ubuntu-mono
           nerd-fonts.ubuntu-sans
-          noto-fonts-color-emoji
+
+          atkinson-hyperlegible-next
+          corefonts # Microsoft
           helvetica-neue-lt-std
+          ibm-plex
           lmodern
           libertine
-          corefonts # Microsoft
-          vista-fonts # Microsoft
           material-symbols
-          ibm-plex
-          atkinson-hyperlegible-next
+          noto-fonts-color-emoji
+          vista-fonts # Microsoft
         ];
 
         fontconfig = {

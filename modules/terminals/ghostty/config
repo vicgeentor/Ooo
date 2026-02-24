@@ -1,0 +1,35 @@
+# Font
+font-size = 14
+bold-color = bright
+
+# Theme
+theme = Rose Pine
+background = #0F0F0F
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# Window
+window-decoration = false
+window-height = 25
+window-padding-balance = true
+window-padding-x = 6
+window-padding-y = 6
+window-width = 100
+
+# Keybinds
+keybind = ctrl+backspace=ignore
+keybind = shift+enter=ignore
+keybind = ctrl+enter=text:✗
+keybind = ctrl+shift+enter=text:✓
+keybind = ctrl+i=text:◆
+keybind = ctrl+m=text:▶
+keybind = ctrl+comma=text:★
+keybind = ctrl+shift+h=text:●
+
+# Other
+clipboard-trim-trailing-spaces = true
+confirm-close-surface = false
+quit-after-last-window-closed = false

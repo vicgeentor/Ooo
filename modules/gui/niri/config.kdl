@@ -4,7 +4,7 @@ screenshot-path "~/personal/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 // spawn-at-startup != spawn-sh-at-startup
 spawn-sh-at-startup "thunar --daemon"
-spawn-sh-at-startup "systemctl --user enable --now app-com.mitchellh.ghostty.service"
+// REMOVE: spawn-sh-at-startup "systemctl --user enable --now app-com.mitchellh.ghostty.service"
 
 environment {
   XDG_CURRENT_DESKTOP "niri"
@@ -132,19 +132,19 @@ binds {
 
   Mod+G { spawn "google"; }
 
-  XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+ -l 1.0"; }
-  XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
-  XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  XF86AudioRaiseVolume { spawn "dms" "ipc" "call" "audio" "increment" "2"; }
+  XF86AudioLowerVolume { spawn "dms" "ipc" "call" "audio" "decrement" "2"; }
+
+  XF86AudioPlay { spawn "dms" "ipc" "call" "mpris" "playPause"; }
+  XF86AudioNext { spawn "dms" "ipc" "call" "mpris" "next"; }
+  XF86AudioPrev { spawn "dms" "ipc" "call" "mpris" "previous"; }
+
   // My mic mute button does not work
-  Shift+F7     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  Shift+F7      allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "micmute"; }
+  XF86AudioMute allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "mute"; }
 
-  XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-  XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-  XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-  XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
-
-  XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+5%"; }
-  XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "5%-"; }
+  XF86MonBrightnessUp   allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "increment" "5" ""; }
+  XF86MonBrightnessDown allow-when-locked=true { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
 
   Mod+O repeat=false { toggle-overview; }
 

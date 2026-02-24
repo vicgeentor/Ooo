@@ -1356,6 +1356,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-tdarr": {
+      "locked": {
+        "lastModified": 1771664674,
+        "narHash": "sha256-E3XARPpQ+qYMMGscHj8bKmMDhObptjGalY6UeoYKmPA=",
+        "owner": "Mistyttm",
+        "repo": "nixpkgs",
+        "rev": "6c7513ecb8ebb66e819ec75d988bbb2bb608e789",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mistyttm",
+        "ref": "add-tdarr",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1770841267,
@@ -1525,6 +1541,7 @@
         "nixarr": "nixarr",
         "nixpkgs": "nixpkgs_5",
         "nixpkgs-stable": "nixpkgs-stable_2",
+        "nixpkgs-tdarr": "nixpkgs-tdarr",
         "simple-nixos-mailserver": "simple-nixos-mailserver",
         "stylix": "stylix",
         "systems": "systems_7",
