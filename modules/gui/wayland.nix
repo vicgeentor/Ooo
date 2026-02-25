@@ -3,9 +3,10 @@
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
+        hyprmagnifier
         wl-clipboard
         wl-screenrec
-        xeyes # Run `xeyes` to show xwayland windows
+        xeyes
         xwayland-satellite
       ];
     };

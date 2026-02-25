@@ -121,6 +121,9 @@ binds {
   Mod+grave { spawn "dms" "ipc" "call" "notepad" "toggle"; }
   Mod+T { spawn "dms" "ipc" "call" "processlist" "toggle"; }
 
+  Mod+G { spawn "google"; }
+  Mod+Z { spawn "hyprmagnifier" "--size" "1000x1000"; }
+
   // Numpad binds
   Mod+KP_Delete { spawn "dms" "ipc" "call" "night" "toggle"; } // .
   Mod+KP_End { spawn "dms" "ipc" "call" "night" "temperature" "6000"; } // 1
@@ -129,8 +132,6 @@ binds {
   Mod+KP_Left { spawn "dms" "ipc" "call" "night" "temperature" "3500"; } // 4
   Mod+KP_Begin { spawn "dms" "ipc" "call" "night" "temperature" "3000"; } // 5
   Mod+KP_Right { spawn "dms" "ipc" "call" "night" "temperature" "2500"; } // 6
-
-  Mod+G { spawn "google"; }
 
   XF86AudioRaiseVolume { spawn "dms" "ipc" "call" "audio" "increment" "2"; }
   XF86AudioLowerVolume { spawn "dms" "ipc" "call" "audio" "decrement" "2"; }

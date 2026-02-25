@@ -6,7 +6,7 @@
         base
 
         alacritty
-        desktop-applications
+        desktop
         direnv
         dank
         default-terminal
