@@ -6,7 +6,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
-    nixpkgs-tdarr.url = "github:Mistyttm/nixpkgs/add-tdarr";
+    nixpkgs-calibre.url = "github:Stebalien/nixpkgs/f50833e7541c8cf9b0289ed483fee741698790b1";
 
     agenix = {
       url = "github:ryantm/agenix";

@@ -10,6 +10,7 @@
 
       base
 
+      dns
       mailserver
       pangolin
       ssh

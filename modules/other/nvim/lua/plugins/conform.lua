@@ -50,6 +50,8 @@ return {
 					},
 				},
 				formatters_by_ft = {
+					cabal = { "cabal_fmt" },
+					haskell = { "hindent" },
 					html = { "djlint" },
 					htmldjango = { "djlint" },
 					lua = { "stylua" },

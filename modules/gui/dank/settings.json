@@ -407,14 +407,13 @@
         {
           "id": "workspaceSwitcher",
           "enabled": true
-        },
-        {
-          "id": "music",
-          "enabled": true,
-          "mediaSize": 0
         }
       ],
       "centerWidgets": [
+        {
+          "id": "music",
+          "enabled": true
+        },
         {
           "id": "clock",
           "enabled": true

@@ -11,6 +11,7 @@
       base
 
       arr-stack
+      dns
       fwupd
       grafana
       graphics

@@ -1,0 +1,30 @@
+let
+  dns-servers = [
+    "1.1.1.1#one.one.one.one"
+    "1.0.0.1#one.one.one.one"
+    "2606:4700:4700::1111#one.one.one.one"
+    "2606:4700:4700::1001#one.one.one.one"
+
+    "8.8.8.8#dns.google"
+    "8.8.4.4#dns.google"
+    "2001:4860:4860::8888#dns.google"
+    "2001:4860:4860::8844#dns.google"
+  ];
+in
+{
+  flake.modules.nixos.dns = {
+    networking = {
+      networkmanager.dns = "systemd-resolved";
+      nameservers = dns-servers;
+    };
+    services.resolved = {
+      enable = true;
+      settings.Resolve = {
+        DNSOverTLS = true;
+        DNSSEC = true;
+        Domains = [ "~." ];
+        FallbackDNS = dns-servers;
+      };
+    };
+  };
+}

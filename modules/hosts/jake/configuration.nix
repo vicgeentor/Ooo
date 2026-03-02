@@ -27,5 +27,11 @@
       libinput.enable = true;
       printing.enable = true;
     };
+
+    # TODO: eduroam does not work with custom nameservers
+    # following does not fix it, maybe try to disable resolved
+    # networking.nameservers = [ ];
+    # services.resolved.settings.Resolve.FallbackDNS = [ ];
+
   };
 }

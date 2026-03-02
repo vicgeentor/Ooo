@@ -11,7 +11,7 @@
 
     services.logind.settings.Login.HandlePowerKey = "ignore";
 
-    documentation.man.generateCaches = false;
+    documentation.man.cache.enable = false;
   };
 
   flake.modules.homeManager.base = {

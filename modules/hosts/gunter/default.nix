@@ -11,6 +11,7 @@
       base
 
       btrfs
+      dns
       fwupd
       minecraft-server-two
       ssd
