@@ -23,6 +23,7 @@
       ssh
       systemdboot
       tailscale
+      tdarr
       your-spotify
     ];
   };

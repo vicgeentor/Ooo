@@ -460,7 +460,7 @@
       "widgetTransparency": 1,
       "squareCorners": true,
       "noBackground": false,
-      "gothCornersEnabled": false,
+      "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
       "borderEnabled": false,
@@ -485,8 +485,12 @@
       "scrollYBehavior": "workspace",
       "shadowIntensity": 0,
       "shadowOpacity": 60,
-      "shadowColorMode": "text",
-      "shadowCustomColor": "#000000"
+      "shadowColorMode": "primary",
+      "shadowCustomColor": "#000000",
+      "clickThrough": false,
+      "maximizeWidgetText": false,
+      "removeWidgetPadding": false,
+      "maximizeWidgetIcons": false
     }
   ],
   "desktopClockEnabled": false,

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+flake="$HOME/Ooo"
+
+nh os boot "$flake" -H "$1" --target-host root@"$1" --build-host root@"$1" --use-substitutes "${@:2}"
