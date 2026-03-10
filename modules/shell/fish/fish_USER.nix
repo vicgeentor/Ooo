@@ -83,6 +83,7 @@
           g = "git";
           gc = "git commit";
           gs = "git status";
+          ga = "git add";
           gaa = "git add --all";
           gp = "git push";
           gd = "git diff";

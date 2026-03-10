@@ -1241,11 +1241,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769506139,
-        "narHash": "sha256-a+/KwZ5Na9eosLzBCDbXM4OLo2pYsfS+7eD6JmWUd1Y=",
+        "lastModified": 1773139001,
+        "narHash": "sha256-ouNaUfEXGkzStiMgOFLDH9tK54SUrsEAQm/lmpW4G8c=",
         "owner": "vicgeentor",
         "repo": "nix-devshells",
-        "rev": "7ed56f438d02488919c6e6d08a7678a29dfcad56",
+        "rev": "641e9547e0486bbeaaea2eee9d14000d58eae878",
         "type": "github"
       },
       "original": {
