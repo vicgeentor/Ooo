@@ -18,6 +18,7 @@
     {
       home = {
         packages = with pkgs; [
+          inputs.cornelis.packages.${pkgs.stdenv.hostPlatform.system}.default
           gcc
           lua5_1
           lua-language-server

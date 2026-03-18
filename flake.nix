@@ -14,6 +14,11 @@
       inputs.darwin.follows = "";
     };
 
+    cornelis = {
+      url = "github:agda/cornelis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";

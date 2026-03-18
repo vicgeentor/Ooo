@@ -86,6 +86,7 @@
           ga = "git add";
           gaa = "git add --all";
           gp = "git push";
+          gP = "git pull";
           gd = "git diff";
 
           # Tmux

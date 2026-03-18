@@ -18,6 +18,7 @@ return {
 					auto_install = true,
 					highlight = {
 						enable = true,
+						disable = { "agda" },
 						additional_vim_regex_highlighting = false,
 					},
 					indent = { enable = true, disable = { "ocaml" } },
