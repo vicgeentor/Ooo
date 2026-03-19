@@ -14,11 +14,11 @@ shell-integration-features = no-cursor
 
 # Window
 window-decoration = false
-window-height = 25
 window-padding-balance = true
 window-padding-x = 6
-window-padding-y = 6
-window-width = 100
+window-padding-y = 6,2
+window-width = 90
+window-height = 25
 
 # Keybinds
 keybind = ctrl+backspace=ignore
@@ -27,7 +27,9 @@ keybind = ctrl+enter=text:✗
 keybind = ctrl+shift+enter=text:✓
 keybind = ctrl+i=text:◆
 keybind = ctrl+m=text:▶
-keybind = ctrl+comma=text:★
+keybind = ctrl+,=text:★
+keybind = ctrl+.=text:󱞙
+keybind = ctrl+/=text:✉
 keybind = ctrl+shift+h=text:●
 
 # Other

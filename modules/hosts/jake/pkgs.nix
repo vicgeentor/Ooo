@@ -54,7 +54,7 @@
         yt-dlp
         zapzap # Whatsapp
         zip
-        zotero-beta
+        zotero
       ];
     };
 }

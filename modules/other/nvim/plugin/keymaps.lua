@@ -1,17 +1,6 @@
 -- See `:help set()`
 local set = vim.keymap.set
 
-set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
-set({ "n", "v" }, "<CR>", "<Nop>", { silent = true })
-set({ "n", "v", "i" }, "◆", "<C-i>", { silent = true })
-
--- Diagnostics
-set("n", "[d", function()
-	vim.diagnostic.jump({ count = 1 })
-end, { desc = "Go to previous diagnostic message" })
-set("n", "]d", function()
-	vim.diagnostic.jump({ count = -1 })
-end, { desc = "Go to next diagnostic message" })
 set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 
 set(
@@ -103,13 +92,14 @@ set("n", "<leader>mdh", function()
 	vim.cmd("!mdto html" .. escaped_file)
 end, { desc = "[M]ark[d]own to [h]tml" })
 
--- Dismiss Noice message
-set("n", "<Del>", "<CMD>NoiceDismiss<CR>", { desc = "Dismiss Noice message" })
-
 -- vsplit
 set("n", "<leader>v", "<CMD>vsplit<CR>", { desc = "Create [v]ertical split" })
 
 -- Other
+set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+set({ "n", "v" }, "<CR>", "<Nop>", { silent = true })
+set({ "n", "v", "i" }, "◆", "<C-i>", { silent = true })
 set("n", "J", "mzJ`z")
-set("i", "<C-c>", "<Esc>")
-set("n", "Q", "<nop>")
+set({ "n", "i" }, "<C-c>", "<Nop>")
+set("n", "Q", "<Nop>")
+set("n", "<Esc>", "<cmd>nohlsearch<CR>")

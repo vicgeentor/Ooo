@@ -2,12 +2,12 @@
 
 vim.opt.inccommand = "split"
 
+-- Don't show the mode, since it's already in the status line
+vim.o.showmode = false
+
 -- List mode
 vim.opt.list = false -- Set to true to enable this:
 vim.opt.listchars = { leadmultispace = "·", tab = "» ", trail = "·", nbsp = "␣" }
-
--- Set highlight off on search
-vim.opt.hlsearch = false
 
 -- Default split style
 vim.opt.splitbelow = true
@@ -29,7 +29,7 @@ vim.opt.signcolumn = "yes"
 
 -- Decrease update time
 vim.opt.updatetime = 250
-vim.opt.timeoutlen = 500
+vim.opt.timeout = false
 
 -- Tab width
 vim.opt.tabstop = 2
@@ -64,8 +64,16 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
--- vim.opt.colorcolumn = "78"
-vim.diagnostic.config({ virtual_text = false, virtual_lines = false })
+vim.diagnostic.config({
+	update_in_insert = false,
+	severity_sort = true,
+	float = { border = "rounded", source = "if_many" },
+	underline = { severity = { min = vim.diagnostic.severity.WARN } },
+	virtual_text = false,
+	virtual_lines = false,
+	jump = { float = true },
+})
+vim.g.have_nerd_font = true
 
 -- Highlight on yank
 -- See `:help vim.highlight.on_yank()`

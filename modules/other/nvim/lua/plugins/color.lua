@@ -13,6 +13,13 @@ function Color(color)
 	vim.api.nvim_set_hl(0, "TreesitterContext", { bg = "#333033" })
 	vim.api.nvim_set_hl(0, "TreesitterContextLineNumber", { fg = "#999099", bg = "#333033" })
 	vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#1A1B26" })
+
+	-- Disable strikethrough
+	vim.api.nvim_set_hl(0, "CmpItemAbbrDeprecated", { strikethrough = false })
+	vim.api.nvim_set_hl(0, "BlinkCmpLabelDeprecated", { strikethrough = false })
+	vim.api.nvim_set_hl(0, "@text.strike", { strikethrough = false })
+	vim.api.nvim_set_hl(0, "@markup.strikethrough", { strikethrough = false })
+	vim.api.nvim_set_hl(0, "@lsp.mod.deprecated", { strikethrough = false })
 end
 
 -- Function to cycle between themes

@@ -5,31 +5,20 @@ return {
 		opts = {},
 		cmd = "Trouble",
 		keys = {
-			{
-				"<leader>tt",
-				"<cmd>Trouble diagnostics toggle<cr>",
-				desc = "Toggle Trouble",
-			},
-			{
-				"[t",
-				"<cmd>Trouble diagnostics prev jump=true<cr>",
-				desc = "Trouble Previous",
-			},
-			{
-				"]t",
-				"<cmd>Trouble diagnostics next jump=true<cr>",
-				desc = "Trouble Next",
-			},
-			{
-				"<leader>ts",
-				"<cmd>Trouble symbols toggle focus=false pinned=true results.win.relative=win results.win.position=right<cr>",
-				desc = "Toggle symbols (Trouble)",
-			},
-			{
-				"<leader>tc",
-				"<cmd>Trouble todo<cr>",
-				desc = "Toggle TODO comments (Trouble)",
-			},
+			-- Diagnostics
+			{ "<leader>td", "<cmd>Trouble diagnostics toggle<cr>" },
+			{ "[d", "<cmd>Trouble diagnostics prev jump=true<cr>" },
+			{ "]d", "<cmd>Trouble diagnostics next jump=true<cr>" },
+
+			-- Telescope
+			{ "<leader>tt", "<cmd>Trouble todo toggle<cr>" },
+			{ "[t", "<cmd>Trouble todo prev jump=true<cr>" },
+			{ "]t", "<cmd>Trouble todo next jump=true<cr>" },
+
+			-- Todo comments
+			{ "<leader>tc", "<cmd>Trouble todo toggle<cr>" },
+			{ "[c", "<cmd>Trouble todo prev jump=true<cr>" },
+			{ "]c", "<cmd>Trouble todo next jump=true<cr>" },
 		},
 	},
 }
