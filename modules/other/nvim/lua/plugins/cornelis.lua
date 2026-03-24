@@ -9,7 +9,7 @@ return {
 		config = function()
 			-- Required for nix
 			vim.g.cornelis_use_global_binary = 1
-      vim.g.cornelis_max_size = 8
+      vim.g.cornelis_max_size = 10
 
 			-- Close the extra window when quitting inside an agda file
 			vim.api.nvim_create_autocmd("QuitPre", {

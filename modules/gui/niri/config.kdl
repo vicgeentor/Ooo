@@ -43,10 +43,18 @@ input {
 }
 
 output "eDP-1" {
-  mode "2560x1440@165.003"
+  mode "2560x1440"
   scale 1.6
   transform "normal"
   focus-at-startup
+  hot-corners {
+    off
+  }
+}
+
+output "HDMI-A-1" {
+  mode "1920x1080"
+  transform "normal"
   hot-corners {
     off
   }

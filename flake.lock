@@ -179,15 +179,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1769080344,
-        "narHash": "sha256-Z/2hBW/bRb8wtJqBUT8tqgoXg4XqGNvp8L6xw+zHDaU=",
-        "owner": "agda",
+        "lastModified": 1774700892,
+        "narHash": "sha256-nM1gHh66EKXRNTeBzJE9yRCfPFlbyQz73Ge8McioxJQ=",
+        "owner": "vicgeentor",
         "repo": "cornelis",
-        "rev": "8401538b8d5056571827679658331136c38f11be",
+        "rev": "bf1456deda17a87f77cb0b3fd623b673337bc5f3",
         "type": "github"
       },
       "original": {
-        "owner": "agda",
+        "owner": "vicgeentor",
         "repo": "cornelis",
         "type": "github"
       }
@@ -1278,11 +1278,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773932163,
-        "narHash": "sha256-gK6uvtOL3+a2jG6GnPY58IsFKQrU0gPqR0sUGUOMLi4=",
+        "lastModified": 1774019887,
+        "narHash": "sha256-uDGaFVqAIvpG3foGc/oPQ0Q2/3BvOTYrEK12eL1yth4=",
         "owner": "vicgeentor",
         "repo": "nix-devshells",
-        "rev": "0061e38b8203bcba072a5059c396b4466fa77ecd",
+        "rev": "45cce78ee173bf68b05c1ee584d877f6d9bc819a",
         "type": "github"
       },
       "original": {

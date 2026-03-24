@@ -11,9 +11,9 @@ return {
 			{ "]d", "<cmd>Trouble diagnostics next jump=true<cr>" },
 
 			-- Telescope
-			{ "<leader>tt", "<cmd>Trouble todo toggle<cr>" },
-			{ "[t", "<cmd>Trouble todo prev jump=true<cr>" },
-			{ "]t", "<cmd>Trouble todo next jump=true<cr>" },
+			{ "<leader>tt", "<cmd>Trouble telescope toggle<cr>" },
+			{ "[t", "<cmd>Trouble telescope prev jump=true<cr>" },
+			{ "]t", "<cmd>Trouble telescope next jump=true<cr>" },
 
 			-- Todo comments
 			{ "<leader>tc", "<cmd>Trouble todo toggle<cr>" },

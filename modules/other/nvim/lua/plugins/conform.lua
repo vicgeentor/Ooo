@@ -8,6 +8,9 @@ return {
 					async = true,
 				},
 				formatters = {
+					hattier = {
+						command = "hattier",
+					},
 					latexindent = {
 						prepend_args = {
 							"-y=modifyLineBreaks:textWrapOptions:columns:60",
@@ -51,7 +54,8 @@ return {
 				},
 				formatters_by_ft = {
 					cabal = { "cabal_fmt" },
-					haskell = { "hindent" },
+					haskell = { "hattier" },
+					-- haskell = { "ormolu" },
 					html = { "djlint" },
 					htmldjango = { "djlint" },
 					lua = { "stylua" },

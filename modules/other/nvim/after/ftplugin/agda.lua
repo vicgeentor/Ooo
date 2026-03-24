@@ -1,2 +1,3 @@
--- vim.o.timeoutlen = 2000
--- vim.o.syntax = "off"
+vim.opt.formatoptions:remove("o")
+vim.opt.formatoptions:remove("t")
+vim.opt.formatoptions:remove("c")
