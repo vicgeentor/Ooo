@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ghostty + Neovim
+Comment=Open text files in a new Ghostty window with Neovim
+Exec=ghostty +new-window -e nvim %f
+Terminal=false
+Type=Application
+MimeType=text/plain;text/x-shellscript;application/x-shellscript;
+MimeType=text/plain;text/x-shellscript;application/x-shellscript;application/octet-stream;inode/x-empty;application/x-zerosize
+Categories=Development;TextEditor;Utility;
+Icon=ghostty

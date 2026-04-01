@@ -19,7 +19,7 @@ in
       dconf.settings."org/cinnamon/desktop/applications/terminal".exec = term;
       home.packages = [
         (pkgs.writers.writeDashBin "xterm" ''
-          ghostty -e "$@"
+          ghostty +new-window -e "$@"
         '')
       ];
     };
