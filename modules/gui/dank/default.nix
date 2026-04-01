@@ -1,24 +1,29 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.dank = {
-    imports = [
-      inputs.dms.nixosModules.dank-material-shell
-      inputs.dms-plugin-registry.modules.default
-    ];
+  flake.modules.nixos.dank =
+    { pkgs, ... }:
+    {
+      imports = [
+        inputs.dms.nixosModules.dank-material-shell
+        inputs.dms-plugin-registry.modules.default
+      ];
 
-    programs.dank-material-shell = {
-      enable = true;
-      systemd.enable = true;
-      enableAudioWavelength = false;
-      enableCalendarEvents = false;
-      enableDynamicTheming = false;
+      programs.dank-material-shell = {
+        enable = true;
+        systemd.enable = true;
+        enableAudioWavelength = false;
+        enableCalendarEvents = false;
+        enableDynamicTheming = false;
 
-      plugins = {
-        emojiLauncher.enable = true;
+        plugins = {
+          emojiLauncher.enable = true;
+          displayMirror.enable = true;
+        };
       };
-    };
 
-  };
+      environment.systemPackages = [ pkgs.wl-mirror ];
+
+    };
   flake.modules.homeManager.dank = hmArgs: {
     home.file = {
       ".config/DankMaterialShell/settings.json".source =

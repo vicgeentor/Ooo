@@ -15,7 +15,7 @@
     };
 
     cornelis = {
-      url = "github:vicgeentor/cornelis";
+      url = "github:agda/cornelis";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

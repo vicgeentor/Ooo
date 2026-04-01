@@ -179,15 +179,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1774700892,
-        "narHash": "sha256-nM1gHh66EKXRNTeBzJE9yRCfPFlbyQz73Ge8McioxJQ=",
-        "owner": "vicgeentor",
+        "lastModified": 1769080344,
+        "narHash": "sha256-Z/2hBW/bRb8wtJqBUT8tqgoXg4XqGNvp8L6xw+zHDaU=",
+        "owner": "agda",
         "repo": "cornelis",
-        "rev": "bf1456deda17a87f77cb0b3fd623b673337bc5f3",
+        "rev": "8401538b8d5056571827679658331136c38f11be",
         "type": "github"
       },
       "original": {
-        "owner": "vicgeentor",
+        "owner": "agda",
         "repo": "cornelis",
         "type": "github"
       }

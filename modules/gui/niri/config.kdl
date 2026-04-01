@@ -4,7 +4,6 @@ screenshot-path "~/personal/Pictures/screenshots/%Y-%m-%d_%H-%M-%S.png"
 
 // spawn-at-startup != spawn-sh-at-startup
 spawn-sh-at-startup "thunar --daemon"
-// REMOVE: spawn-sh-at-startup "systemctl --user enable --now app-com.mitchellh.ghostty.service"
 
 environment {
   XDG_CURRENT_DESKTOP "niri"
