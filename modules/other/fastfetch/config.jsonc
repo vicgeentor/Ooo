@@ -3,9 +3,9 @@
     "logo": {
         "type": "builtin",
         "height": 15,
-        "width": 30,
+        "width": 15,
         "padding": {
-            "top": 5,
+            "top": 3,
             "left": 3
         }
     },
