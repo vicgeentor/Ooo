@@ -127,6 +127,7 @@ binds {
   Mod+Alt+L { spawn "dms" "ipc" "call" "lock" "lock"; }
   Mod+grave { spawn "dms" "ipc" "call" "notepad" "toggle"; }
   Mod+T { spawn "dms" "ipc" "call" "processlist" "toggle"; }
+  Mod+W { spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"; }
 
   Mod+G { spawn "google"; }
   Mod+Z { spawn "hyprmagnifier" "--size" "1000x1000"; }

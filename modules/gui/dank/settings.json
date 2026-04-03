@@ -75,22 +75,17 @@
   "privacyShowScreenShareIcon": false,
   "controlCenterWidgets": [
     {
+      "id": "brightnessSlider",
+      "enabled": true,
+      "width": 100
+    },
+    {
       "id": "volumeSlider",
       "enabled": true,
       "width": 50
     },
     {
-      "id": "brightnessSlider",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "wifi",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "bluetooth",
+      "id": "inputVolumeSlider",
       "enabled": true,
       "width": 50
     },
@@ -105,12 +100,22 @@
       "width": 50
     },
     {
+      "id": "wifi",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "bluetooth",
+      "enabled": true,
+      "width": 50
+    },
+    {
       "id": "nightMode",
       "enabled": true,
       "width": 50
     },
     {
-      "id": "darkMode",
+      "id": "builtin_vpn",
       "enabled": true,
       "width": 50
     }
@@ -124,7 +129,7 @@
   "maxWorkspaceIcons": 3,
   "workspaceAppIconSizeOffset": 0,
   "groupWorkspaceApps": true,
-  "workspaceFollowFocus": false,
+  "workspaceFollowFocus": true,
   "showOccupiedWorkspacesOnly": true,
   "reverseScrolling": false,
   "dwlShowAllTags": false,
@@ -157,7 +162,33 @@
   "runningAppsCurrentWorkspace": false,
   "runningAppsGroupByApp": false,
   "runningAppsCurrentMonitor": false,
-  "appIdSubstitutions": [],
+  "appIdSubstitutions": [
+    {
+      "pattern": "Spotify",
+      "replacement": "spotify",
+      "type": "exact"
+    },
+    {
+      "pattern": "beepertexts",
+      "replacement": "beeper",
+      "type": "exact"
+    },
+    {
+      "pattern": "home assistant desktop",
+      "replacement": "homeassistant-desktop",
+      "type": "exact"
+    },
+    {
+      "pattern": "com.transmissionbt.transmission",
+      "replacement": "transmission-gtk",
+      "type": "contains"
+    },
+    {
+      "pattern": "^steam_app_(\\d+)$",
+      "replacement": "steam_icon_$1",
+      "type": "regex"
+    }
+  ],
   "centeringMode": "index",
   "clockDateFormat": "",
   "lockDateFormat": "",
@@ -307,7 +338,7 @@
   "dockMaxVisibleApps": 0,
   "dockMaxVisibleRunningApps": 0,
   "dockShowOverflowBadge": true,
-  "notificationOverlayEnabled": false,
+  "notificationOverlayEnabled": true,
   "notificationPopupShadowEnabled": true,
   "notificationPopupPrivacyMode": false,
   "modalDarkenBackground": true,
@@ -421,6 +452,10 @@
       ],
       "rightWidgets": [
         {
+          "id": "displayMirror",
+          "enabled": false
+        },
+        {
           "id": "privacyIndicator",
           "enabled": true
         },
@@ -475,7 +510,7 @@
       "autoHide": false,
       "autoHideDelay": 250,
       "showOnWindowsOpen": false,
-      "openOnOverview": true,
+      "openOnOverview": false,
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
