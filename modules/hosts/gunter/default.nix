@@ -13,7 +13,7 @@
       btrfs
       dns
       fwupd
-      minecraft-server-two
+      minecraft-server
       ssd
       ssh
       stirling-pdf

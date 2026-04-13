@@ -15,7 +15,6 @@
       fwupd
       grafana
       graphics
-      minecraft-server
       networkmanager
       nginx
       nvidia

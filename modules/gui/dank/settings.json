@@ -1,6 +1,6 @@
 {
-  "currentThemeName": "purple",
-  "currentThemeCategory": "generic",
+  "currentThemeName": "dynamic",
+  "currentThemeCategory": "dynamic",
   "customThemeFile": "",
   "registryThemeVariants": {},
   "matugenScheme": "scheme-tonal-spot",
@@ -192,6 +192,17 @@
   "centeringMode": "index",
   "clockDateFormat": "",
   "lockDateFormat": "",
+  "greeterRememberLastSession": true,
+  "greeterRememberLastUser": true,
+  "greeterEnableFprint": false,
+  "greeterEnableU2f": false,
+  "greeterWallpaperPath": "",
+  "greeterUse24HourClock": true,
+  "greeterShowSeconds": false,
+  "greeterPadHours12Hour": false,
+  "greeterLockDateFormat": "",
+  "greeterFontFamily": "",
+  "greeterWallpaperFillMode": "",
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
@@ -284,7 +295,11 @@
       "14:3F:A6:46:F5:4C"
     ]
   },
-  "audioInputDevicePins": {},
+  "audioInputDevicePins": {
+    "preferredInput": [
+      "alsa_input.pci-0000_00_1f.3.analog-stereo"
+    ]
+  },
   "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
@@ -312,6 +327,7 @@
   "matugenTemplateKcolorscheme": true,
   "matugenTemplateVscode": true,
   "matugenTemplateEmacs": true,
+  "matugenTemplateZed": true,
   "showDock": false,
   "dockAutoHide": false,
   "dockSmartAutoHide": false,
@@ -353,6 +369,8 @@
   "lockAtStartup": false,
   "enableFprint": false,
   "maxFprintTries": 15,
+  "enableU2f": false,
+  "u2fMode": "or",
   "lockScreenActiveMonitor": "all",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,

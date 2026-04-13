@@ -1,22 +1,28 @@
-{ config, ... }:
+{ config, inputs, ... }:
 {
-  flake.modules.nixos.sound = {
-    security.rtkit.enable = true;
-    services.pipewire = {
-      enable = true;
-      audio.enable = true;
-      systemWide = true;
-      alsa = {
+  flake.modules.nixos.sound =
+    { pkgs, ... }:
+    {
+      security.rtkit.enable = true;
+      services.pipewire = {
         enable = true;
-        support32Bit = true;
+        package = inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.pipewire;
+        audio.enable = true;
+        systemWide = true;
+        alsa = {
+          enable = true;
+          support32Bit = true;
+        };
+        jack.enable = true;
+        pulse.enable = true;
+        wireplumber.enable = true;
+        wireplumber.package =
+          inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.wireplumber;
+
       };
-      jack.enable = true;
-      pulse.enable = true;
-      wireplumber.enable = true;
+      users.users.${config.flake.meta.vic.username}.extraGroups = [
+        "audio"
+        "pipewire"
+      ];
     };
-    users.users.${config.flake.meta.vic.username}.extraGroups = [
-      "audio"
-      "pipewire"
-    ];
-  };
 }

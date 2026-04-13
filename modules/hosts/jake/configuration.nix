@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.jake = {
+  flake.modules.nixos.jake = nixosArgs: {
 
     # These three are required
     networking.hostName = "jake";

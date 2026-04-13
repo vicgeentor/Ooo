@@ -71,7 +71,7 @@ vim.diagnostic.config({
 	underline = { severity = { min = vim.diagnostic.severity.WARN } },
 	virtual_text = false,
 	virtual_lines = false,
-	jump = { float = true },
+	on_jump = { float = true },
 })
 vim.g.have_nerd_font = true
 

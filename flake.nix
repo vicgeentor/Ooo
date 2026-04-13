@@ -7,6 +7,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-calibre.url = "github:Stebalien/nixpkgs/f50833e7541c8cf9b0289ed483fee741698790b1";
+    nixpkgs-tdarr.url = "github:Stebalien/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
 
     agenix = {
       url = "github:ryantm/agenix";
@@ -52,7 +53,7 @@
 
     import-tree.url = "github:vic/import-tree";
 
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay/0990740d36eb5674abfd899746ac5f51a96bf1c0";
 
     niri = {
       url = "github:sodiboo/niri-flake";

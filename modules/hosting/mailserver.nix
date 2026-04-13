@@ -51,7 +51,7 @@
 
         # A list of all login accounts. To create the password hashes, use
         # nix-shell -p mkpasswd --run 'mkpasswd -s'
-        loginAccounts = {
+        accounts = {
           "vic@vicgeentor.nl" = {
             hashedPasswordFile = nixosArgs.config.age.secrets.email-password-vic-at-vicgeentornl.path;
             aliases = [ "@vicgeentor.nl" ];
