@@ -32,7 +32,7 @@
         jq
         mermaid-cli
         nixd # Nix lsp
-        inputs.nix-devshells.packages.${pkgs.stdenv.hostPlatform.system}.default
+        inputs.givenv.packages.${pkgs.stdenv.hostPlatform.system}.default
         obs-studio
         kdePackages.okular
         pavucontrol # Audio controls
@@ -45,6 +45,7 @@
         signal-desktop
         spotify
         sshfs
+        teams-for-linux
         thunderbird-latest # Mail client
         unrar
         unzip

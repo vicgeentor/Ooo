@@ -22,7 +22,7 @@ return {
 	-- 		views = {
 	-- 			cmdline_popup = {
 	-- 				position = { row = "95%", col = "50%" },
-	-- 				size = { width = 60, height = "auto" },
+	-- 				size = { width = 64, height = "auto" },
 	-- 			},
 	-- 		},
 	-- 	},

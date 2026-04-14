@@ -65,8 +65,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-devshells = {
-      url = "github:vicgeentor/nix-devshells";
+    givenv = {
+      url = "github:vicgeentor/givenv";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

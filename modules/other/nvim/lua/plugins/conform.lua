@@ -13,7 +13,7 @@ return {
 					},
 					latexindent = {
 						prepend_args = {
-							"-y=modifyLineBreaks:textWrapOptions:columns:60",
+							"-y=modifyLineBreaks:textWrapOptions:columns:64",
 							"-m",
 						},
 					},
@@ -21,7 +21,7 @@ return {
 						prepend_args = {
 							"--number",
 							"--wrap",
-							"60",
+							"64",
 						},
 					},
 					ocamlformat = {
