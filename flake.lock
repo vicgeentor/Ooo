@@ -1278,11 +1278,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776162268,
-        "narHash": "sha256-+zssaAgHJVAHAK9ZImAFwzpFLsA+G9aruB7ajvr/qxE=",
+        "lastModified": 1776170719,
+        "narHash": "sha256-I+o8FxDiUDeQZkXzT4i3WvyAzQuLFStvA/tG4DH0CtM=",
         "owner": "vicgeentor",
         "repo": "nix-devshells",
-        "rev": "05b22443836fe69d1c3cafc709fc700489473db0",
+        "rev": "c5087c14d47a28ec30d3227b7a34ac34421ee3cb",
         "type": "github"
       },
       "original": {
