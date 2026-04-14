@@ -1,6 +1,8 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.base = {
+  flake.modules.nixos.base = nixosArgs: {
+    age.secrets.github-general-api-token.file = ../../_secrets/github-general-api-token.age;
+
     nix = {
       channel.enable = false;
       registry.nixpkgs.flake = inputs.nixpkgs;
@@ -28,6 +30,9 @@
           "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         ];
       };
+      extraOptions = ''
+        !include ${nixosArgs.config.age.secrets.github-general-api-token.path}
+      '';
     };
     nixpkgs.config = {
       allowUnfree = true;

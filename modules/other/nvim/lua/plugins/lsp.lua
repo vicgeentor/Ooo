@@ -52,7 +52,6 @@ return {
 			-- enabling LSPs
 			vim.lsp.enable("bashls")
 			vim.lsp.enable("clangd")
-			vim.lsp.enable("gdscript")
 			vim.lsp.enable("hls")
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("ltex_plus")
@@ -60,15 +59,9 @@ return {
 			vim.lsp.enable("ocamllsp")
 			vim.lsp.enable("pyright")
 			vim.lsp.enable("qmlls")
-			vim.lsp.enable("ts_ls")
 			vim.lsp.enable("tinymist")
-			vim.lsp.enable("zls")
 
 			-- Additional setup
-			vim.lsp.config("gdscript", {
-				name = "godot",
-				cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
-			})
 			vim.lsp.config("hls", {
 				settings = {
 					hls = {

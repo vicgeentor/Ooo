@@ -24,6 +24,11 @@ in
     simon-system
   ];
 
+  "github-general-api-token.age".publicKeys = [
+    jake-vic
+    jake-system
+  ];
+
   "grafana.age".publicKeys = [
     jake-vic
     simon-system
