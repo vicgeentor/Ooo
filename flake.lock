@@ -1388,17 +1388,17 @@
     },
     "nixpkgs-calibre": {
       "locked": {
-        "lastModified": 1772479450,
-        "narHash": "sha256-eR3DpZ+CZL5+RUzGo0GF3stujdYc2WceVI45Q1HddIw=",
+        "lastModified": 1775827408,
+        "narHash": "sha256-g0aAHVYKg0qDaX+d043epPzs1heULVvHQU+JrAtzmws=",
         "owner": "Stebalien",
         "repo": "nixpkgs",
-        "rev": "f50833e7541c8cf9b0289ed483fee741698790b1",
+        "rev": "d49eafdefcf72daec3fa4cc42dd3885204116304",
         "type": "github"
       },
       "original": {
         "owner": "Stebalien",
         "repo": "nixpkgs",
-        "rev": "f50833e7541c8cf9b0289ed483fee741698790b1",
+        "rev": "d49eafdefcf72daec3fa4cc42dd3885204116304",
         "type": "github"
       }
     },

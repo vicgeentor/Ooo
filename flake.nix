@@ -6,7 +6,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
-    nixpkgs-calibre.url = "github:Stebalien/nixpkgs/f50833e7541c8cf9b0289ed483fee741698790b1";
+    nixpkgs-calibre.url = "github:Stebalien/nixpkgs/d49eafdefcf72daec3fa4cc42dd3885204116304";
     nixpkgs-tdarr.url = "github:Stebalien/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
 
     agenix = {
