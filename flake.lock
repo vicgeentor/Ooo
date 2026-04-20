@@ -564,11 +564,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1776687349,
-        "narHash": "sha256-3kLPzGVmalX80fivEhhAX3XjITM5b7KL9fgoqkGfMU8=",
+        "lastModified": 1776715888,
+        "narHash": "sha256-0ftoYCwgofaLowOMvRflla5wtoohWt5PY4GRBpCVf7o=",
         "owner": "vicgeentor",
         "repo": "givenv",
-        "rev": "72b0532cdfb3f82dc06267dacead898ec430d1b0",
+        "rev": "b64557ced13a05757945f0f85cf14e83de5e0cde",
         "type": "github"
       },
       "original": {

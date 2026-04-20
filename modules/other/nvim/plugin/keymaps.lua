@@ -76,8 +76,6 @@ set(
 -- Search through all keymaps with Telescope
 set("n", "<leader>key", "<cmd>Telescope keymaps<CR>", { desc = "Search through keymaps", silent = true })
 
-set("n", "<F5>", "<CMD>e<CR>", { desc = "Reload buffer" })
-
 -- mdto pdf
 set("n", "<leader>mdp", function()
 	local file = vim.fn.expand("%")
