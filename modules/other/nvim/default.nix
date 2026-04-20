@@ -26,7 +26,7 @@
           nodejs
           ripgrep
           stylua
-          tree-sitter
+          inputs.tree-sitter.packages.${pkgs.stdenv.hostPlatform.system}.default
           yarn
         ];
         file = {

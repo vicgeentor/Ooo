@@ -6,8 +6,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
-    nixpkgs-calibre.url = "github:Stebalien/nixpkgs/d49eafdefcf72daec3fa4cc42dd3885204116304";
-    nixpkgs-tdarr.url = "github:Stebalien/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
+    nixpkgs-calibre.url = "github:NixOS/nixpkgs/d49eafdefcf72daec3fa4cc42dd3885204116304";
+    nixpkgs-tdarr.url = "github:NixOS/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
+
+    # remove later
+    tree-sitter.url = "github:tree-sitter/tree-sitter";
 
     agenix = {
       url = "github:ryantm/agenix";
@@ -53,7 +56,7 @@
 
     import-tree.url = "github:vic/import-tree";
 
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay/0990740d36eb5674abfd899746ac5f51a96bf1c0";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     niri = {
       url = "github:sodiboo/niri-flake";
