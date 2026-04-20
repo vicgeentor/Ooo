@@ -9,7 +9,7 @@ return {
 		config = function()
 			-- Required for nix
 			vim.g.cornelis_use_global_binary = 1
-      vim.g.cornelis_max_size = 10
+			vim.g.cornelis_max_size = 10
 
 			-- Close the extra window when quitting inside an agda file
 			vim.api.nvim_create_autocmd("QuitPre", {
@@ -32,7 +32,7 @@ return {
 			set("n", "<C-c><C-s>", "<cmd>CornelisSolve<CR>", { desc = "Solve constraints" })
 			set("n", "<M-.>", "<cmd>CornelisGoToDefinition<CR>", { desc = "Jump to definition of name at cursor" })
 			set("n", "gd", "<cmd>CornelisGoToDefinition<CR>", { desc = "Jump to definition of name at cursor" })
-      -- Capital B because of tmux
+			-- Capital B because of tmux
 			set("n", "<C-c><C-B>", "<cmd>CornelisPrevGoal<CR>", { desc = "Jump to previous goal" })
 			set("n", "<C-c><C-f>", "<cmd>CornelisNextGoal<CR>", { desc = "Jump to next goal" })
 			set("n", "<C-c><C-space>", "<cmd>CornelisGive<CR>", { desc = "Fill goal with hole contents" })

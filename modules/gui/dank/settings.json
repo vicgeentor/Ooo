@@ -497,13 +497,16 @@
         {
           "id": "controlCenterButton",
           "enabled": true,
+          "showNetworkIcon": true,
+          "showBluetoothIcon": true,
           "showAudioPercent": false,
           "showVpnIcon": true,
           "showBrightnessIcon": false,
           "showBrightnessPercent": false,
           "showMicIcon": false,
-          "showMicPercent": true,
-          "showBatteryIcon": false
+          "showMicPercent": false,
+          "showBatteryIcon": false,
+          "showPrinterIcon": false
         }
       ],
       "spacing": 0,

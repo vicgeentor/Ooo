@@ -25,10 +25,7 @@
       {
         "index": 11,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "bridge"
-        ],
+        "class_list": ["pci", "bridge"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -86,21 +83,14 @@
         },
         "driver": "pcieport",
         "driver_module": "pcieportdrv",
-        "drivers": [
-          "pcieport"
-        ],
-        "driver_modules": [
-          "pcieportdrv"
-        ],
+        "drivers": ["pcieport"],
+        "driver_modules": ["pcieportdrv"],
         "module_alias": "pci:v00008086d0000A33Csv00001028sd00000930bc06sc04i00"
       },
       {
         "index": 13,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "bridge"
-        ],
+        "class_list": ["pci", "bridge"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -157,10 +147,7 @@
       {
         "index": 19,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "bridge"
-        ],
+        "class_list": ["pci", "bridge"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -213,22 +200,15 @@
         },
         "driver": "skl_uncore",
         "driver_module": "intel_uncore",
-        "drivers": [
-          "skl_uncore"
-        ],
-        "driver_modules": [
-          "intel_uncore"
-        ],
+        "drivers": ["skl_uncore"],
+        "driver_modules": ["intel_uncore"],
         "module_alias": "pci:v00008086d00003EC2sv00001028sd00000930bc06sc00i00",
         "label": "Onboard - Other"
       },
       {
         "index": 21,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "bridge"
-        ],
+        "class_list": ["pci", "bridge"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -286,12 +266,8 @@
         },
         "driver": "pcieport",
         "driver_module": "pcieportdrv",
-        "drivers": [
-          "pcieport"
-        ],
-        "driver_modules": [
-          "pcieportdrv"
-        ],
+        "drivers": ["pcieport"],
+        "driver_modules": ["pcieportdrv"],
         "module_alias": "pci:v00008086d0000A330sv00001028sd00000930bc06sc04i00"
       }
     ],
@@ -299,11 +275,7 @@
       {
         "index": 28,
         "attached_to": 10,
-        "class_list": [
-          "cdrom",
-          "scsi",
-          "block_device"
-        ],
+        "class_list": ["cdrom", "scsi", "block_device"],
         "bus_type": {
           "hex": "0084",
           "name": "SCSI",
@@ -357,14 +329,8 @@
         "unix_device_name2": "/dev/sg0",
         "driver": "ahci",
         "driver_module": "ahci",
-        "drivers": [
-          "ahci",
-          "sr"
-        ],
-        "driver_modules": [
-          "ahci",
-          "sr_mod"
-        ]
+        "drivers": ["ahci", "sr"],
+        "driver_modules": ["ahci", "sr_mod"]
       }
     ],
     "cpu": [
@@ -510,9 +476,7 @@
           "gds",
           "vmscape"
         ],
-        "power_management": [
-          ""
-        ],
+        "power_management": [""],
         "bogo": 6000,
         "cache": 9216,
         "units": 16,
@@ -536,11 +500,7 @@
       {
         "index": 27,
         "attached_to": 14,
-        "class_list": [
-          "disk",
-          "block_device",
-          "nvme"
-        ],
+        "class_list": ["disk", "block_device", "nvme"],
         "bus_type": {
           "hex": "0096",
           "name": "NVME",
@@ -608,22 +568,15 @@
         ],
         "driver": "nvme",
         "driver_module": "nvme",
-        "drivers": [
-          "nvme"
-        ],
-        "driver_modules": [
-          "nvme"
-        ]
+        "drivers": ["nvme"],
+        "driver_modules": ["nvme"]
       }
     ],
     "graphics_card": [
       {
         "index": 23,
         "attached_to": 0,
-        "class_list": [
-          "graphics_card",
-          "pci"
-        ],
+        "class_list": ["graphics_card", "pci"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -686,12 +639,8 @@
         },
         "driver": "i915",
         "driver_module": "i915",
-        "drivers": [
-          "i915"
-        ],
-        "driver_modules": [
-          "i915"
-        ],
+        "drivers": ["i915"],
+        "driver_modules": ["i915"],
         "module_alias": "pci:v00008086d00003E92sv00001028sd00000930bc03sc00i00",
         "label": "Onboard - Video"
       }
@@ -700,10 +649,7 @@
       {
         "index": 29,
         "attached_to": 24,
-        "class_list": [
-          "usb",
-          "hub"
-        ],
+        "class_list": ["usb", "hub"],
         "bus_type": {
           "hex": "0086",
           "name": "USB",
@@ -776,21 +722,14 @@
         "hotplug": "usb",
         "driver": "hub",
         "driver_module": "usbcore",
-        "drivers": [
-          "hub"
-        ],
-        "driver_modules": [
-          "usbcore"
-        ],
+        "drivers": ["hub"],
+        "driver_modules": ["usbcore"],
         "module_alias": "usb:v1D6Bp0002d0612dc09dsc00dp01ic09isc00ip00in00"
       },
       {
         "index": 30,
         "attached_to": 24,
-        "class_list": [
-          "usb",
-          "hub"
-        ],
+        "class_list": ["usb", "hub"],
         "bus_type": {
           "hex": "0086",
           "name": "USB",
@@ -853,12 +792,8 @@
         "hotplug": "usb",
         "driver": "hub",
         "driver_module": "usbcore",
-        "drivers": [
-          "hub"
-        ],
-        "driver_modules": [
-          "usbcore"
-        ],
+        "drivers": ["hub"],
+        "driver_modules": ["usbcore"],
         "module_alias": "usb:v1D6Bp0003d0612dc09dsc00dp03ic09isc00ip00in00"
       }
     ],
@@ -866,9 +801,7 @@
       {
         "index": 9,
         "attached_to": 0,
-        "class_list": [
-          "memory"
-        ],
+        "class_list": ["memory"],
         "base_class": {
           "hex": "0101",
           "name": "Internally Used Class",
@@ -892,10 +825,7 @@
       {
         "index": 16,
         "attached_to": 11,
-        "class_list": [
-          "network_controller",
-          "pci"
-        ],
+        "class_list": ["network_controller", "pci"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -938,9 +868,7 @@
         "model": "Ethernet controller",
         "sysfs_id": "/devices/pci0000:00/0000:00:1c.0/0000:01:00.0",
         "sysfs_bus_id": "0000:01:00.0",
-        "unix_device_names": [
-          "enp1s0"
-        ],
+        "unix_device_names": ["enp1s0"],
         "resources": [
           {
             "type": "hwaddr",
@@ -967,12 +895,8 @@
         },
         "driver": "r8169",
         "driver_module": "r8169",
-        "drivers": [
-          "r8169"
-        ],
-        "driver_modules": [
-          "r8169"
-        ],
+        "drivers": ["r8169"],
+        "driver_modules": ["r8169"],
         "module_alias": "pci:v000010ECd00008168sv00001028sd00000930bc02sc00i00"
       }
     ],
@@ -980,9 +904,7 @@
       {
         "index": 31,
         "attached_to": 16,
-        "class_list": [
-          "network_interface"
-        ],
+        "class_list": ["network_interface"],
         "base_class": {
           "hex": "0107",
           "name": "Network Interface",
@@ -996,9 +918,7 @@
         "model": "Ethernet network interface",
         "sysfs_id": "/class/net/enp1s0",
         "sysfs_device_link": "/devices/pci0000:00/0000:00:1c.0/0000:01:00.0",
-        "unix_device_names": [
-          "enp1s0"
-        ],
+        "unix_device_names": ["enp1s0"],
         "resources": [
           {
             "type": "hwaddr",
@@ -1011,19 +931,13 @@
         ],
         "driver": "r8169",
         "driver_module": "r8169",
-        "drivers": [
-          "r8169"
-        ],
-        "driver_modules": [
-          "r8169"
-        ]
+        "drivers": ["r8169"],
+        "driver_modules": ["r8169"]
       },
       {
         "index": 33,
         "attached_to": 0,
-        "class_list": [
-          "network_interface"
-        ],
+        "class_list": ["network_interface"],
         "base_class": {
           "hex": "0107",
           "name": "Network Interface",
@@ -1036,19 +950,14 @@
         },
         "model": "Loopback network interface",
         "sysfs_id": "/class/net/lo",
-        "unix_device_names": [
-          "lo"
-        ]
+        "unix_device_names": ["lo"]
       }
     ],
     "pci": [
       {
         "index": 12,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "unknown"
-        ],
+        "class_list": ["pci", "unknown"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1101,10 +1010,7 @@
       {
         "index": 15,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "unknown"
-        ],
+        "class_list": ["pci", "unknown"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1157,22 +1063,15 @@
         },
         "driver": "mei_me",
         "driver_module": "mei_me",
-        "drivers": [
-          "mei_me"
-        ],
-        "driver_modules": [
-          "mei_me"
-        ],
+        "drivers": ["mei_me"],
+        "driver_modules": ["mei_me"],
         "module_alias": "pci:v00008086d0000A360sv00001028sd00000930bc07sc80i00",
         "label": "Onboard - Other"
       },
       {
         "index": 17,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "unknown"
-        ],
+        "class_list": ["pci", "unknown"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1224,22 +1123,15 @@
         },
         "driver": "intel-spi",
         "driver_module": "spi_intel_pci",
-        "drivers": [
-          "intel-spi"
-        ],
-        "driver_modules": [
-          "spi_intel_pci"
-        ],
+        "drivers": ["intel-spi"],
+        "driver_modules": ["spi_intel_pci"],
         "module_alias": "pci:v00008086d0000A324sv00001028sd00000930bc0Csc80i00",
         "label": "Onboard - Other"
       },
       {
         "index": 20,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "unknown"
-        ],
+        "class_list": ["pci", "unknown"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1292,22 +1184,15 @@
         },
         "driver": "intel_pch_thermal",
         "driver_module": "intel_pch_thermal",
-        "drivers": [
-          "intel_pch_thermal"
-        ],
-        "driver_modules": [
-          "intel_pch_thermal"
-        ],
+        "drivers": ["intel_pch_thermal"],
+        "driver_modules": ["intel_pch_thermal"],
         "module_alias": "pci:v00008086d0000A379sv00001028sd00000930bc11sc80i00",
         "label": "Onboard - Other"
       },
       {
         "index": 22,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "unknown"
-        ],
+        "class_list": ["pci", "unknown"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1365,10 +1250,7 @@
       {
         "index": 25,
         "attached_to": 0,
-        "class_list": [
-          "pci",
-          "unknown"
-        ],
+        "class_list": ["pci", "unknown"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1430,12 +1312,8 @@
         },
         "driver": "i801_smbus",
         "driver_module": "i2c_i801",
-        "drivers": [
-          "i801_smbus"
-        ],
-        "driver_modules": [
-          "i2c_i801"
-        ],
+        "drivers": ["i801_smbus"],
+        "driver_modules": ["i2c_i801"],
         "module_alias": "pci:v00008086d0000A323sv00001028sd00000930bc0Csc05i00",
         "label": "Onboard - Other"
       }
@@ -1444,10 +1322,7 @@
       {
         "index": 18,
         "attached_to": 0,
-        "class_list": [
-          "sound",
-          "pci"
-        ],
+        "class_list": ["sound", "pci"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1499,12 +1374,8 @@
         },
         "driver": "snd_hda_intel",
         "driver_module": "snd_hda_intel",
-        "drivers": [
-          "snd_hda_intel"
-        ],
-        "driver_modules": [
-          "snd_hda_intel"
-        ],
+        "drivers": ["snd_hda_intel"],
+        "driver_modules": ["snd_hda_intel"],
         "module_alias": "pci:v00008086d0000A348sv00001028sd00000930bc04sc03i00",
         "label": "Onboard - Sound"
       }
@@ -1513,10 +1384,7 @@
       {
         "index": 10,
         "attached_to": 0,
-        "class_list": [
-          "storage_controller",
-          "pci"
-        ],
+        "class_list": ["storage_controller", "pci"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1595,22 +1463,15 @@
         },
         "driver": "ahci",
         "driver_module": "ahci",
-        "drivers": [
-          "ahci"
-        ],
-        "driver_modules": [
-          "ahci"
-        ],
+        "drivers": ["ahci"],
+        "driver_modules": ["ahci"],
         "module_alias": "pci:v00008086d0000A352sv00001028sd00000930bc01sc06i01",
         "label": "Onboard - SATA"
       },
       {
         "index": 14,
         "attached_to": 21,
-        "class_list": [
-          "storage_controller",
-          "pci"
-        ],
+        "class_list": ["storage_controller", "pci"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1661,12 +1522,8 @@
         },
         "driver": "nvme",
         "driver_module": "nvme",
-        "drivers": [
-          "nvme"
-        ],
-        "driver_modules": [
-          "nvme"
-        ],
+        "drivers": ["nvme"],
+        "driver_modules": ["nvme"],
         "module_alias": "pci:v00001C5Cd00001339sv00001C5Csd00000000bc01sc08i02"
       }
     ],
@@ -1677,9 +1534,7 @@
       {
         "index": 26,
         "attached_to": 0,
-        "class_list": [
-          "unknown"
-        ],
+        "class_list": ["unknown"],
         "base_class": {
           "hex": "0007",
           "name": "Communication controller",
@@ -1701,9 +1556,7 @@
           "value": 0
         },
         "model": "16550A",
-        "unix_device_names": [
-          "/dev/ttyS0"
-        ],
+        "unix_device_names": ["/dev/ttyS0"],
         "resources": [
           {
             "type": "io",
@@ -1719,10 +1572,7 @@
       {
         "index": 24,
         "attached_to": 0,
-        "class_list": [
-          "usb_controller",
-          "pci"
-        ],
+        "class_list": ["usb_controller", "pci"],
         "bus_type": {
           "hex": "0004",
           "name": "PCI",
@@ -1779,12 +1629,8 @@
         },
         "driver": "xhci_hcd",
         "driver_module": "xhci_pci",
-        "drivers": [
-          "xhci_hcd"
-        ],
-        "driver_modules": [
-          "xhci_pci"
-        ],
+        "drivers": ["xhci_hcd"],
+        "driver_modules": ["xhci_pci"],
         "module_alias": "pci:v00008086d0000A36Dsv00001028sd00000930bc0Csc03i30",
         "label": "Onboard - Other"
       }
@@ -1829,10 +1675,7 @@
         "name": "Motherboard",
         "value": 10
       },
-      "features": [
-        "Hosting Board",
-        "Replaceable"
-      ],
+      "features": ["Hosting Board", "Replaceable"],
       "location": "",
       "chassis": 3
     },
@@ -1871,12 +1714,8 @@
           "name": "8-way Set-Associative",
           "value": 7
         },
-        "sram_type_current": [
-          "Synchronous"
-        ],
-        "sram_type_supported": [
-          "Synchronous"
-        ]
+        "sram_type_current": ["Synchronous"],
+        "sram_type_supported": ["Synchronous"]
       },
       {
         "handle": 19,
@@ -1912,12 +1751,8 @@
           "name": "4-way Set-Associative",
           "value": 5
         },
-        "sram_type_current": [
-          "Synchronous"
-        ],
-        "sram_type_supported": [
-          "Synchronous"
-        ]
+        "sram_type_current": ["Synchronous"],
+        "sram_type_supported": ["Synchronous"]
       },
       {
         "handle": 20,
@@ -1953,12 +1788,8 @@
           "name": "Other",
           "value": 9
         },
-        "sram_type_current": [
-          "Synchronous"
-        ],
-        "sram_type_supported": [
-          "Synchronous"
-        ]
+        "sram_type_current": ["Synchronous"],
+        "sram_type_supported": ["Synchronous"]
       }
     ],
     "chassis": [
@@ -1997,37 +1828,27 @@
     ],
     "config": {
       "handle": 5,
-      "options": [
-        "Default string"
-      ]
+      "options": ["Default string"]
     },
     "group_associations": [
       {
         "handle": 61499,
         "name": "Firmware Version Info",
         "handles": [
-          60129542157,
-          64424509454,
-          68719476751,
-          73014444048,
-          264101833998353,
+          60129542157, 64424509454, 68719476751, 73014444048, 264101833998353,
           141733982259
         ]
       },
       {
         "handle": 61501,
         "name": "$MEI",
-        "handles": [
-          0
-        ]
+        "handles": [0]
       }
     ],
     "language": [
       {
         "handle": 61500,
-        "languages": [
-          "en|US|iso8859-1"
-        ]
+        "languages": ["en|US|iso8859-1"]
       }
     ],
     "memory_array": [
@@ -2085,9 +1906,7 @@
           "name": "Other",
           "value": 26
         },
-        "memory_type_details": [
-          "Synchronous"
-        ],
+        "memory_type_details": ["Synchronous"],
         "speed": 2666
       },
       {
@@ -2523,10 +2342,7 @@
           "value": 3
         },
         "id": 1,
-        "features": [
-          "3.3 V",
-          "PME#"
-        ]
+        "features": ["3.3 V", "PME#"]
       },
       {
         "handle": 44,
@@ -2552,10 +2368,7 @@
           "value": 4
         },
         "id": 2,
-        "features": [
-          "3.3 V",
-          "PME#"
-        ]
+        "features": ["3.3 V", "PME#"]
       },
       {
         "handle": 45,
@@ -2581,10 +2394,7 @@
           "value": 4
         },
         "id": 3,
-        "features": [
-          "3.3 V",
-          "PME#"
-        ]
+        "features": ["3.3 V", "PME#"]
       },
       {
         "handle": 46,
@@ -2610,10 +2420,7 @@
           "value": 3
         },
         "id": 4,
-        "features": [
-          "3.3 V",
-          "PME#"
-        ]
+        "features": ["3.3 V", "PME#"]
       }
     ],
     "system": {
