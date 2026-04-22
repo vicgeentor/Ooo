@@ -15,7 +15,6 @@
         efibooteditor
         element-desktop
         ente-auth
-        evince # pdf
         eza # ls replacement
         fd # Finding files
         ffmpeg
@@ -34,7 +33,7 @@
         nixd # Nix lsp
         inputs.givenv.packages.${pkgs.stdenv.hostPlatform.system}.default
         obs-studio
-        kdePackages.okular
+        kdePackages.okular # pdf
         pavucontrol # Audio controls
         pinta # Paint
         playerctl # Needed for pausing, skipping songs, etc.

@@ -1,6 +1,9 @@
-# sudo nix run --option experimental-features "nix-command flakes" nixpkgs#nixos-facter -- -o facter.json
+# Run `nixos-facter -- -o facter.json`
 {
-  flake.modules.nixos.base = {
-    hardware.facter.detected.dhcp.enable = false;
-  };
+  flake.modules.nixos.base =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = [ pkgs.nixos-facter ];
+      hardware.facter.detected.dhcp.enable = false;
+    };
 }

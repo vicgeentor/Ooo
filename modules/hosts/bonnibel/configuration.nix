@@ -7,11 +7,10 @@
     }:
     {
 
-      # These four are required
+      # These three are required
       networking.hostName = "bonnibel";
       system.stateVersion = "25.11";
       hardware.facter.reportPath = ./facter.json;
-      hardware.facter.detected.dhcp.enable = false;
 
       # do not use DHCP, as DigitalOcean provisions IPs using cloud-init
       networking.useDHCP = lib.mkForce false;

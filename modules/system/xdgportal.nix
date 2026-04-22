@@ -10,6 +10,11 @@
           pkgs.xdg-desktop-portal-gnome
           pkgs.kdePackages.xdg-desktop-portal-kde
         ];
+        config = {
+          common = {
+            "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+          };
+        };
       };
     };
 }

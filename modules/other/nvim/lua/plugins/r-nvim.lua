@@ -32,7 +32,7 @@ return {
 			objbr_opendf = true,
 			objbr_openlist = false,
 			config_tmux = false,
-			pdfviewer = "evince",
+			pdfviewer = "okular",
 			setwd = "nvim", -- working directory becomes the current nvim working directory
 			quarto_chunk_hl = {
 				bg = "none", -- Use a different background color

@@ -88,6 +88,7 @@
           gp = "git push";
           gP = "git pull";
           gd = "git diff";
+          gl = "git log";
 
           # Tmux
           t = "tmux";
@@ -116,7 +117,6 @@
           open = "xdg-open";
           valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/fish/fish_USER.nix";
           view = "qimgv";
-          ev = "evince";
           thu = "thunar .";
           pf = "fd --type f | fzf | xargs ${config.flake.meta.vic.editor}";
           godot = "godot4 --display-driver wayland";

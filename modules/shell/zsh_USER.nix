@@ -106,8 +106,7 @@
           open = "xdg-open";
           valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/zsh_USER.nix";
           view = "qimgv";
-          ev = "silent evince";
-          thu = "silent thunar .";
+          thu = "thunar .";
           R = "R --save --quiet";
           pf = "fd --type f | fzf | xargs ${config.flake.meta.vic.editor}";
           cp = "cp -v";

@@ -1,4 +1,3 @@
-**/*.bak
 **/*lazy-lock.json
 **/.pre-commit-config.yaml
 result

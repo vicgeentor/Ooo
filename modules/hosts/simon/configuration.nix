@@ -3,7 +3,7 @@
     nixosArgs@{ lib, ... }:
     {
 
-      # These three are required
+      # These four are required
       networking.hostName = "simon";
       system.stateVersion = "24.11";
       hardware.facter.reportPath = ./facter.json;
