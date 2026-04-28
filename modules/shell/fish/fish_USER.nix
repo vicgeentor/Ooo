@@ -74,6 +74,7 @@
           R = "R --save --quiet";
         };
         shellAbbrs = {
+          # nvim
           vim = "nvim";
           vi = "nvim";
           svim = "sudo nvim";
@@ -89,9 +90,6 @@
           gP = "git pull";
           gd = "git diff";
           gl = "git log";
-
-          # Tmux
-          t = "tmux";
 
           # Syncing
           odsync = "onedrive --sync";

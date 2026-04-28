@@ -3,11 +3,11 @@
     boot = {
       plymouth = {
         enable = true;
-        # theme = "splash";
+        # theme = "rings";
         # themePackages = with pkgs; [
         #   # By default we would install all themes
         #   (adi1090x-plymouth-themes.override {
-        #     selected_themes = [ "splash" ];
+        #     selected_themes = ["rings"];
         #   })
         # ];
       };
@@ -17,8 +17,11 @@
       initrd.verbose = false;
       kernelParams = [
         "quiet"
+        "splash"
+        "boot.shell_on_fail"
         "udev.log_priority=3"
-        "systemd.show_status=auto"
+        "rd.systemd.show_status=auto"
+        "plymouth.use-simpledrm"
       ];
       # Hide the OS choice for bootloaders.
       # It's still possible to open the bootloader list by pressing any key

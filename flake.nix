@@ -8,6 +8,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-calibre.url = "github:NixOS/nixpkgs/d49eafdefcf72daec3fa4cc42dd3885204116304";
     nixpkgs-tdarr.url = "github:NixOS/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
+    nixpkgs-cornelis.url = "github:NixOS/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
 
     # remove later
     tree-sitter.url = "github:tree-sitter/tree-sitter";
@@ -20,16 +21,11 @@
 
     cornelis = {
       url = "github:agda/cornelis";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-cornelis";
     };
 
     disko = {
       url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

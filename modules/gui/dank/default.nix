@@ -4,11 +4,10 @@
     { pkgs, ... }:
     {
       imports = [
-        inputs.dms.nixosModules.dank-material-shell
         inputs.dms-plugin-registry.modules.default
       ];
 
-      programs.dank-material-shell = {
+      programs.dms-shell = {
         enable = true;
         systemd.enable = true;
         enableAudioWavelength = false;
