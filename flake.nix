@@ -43,13 +43,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprshutdown = {
-      url = "github:hyprwm/hyprshutdown";
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-    };
-
     import-tree.url = "github:vic/import-tree";
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
