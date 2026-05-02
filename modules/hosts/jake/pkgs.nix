@@ -19,6 +19,7 @@
         fd # Finding files
         ffmpeg
         (fortune.override { withOffensive = true; })
+        gcc # Too many things need this, so I'll install it globally
         ghostscript
         gimp3
         glib

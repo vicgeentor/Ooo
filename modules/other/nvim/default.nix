@@ -8,7 +8,6 @@
 
         # These are mostly dependencies of plugins
         inputs.cornelis.packages.${pkgs.stdenv.hostPlatform.system}.default
-        gcc
         lua5_1
         lua-language-server
         luajitPackages.luarocks

@@ -61,6 +61,7 @@ return {
 			vim.lsp.enable("ocamllsp")
 			vim.lsp.enable("pyright")
 			vim.lsp.enable("qmlls")
+			vim.lsp.enable("rust_analyzer")
 			vim.lsp.enable("tinymist")
 
 			-- Additional setup
