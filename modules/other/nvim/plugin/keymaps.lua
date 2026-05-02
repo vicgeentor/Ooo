@@ -3,6 +3,11 @@ local set = vim.keymap.set
 
 set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 
+vim.keymap.set("n", "<leader>l", function()
+	local new_config = not vim.diagnostic.config().virtual_lines
+	vim.diagnostic.config({ virtual_lines = new_config })
+end, { desc = "Toggle diagnostic virtual_lines" })
+
 set(
 	"n",
 	"<leader>th",

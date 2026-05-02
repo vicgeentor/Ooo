@@ -44,6 +44,12 @@ return {
 							"2",
 						},
 					},
+					rustfmt = {
+						prepend_args = {
+							"--config",
+							"tab_spaces=2",
+						},
+					},
 					typstyle = {
 						prepend_args = {
 							"--line-width",
@@ -63,6 +69,7 @@ return {
 					ocaml = { "ocamlformat" },
 					python = { "black" },
 					qml = { "qmlformat" },
+					rust = { "rustfmt" },
 					tex = { "latexindent" },
 					typst = { "typstyle" },
 				},
