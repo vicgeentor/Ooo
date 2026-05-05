@@ -26,7 +26,10 @@ in
 
   "github-general-api-token.age".publicKeys = [
     jake-vic
+    bonnibel-system
+    simon-system
     jake-system
+    gunter-system
   ];
 
   "grafana.age".publicKeys = [

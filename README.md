@@ -23,8 +23,8 @@ The laptop that I use for everything.
 ### [bonnibel](https://adventuretime.fandom.com/wiki/Princess_Bubblegum)
 
 My DigitalOcean VPS that is running
-[Pangolin](https://github.com/fosrl/pangolin) through which
-all my web services running on different hosts (e.g.
+[Pangolin](https://github.com/fosrl/pangolin) through which all
+my web services running on different hosts (e.g.
 [simon](#simon)) are routed through a
 [Newt](https://github.com/fosrl/newt) tunnel.
 
@@ -35,7 +35,6 @@ It also runs a receiving email server using
 
 My home server that runs some web services:
 
-- [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
 - [your_spotify](https://github.com/Yooooomi/your_spotify)
 
 ### [gunter](https://adventuretime.fandom.com/wiki/gunter)
@@ -59,8 +58,7 @@ For all hosts:
 
 - Backup all important files with
   [restic](https://github.com/restic/restic),
-  [rclone](https://github.com/rclone/rclone) and Google
-  Drive:
+  [rclone](https://github.com/rclone/rclone) and Google Drive:
   - email
   - your_spotify
   - immich
