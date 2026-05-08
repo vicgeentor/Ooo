@@ -19,7 +19,7 @@ Server mods:
 - [C2ME](https://modrinth.com/mod/c2me-fabric)
 - [Fabric API](https://modrinth.com/mod/P7dR8mSH)
 - [FerriteCore](https://modrinth.com/mod/ferrite-core)
-- [Krypton](https://modrinth.com/mod/krypton) Yet to install
+- [Krypton](https://modrinth.com/mod/krypton)
 - [Lithium](https://modrinth.com/mod/lithium)
 - [Resourceful Config](https://modrinth.com/mod/resourceful-config)
 - [ScalableLux](https://modrinth.com/mod/scalablelux)

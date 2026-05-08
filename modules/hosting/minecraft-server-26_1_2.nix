@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.modules.nixos.minecraft-server =
+  flake.modules.nixos.minecraft-server-26_1_2 =
     { pkgs, ... }:
     {
       imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
