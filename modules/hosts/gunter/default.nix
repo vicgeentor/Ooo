@@ -16,7 +16,7 @@
       minecraft-server-1_21_11
       ssd
       ssh
-      stirling-pdf
+      # stirling-pdf
       systemdboot
       tailscale
     ];

@@ -40,7 +40,7 @@
           port = 4444;
         };
 
-        jellyseerr = {
+        seerr = {
           enable = true;
           port = 4445;
         };
