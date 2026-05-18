@@ -2,7 +2,14 @@ return {
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
-		opts = {},
+		opts = {
+			modes = {
+				char = {
+					-- Whether flash is activated through `f`, `F`, `t`, `T`, `;` and `,` motions
+					enabled = false,
+				},
+			},
+		},
 		keys = {
 			{
 				"s",

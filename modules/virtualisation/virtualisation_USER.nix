@@ -1,18 +1,30 @@
 { config, ... }:
 {
-  flake.modules.nixos.virtualisation = {
-    programs = {
-      dconf.enable = true;
-      virt-manager.enable = true;
-    };
+  flake.modules.nixos.virtualisation =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = with pkgs; [
+        dnsmasq
+      ];
 
-    users.groups.libvirtd.members = [ config.flake.meta.vic.username ];
-    users.users.${config.flake.meta.vic.username}.extraGroups = [ "libvirtd" ];
+      programs = {
+        dconf.enable = true;
+        virt-manager.enable = true;
+      };
 
-    virtualisation = {
-      libvirtd.enable = true;
-      spiceUSBRedirection.enable = true;
-      containers.enable = true;
+      users.groups.libvirtd.members = [ config.flake.meta.vic.username ];
+      users.users.${config.flake.meta.vic.username}.extraGroups = [ "libvirtd" ];
+
+      virtualisation = {
+        libvirtd = {
+          enable = true;
+          qemu = {
+            swtpm.enable = true;
+            vhostUserPackages = with pkgs; [ virtiofsd ];
+          };
+        };
+        spiceUSBRedirection.enable = true;
+        containers.enable = true;
+      };
     };
-  };
 }
