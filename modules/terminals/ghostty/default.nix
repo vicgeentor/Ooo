@@ -1,11 +1,8 @@
-{ inputs, ... }:
 {
   flake.modules.homeManager.ghostty =
-    hmArgs@{ pkgs, ... }:
+    hmArgs@{ pkgs, lib, ... }:
     {
-      home.packages = [
-        inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
-      ];
+      home.packages = [ pkgs.ghostty ];
       home.file = {
         ".config/ghostty/config".source =
           hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/terminals/ghostty/config";
@@ -27,9 +24,7 @@
             ReloadSignal = "SIGUSR2";
             BusName = "com.mitchellh.ghostty";
             ExecStart = ''
-              ${
-                inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
-              }/bin/ghostty --gtk-single-instance=true --initial-window=false
+              ${lib.getExe pkgs.ghostty} --gtk-single-instance=true --initial-window=false
             '';
           };
           Install = {

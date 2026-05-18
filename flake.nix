@@ -6,8 +6,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
-    nixpkgs-calibre.url = "github:NixOS/nixpkgs/d49eafdefcf72daec3fa4cc42dd3885204116304";
-    nixpkgs-tdarr.url = "github:NixOS/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
     nixpkgs-cornelis.url = "github:NixOS/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
 
     # remove later
@@ -21,6 +19,7 @@
 
     cornelis = {
       url = "github:agda/cornelis";
+      # Pin nixpkgs to stop it from rebuilding all the time due to a GHC version change in nixpkgs
       inputs.nixpkgs.follows = "nixpkgs-cornelis";
     };
 
@@ -35,8 +34,6 @@
     };
 
     flake-parts.url = "github:hercules-ci/flake-parts";
-
-    ghostty.url = "github:ghostty-org/ghostty";
 
     home-manager = {
       url = "github:nix-community/home-manager";
