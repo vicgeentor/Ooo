@@ -105,8 +105,8 @@
           wifioff = "nmcli radio wifi off";
           ethon = "sudo ifconfig enp2s0 up";
           ethoff = "sudo ifconfig enp2s0 down";
-          virshon = "sudo virsh net-start --network default";
-          virshoff = "sudo virsh net-destroy --network default";
+          virshon = "sudo virsh net-start default";
+          virshoff = "sudo virsh net-destroy default";
 
           # Nice ones
           off = "systemctl poweroff";
