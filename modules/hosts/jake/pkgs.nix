@@ -8,7 +8,6 @@
         inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
         bash-language-server
         bat
-        bitwarden-desktop
         brightnessctl
         cowsay
         discord
