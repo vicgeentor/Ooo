@@ -4,6 +4,7 @@
     {
       hardware.graphics.extraPackages = [
         pkgs.intel-media-driver # LIBVA_DRIVER_NAME=iHD
+        pkgs.intel-compute-runtime
       ];
       services.xserver.videoDrivers = [ "intel" ];
 

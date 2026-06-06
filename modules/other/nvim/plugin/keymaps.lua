@@ -83,20 +83,6 @@ set("n", "<leader>key", "<cmd>Telescope keymaps<CR>", { desc = "Search through k
 
 set("n", "<F5>", "<CMD>e<CR>", { desc = "Reload buffer" })
 
--- mdto pdf
-set("n", "<leader>mdp", function()
-	local file = vim.fn.expand("%")
-	local escaped_file = vim.fn.shellescape(file)
-	vim.cmd("!mdto pdf " .. escaped_file)
-end, { desc = "[M]ark[d]own to [p]df" })
-
--- mdto html
-set("n", "<leader>mdh", function()
-	local file = vim.fn.expand("%")
-	local escaped_file = vim.fn.shellescape(file)
-	vim.cmd("!mdto html" .. escaped_file)
-end, { desc = "[M]ark[d]own to [h]tml" })
-
 -- vsplit
 set("n", "<leader>v", "<CMD>vsplit<CR>", { desc = "Create [v]ertical split" })
 

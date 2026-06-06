@@ -51,7 +51,6 @@
       tailscale
       thunar
       typst
-      virtualisation
       vpn
       wayland
       xdgportal

@@ -291,7 +291,6 @@
   "wifiNetworkPins": {
     "preferredWifi": [
       "eduroam",
-      "Ziggo2162432",
       "civverig"
     ]
   },
