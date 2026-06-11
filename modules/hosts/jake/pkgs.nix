@@ -10,7 +10,6 @@
         bat
         brightnessctl
         cowsay
-        discord
         efibooteditor
         element-desktop
         ente-auth
@@ -47,6 +46,7 @@
         thunderbird-latest # Mail client
         unrar
         unzip
+        vesktop # Discord but better for Wayland
         vulkan-tools
         wev # xev for wayland
         wget

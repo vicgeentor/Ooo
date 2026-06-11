@@ -22,7 +22,6 @@
       fish
       fonts
       formatting
-      fwupd
       graphics
       intel
       javascript

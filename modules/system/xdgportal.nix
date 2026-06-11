@@ -4,17 +4,26 @@
     {
       xdg.portal = {
         enable = true;
-        wlr.enable = true;
-        extraPortals = [
-          pkgs.xdg-desktop-portal-gtk
-          pkgs.xdg-desktop-portal-gnome
-          pkgs.kdePackages.xdg-desktop-portal-kde
+        extraPortals = with pkgs; [
+          xdg-desktop-portal-gtk
+          xdg-desktop-portal-gnome
+          kdePackages.xdg-desktop-portal-kde
         ];
         config = {
           common = {
+            default = [
+              "gnome"
+              "gtk"
+            ];
             "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
           };
         };
       };
+
+      environment.systemPackages = with pkgs; [
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-gnome
+        kdePackages.xdg-desktop-portal-kde
+      ];
     };
 }

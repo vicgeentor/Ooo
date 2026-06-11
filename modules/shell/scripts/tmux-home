@@ -20,10 +20,6 @@ new_session() {
     tmux new-session -s "$1" -c "$2" -d
 }
 
-new_session2() {
-    tmux new-session -s "$1" -c "$2" "$SHELL"
-}
-
 if has_session "$name"; then
     if no_tmux; then
         debug "Attaching to tmux session $name"
@@ -35,7 +31,7 @@ if has_session "$name"; then
 else
     debug "Creating new session $name"
     if no_tmux; then
-        new_session2 "$name" "$directory"
+        new_session "$name" "$directory"
         tmux attach-session -t "$name"
     else
         new_session "$name" "$directory"

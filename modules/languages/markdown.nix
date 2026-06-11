@@ -1,10 +1,9 @@
-{ inputs, ... }:
 {
   flake.modules.nixos.markdown =
     { pkgs, ... }:
     {
       environment.systemPackages = [
-        (inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.python3.withPackages (
+        (pkgs.python3.withPackages (
           ps: with ps; [
             mdformat
             mdformat-frontmatter

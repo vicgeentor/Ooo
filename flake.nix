@@ -5,7 +5,6 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-cornelis.url = "github:NixOS/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
 
     # remove later when tree-sitter version 0.27 is in nixpkgs unstable

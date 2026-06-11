@@ -22,6 +22,7 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=writer.d
 text/x-shellscript=ghostty-neovim.desktop
 application/x-shellscript=ghostty-neovim.desktop
 application/octet-stream=ghostty-neovim.desktop
+x-scheme-handler/discord=vesktop.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen-twilight.desktop;
