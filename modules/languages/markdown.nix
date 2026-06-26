@@ -11,6 +11,7 @@
             mdformat-gfm-alerts
           ]
         ))
+        pkgs.pandoc
       ];
     };
 }

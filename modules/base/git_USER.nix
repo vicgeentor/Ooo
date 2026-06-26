@@ -10,6 +10,7 @@
         };
         core.editor = config.flake.meta.vic.editor;
         init.defaultBranch = "main";
+        push.autoSetupRemote = true;
       };
     };
   };

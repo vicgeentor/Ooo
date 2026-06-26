@@ -44,12 +44,6 @@ return {
 							"2",
 						},
 					},
-					rustfmt = {
-						prepend_args = {
-							"--config",
-							"tab_spaces=2",
-						},
-					},
 					typstyle = {
 						prepend_args = {
 							"--line-width",

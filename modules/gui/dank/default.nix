@@ -16,7 +16,7 @@
 
         plugins = {
           emojiLauncher.enable = true;
-          displayMirror.enable = true;
+          niriDS.enable = true;
         };
       };
 

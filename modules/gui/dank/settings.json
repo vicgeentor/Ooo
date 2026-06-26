@@ -124,7 +124,7 @@
       "width": 50
     },
     {
-      "id": "builtin_vpn",
+      "id": "plugin_niriDS",
       "enabled": true,
       "width": 50
     }
@@ -440,7 +440,11 @@
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
   "displayNameMode": "system",
-  "screenPreferences": {},
+  "screenPreferences": {
+    "wallpaper": [
+      "all"
+    ]
+  },
   "showOnLastDisplay": {},
   "niriOutputSettings": {},
   "hyprlandOutputSettings": {},
@@ -460,7 +464,10 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "launcherButton",
+        {
+          "id": "launcherButton",
+          "enabled": true
+        },
         {
           "id": "workspaceSwitcher",
           "enabled": true
@@ -477,10 +484,6 @@
         }
       ],
       "rightWidgets": [
-        {
-          "id": "displayMirror",
-          "enabled": false
-        },
         {
           "id": "privacyIndicator",
           "enabled": true
@@ -539,7 +542,7 @@
       "autoHide": false,
       "autoHideDelay": 250,
       "showOnWindowsOpen": false,
-      "openOnOverview": false,
+      "openOnOverview": true,
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,

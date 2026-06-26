@@ -44,6 +44,7 @@
         sshfs
         teams-for-linux
         thunderbird-latest # Mail client
+        tldr
         unrar
         unzip
         vesktop # Discord but better for Wayland
