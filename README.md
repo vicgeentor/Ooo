@@ -25,7 +25,7 @@ The laptop that I use for everything.
 My DigitalOcean VPS that is running
 [Pangolin](https://github.com/fosrl/pangolin) through which all
 my web services running on different hosts (e.g.
-[simon](#simon)) are routed through a
+[simon](#simon)) are routed via a
 [Newt](https://github.com/fosrl/newt) tunnel.
 
 It also runs a receiving email server using
@@ -33,16 +33,16 @@ It also runs a receiving email server using
 
 ### [simon](https://adventuretime.fandom.com/wiki/Ice_King)
 
-My home server that runs some web services:
+My home server that runs some services:
 
 - [your_spotify](https://github.com/Yooooomi/your_spotify)
+- [nixarr stack](https://github.com/nix-media-server/nixarr)
 
 ### [gunter](https://adventuretime.fandom.com/wiki/gunter)
 
-Another home server that runs some web services:
+Another home server that runs some services:
 
 - [nix-minecraft](https://github.com/Infinidoge/nix-minecraft)
-- [Stirling-PDF](https://github.com/Stirling-Tools/Stirling-PDF)
 
 ### [neptr](https://adventuretime.fandom.com/wiki/Neptr)
 
@@ -51,6 +51,10 @@ A virtual NixOS machine.
 ### [bmo](https://adventuretime.fandom.com/wiki/BMO)
 
 My Android phone.
+
+### [dmo](https://adventuretime.fandom.com/wiki/DMO)
+
+My Android tablet.
 
 ## TODO
 
@@ -61,14 +65,11 @@ For all hosts:
   [rclone](https://github.com/rclone/rclone) and Google Drive:
   - email
   - your_spotify
-  - immich
-  - dawarich
   - minecraft server world
   - etc.
 
 For [jake](#jake):
 
-- Make HDMI support great
 - Re-install system with better drive encryption
 
 For [simon](#simon):
