@@ -1,5 +1,6 @@
 let
-  bonnibel-system = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINB4wKQlCgdpcRDeDwCP2zFWMR5zW282V9ieQJQNg48v";
+  bonnibel-system = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICBXWj6ARPlCbNX3gR9hNHgvqmIhaqz51YJPfZNjDDa7";
+
   simon-system = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDELcORAKNYJcOr1rSfXxxl73pYcGqXxUnSHIbphZ94m";
   jake-system = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHXT5yrR/ahmtnboRuQe4H2wfZOdvKFAsOEbmMOXsh8Y";
   gunter-system = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPAahwTcSwqzDKnV4KhxoBbNPdXDTjd5OlU17Vu3YdZ7";

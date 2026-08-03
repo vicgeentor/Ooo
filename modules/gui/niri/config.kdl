@@ -130,7 +130,7 @@ binds {
   Mod+W { spawn "dms" "ipc" "call" "bar" "toggle" "index" "0"; }
 
   Mod+G { spawn "google"; }
-  Mod+Z { spawn "hyprmagnifier" "--size" "1000x1000"; }
+  Mod+Z { spawn "hyprmag" "--size" "1000x1000"; }
 
   // Numpad binds
   Mod+KP_Delete { spawn "dms" "ipc" "call" "night" "toggle"; } // .

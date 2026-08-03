@@ -3,7 +3,7 @@
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
-        hyprmagnifier
+        hyprmag
         wl-clipboard
         wl-screenrec
         xeyes

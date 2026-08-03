@@ -2,19 +2,6 @@
   flake.modules.nixos.pangolin =
     nixosArgs@{ lib, ... }:
     {
-      # REMOVE: the following overlay when https://github.com/NixOS/nixpkgs/pull/512834 is merged into nixos-unstable.
-      # To check it, see https://github.com/NixOS/nixpkgs/commits/nixos-unstable/pkgs/by-name/rs/rspamd/package.nix
-      nixpkgs.overlays = [
-        (self: super: {
-          rspamd = super.rspamd.overrideAttrs (old: {
-            cmakeFlags = (old.cmakeFlags or [ ]) ++ [
-              "-DSYSTEM_DOCTEST=OFF"
-            ];
-            buildInputs = builtins.filter (p: p.pname or "" != "doctest") (old.buildInputs or [ ]);
-          });
-        })
-      ];
-
       age.secrets = {
         pangolin.file = ../../_secrets/pangolin.age;
         cloudflare-dns-api.file = lib.mkDefault ../../_secrets/cloudflare-dns-api.age;
@@ -69,6 +56,7 @@
         letsEncryptEmail = "security@vicgeentor.nl";
         openFirewall = true;
         environmentFile = nixosArgs.config.age.secrets.pangolin.path;
+        # in your NixOS configuration
       };
 
       services.traefik = {
@@ -85,5 +73,7 @@
           };
         };
       };
+
+      systemd.services.pangolin.serviceConfig.ReadWritePaths = [ "/var/lib/pangolin" ];
     };
 }

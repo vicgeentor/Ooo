@@ -4,7 +4,7 @@
     { pkgs, ... }:
     {
       imports = [
-        inputs.dms-plugin-registry.modules.default
+        inputs.dms-plugin-registry.nixosModules.default
       ];
 
       programs.dms-shell = {

@@ -3,7 +3,7 @@
     { pkgs, ... }:
     {
       environment.systemPackages = with pkgs; [
-        texlive.combined.scheme-full
+        texliveFull
         ltex-ls-plus
         aspell # Spell checker
         aspellDicts.en
