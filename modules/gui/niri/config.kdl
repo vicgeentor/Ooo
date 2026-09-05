@@ -134,12 +134,12 @@ binds {
 
   // Numpad binds
   Mod+KP_Delete { spawn "dms" "ipc" "call" "night" "toggle"; } // .
-  Mod+KP_End { spawn "dms" "ipc" "call" "night" "temperature" "6000"; } // 1
-  Mod+KP_Down { spawn "dms" "ipc" "call" "night" "temperature" "5000"; } // 2
-  Mod+KP_Next { spawn "dms" "ipc" "call" "night" "temperature" "4000"; } // 3
-  Mod+KP_Left { spawn "dms" "ipc" "call" "night" "temperature" "3500"; } // 4
-  Mod+KP_Begin { spawn "dms" "ipc" "call" "night" "temperature" "3000"; } // 5
-  Mod+KP_Right { spawn "dms" "ipc" "call" "night" "temperature" "2500"; } // 6
+  Mod+KP_End { spawn "dms" "ipc" "call" "night" "setTargetTemp" "6000"; } // 1
+  Mod+KP_Down { spawn "dms" "ipc" "call" "night" "setTargetTemp" "5000"; } // 2
+  Mod+KP_Next { spawn "dms" "ipc" "call" "night" "setTargetTemp" "4000"; } // 3
+  Mod+KP_Left { spawn "dms" "ipc" "call" "night" "setTargetTemp" "3500"; } // 4
+  Mod+KP_Begin { spawn "dms" "ipc" "call" "night" "setTargetTemp" "3000"; } // 5
+  Mod+KP_Right { spawn "dms" "ipc" "call" "night" "setTargetTemp" "2500"; } // 6
 
   XF86AudioRaiseVolume { spawn "dms" "ipc" "call" "audio" "increment" "2"; }
   XF86AudioLowerVolume { spawn "dms" "ipc" "call" "audio" "decrement" "2"; }

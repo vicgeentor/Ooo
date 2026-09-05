@@ -413,24 +413,6 @@
   "fadeToDpmsEnabled": true,
   "fadeToDpmsGracePeriod": 5,
   "launchPrefix": "",
-  "brightnessDevicePins": {},
-  "wifiNetworkPins": {
-    "preferredWifi": [
-      "eduroam",
-      "civverig"
-    ]
-  },
-  "bluetoothDevicePins": {
-    "preferredDevice": [
-      "14:3F:A6:46:F5:4C"
-    ]
-  },
-  "audioInputDevicePins": {
-    "preferredInput": [
-      "alsa_input.pci-0000_00_1f.3.analog-stereo"
-    ]
-  },
-  "audioOutputDevicePins": {},
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -829,5 +811,5 @@
   "barInsetPaddingShared": -1,
   "barInsetPaddingSyncAll": false,
   "frameBarInsetPadding": -1,
-  "configVersion": 12
+  "configVersion": 13
 }
