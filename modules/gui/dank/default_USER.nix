@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ config, inputs, ... }:
 {
   flake.modules.nixos.dank =
     { pkgs, ... }:
@@ -21,6 +21,20 @@
       };
 
       environment.systemPackages = [ pkgs.wl-mirror ];
+
+      services.displayManager.dms-greeter = {
+        enable = true;
+        compositor.name = "niri";
+        configHome = "/home/${config.flake.meta.vic.username}";
+        logs = {
+          save = true;
+          path = "/tmp/dms-greeter.log";
+        };
+      };
+
+      users.users.${config.flake.meta.vic.username}.extraGroups = [
+        "greeter"
+      ];
 
     };
   flake.modules.homeManager.dank = hmArgs: {

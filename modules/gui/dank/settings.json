@@ -48,7 +48,7 @@
   "enableRippleEffects": true,
   "animationVariant": 0,
   "motionEffect": 0,
-  "m3ElevationEnabled": true,
+  "m3ElevationEnabled": false,
   "m3ElevationIntensity": 12,
   "m3ElevationOpacity": 30,
   "m3ElevationColorMode": "default",
@@ -205,10 +205,10 @@
   "waveProgressEnabled": true,
   "scrollTitleEnabled": true,
   "mediaAdaptiveWidthEnabled": true,
-  "audioVisualizerEnabled": true,
+  "audioVisualizerEnabled": false,
   "mediaUseAlbumArtAccent": false,
   "audioScrollMode": "volume",
-  "audioWheelScrollAmount": 5,
+  "audioWheelScrollAmount": 2,
   "audioDeviceScrollVolumeEnabled": false,
   "mediaExcludePlayers": [],
   "clockCompactMode": false,
@@ -286,13 +286,13 @@
   "appLauncherGridColumns": 5,
   "spotlightCloseNiriOverview": true,
   "rememberLastQuery": false,
-  "rememberLastMode": true,
+  "rememberLastMode": false,
   "spotlightSectionViewModes": {
     "apps": "list"
   },
   "appDrawerSectionViewModes": {},
   "niriOverviewOverlayEnabled": true,
-  "niriOverviewLauncherStyle": "full",
+  "niriOverviewLauncherStyle": "spotlight",
   "dankLauncherV2Size": "micro",
   "dankLauncherV2ShowSourceBadges": true,
   "dankLauncherV2BorderEnabled": false,
@@ -303,7 +303,7 @@
   "dankLauncherV2IncludeFilesInAll": false,
   "dankLauncherV2IncludeFoldersInAll": false,
   "launcherUseOverlayLayer": false,
-  "launcherStyle": "full",
+  "launcherStyle": "spotlight",
   "spotlightBarShowModeChips": false,
   "keybindsFloatingWindow": false,
   "useAutoLocation": false,
@@ -327,7 +327,7 @@
     },
     {
       "id": "settings",
-      "enabled": true
+      "enabled": false
     }
   ],
   "networkPreference": "ethernet",
@@ -370,7 +370,7 @@
   "notificationSummaryFontSize": 0,
   "notificationBodyFontSize": 0,
   "notepadShowLineNumbers": true,
-  "notepadAutoSave": false,
+  "notepadAutoSave": true,
   "notepadSlideoutSide": "right",
   "notepadDefaultMode": "slideout",
   "notepadTransparencyOverride": -1,
@@ -379,29 +379,29 @@
   "notepadEdgeGap": 0,
   "soundsEnabled": true,
   "useSystemSoundTheme": false,
-  "soundLogin": false,
+  "soundLogin": true,
   "soundNewNotification": true,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
-  "muteSoundsWhenMediaPlaying": true,
+  "muteSoundsWhenMediaPlaying": false,
   "acMonitorTimeout": 0,
   "acLockTimeout": 0,
   "acSuspendTimeout": 0,
   "acSuspendBehavior": 0,
-  "acProfileName": "",
+  "acProfileName": "2",
   "acPostLockMonitorTimeout": 0,
   "batteryMonitorTimeout": 0,
   "batteryLockTimeout": 0,
   "batterySuspendTimeout": 0,
   "batterySuspendBehavior": 0,
-  "batteryProfileName": "",
+  "batteryProfileName": "1",
   "batteryPostLockMonitorTimeout": 0,
   "batteryChargeLimit": 100,
   "batteryNotifyChargeLimit": false,
   "batteryCriticalThreshold": 10,
   "batteryNotifyCritical": true,
   "batteryLowThreshold": 20,
-  "batteryNotifyLow": false,
+  "batteryNotifyLow": true,
   "batteryChargeLimitNotificationType": 0,
   "batteryLowNotificationType": 0,
   "batteryCriticalNotificationType": 1,
@@ -523,7 +523,7 @@
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": false,
-  "notificationShowTimeoutBar": false,
+  "notificationShowTimeoutBar": true,
   "notificationDedupeEnabled": true,
   "notificationPopupPosition": 0,
   "notificationAnimationSpeed": 1,
@@ -544,7 +544,7 @@
       "urgency": "default"
     }
   ],
-  "notificationFocusedMonitor": false,
+  "notificationFocusedMonitor": true,
   "osdAlwaysShowValue": true,
   "osdPosition": 5,
   "osdVolumeEnabled": true,
@@ -560,13 +560,11 @@
   "powerActionHoldDuration": 0.25,
   "powerMenuActions": [
     "reboot",
-    "logout",
     "poweroff",
     "lock",
-    "suspend",
-    "restart"
+    "suspend"
   ],
-  "powerMenuDefaultAction": "logout",
+  "powerMenuDefaultAction": "poweroff",
   "powerMenuGridLayout": false,
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
@@ -579,7 +577,7 @@
   "updaterUseCustomCommand": false,
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
-  "updaterIntervalSeconds": 1800,
+  "updaterIntervalSeconds": 86400,
   "updaterIncludeFlatpak": true,
   "updaterAllowAUR": true,
   "updaterIgnoredPackages": [],
@@ -635,6 +633,10 @@
         },
         {
           "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "clipboard",
           "enabled": true
         },
         {
@@ -702,7 +704,8 @@
       "clickThrough": false,
       "maximizeWidgetText": false,
       "removeWidgetPadding": false,
-      "maximizeWidgetIcons": false
+      "maximizeWidgetIcons": false,
+      "iconScale": 1
     }
   ],
   "desktopClockEnabled": false,
@@ -779,6 +782,9 @@
   "builtInPluginSettings": {
     "dms_settings_search": {
       "trigger": "?"
+    },
+    "dms_clipboard_search": {
+      "trigger": "cb"
     }
   },
   "clipboardClickToPaste": false,
@@ -793,8 +799,8 @@
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
   "frameEnabled": false,
-  "frameThickness": 16,
-  "frameRounding": 23,
+  "frameThickness": 2,
+  "frameRounding": 10,
   "frameColor": "",
   "frameOpacity": 1,
   "frameScreenPreferences": [
@@ -809,7 +815,7 @@
   "frameLauncherEdgeHover": false,
   "frameMode": "connected",
   "barInsetPaddingShared": -1,
-  "barInsetPaddingSyncAll": false,
+  "barInsetPaddingSyncAll": true,
   "frameBarInsetPadding": -1,
   "configVersion": 13
 }
