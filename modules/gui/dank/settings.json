@@ -286,7 +286,7 @@
   "appLauncherGridColumns": 5,
   "spotlightCloseNiriOverview": true,
   "rememberLastQuery": false,
-  "rememberLastMode": false,
+  "rememberLastMode": true,
   "spotlightSectionViewModes": {
     "apps": "list"
   },
@@ -784,7 +784,7 @@
       "trigger": "?"
     },
     "dms_clipboard_search": {
-      "trigger": "cb"
+      "trigger": "!"
     }
   },
   "clipboardClickToPaste": false,
@@ -796,7 +796,14 @@
     "edit",
     "delete"
   ],
-  "launcherPluginVisibility": {},
+  "launcherPluginVisibility": {
+    "dms_clipboard_search": {
+      "allowWithoutTrigger": false
+    },
+    "dms_settings_search": {
+      "allowWithoutTrigger": false
+    }
+  },
   "launcherPluginOrder": [],
   "frameEnabled": false,
   "frameThickness": 2,

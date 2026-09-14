@@ -379,11 +379,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1782479076,
-        "narHash": "sha256-qg8gyKAduey3BzT7/puAsv2eW9aUOw1SAlpge70qrJ8=",
+        "lastModified": 1788878914,
+        "narHash": "sha256-B2hyryCXUkyiZPxTt2O+cAh896QCAMv9RWeMDRfQ3bA=",
         "owner": "vicgeentor",
         "repo": "givenv",
-        "rev": "18294c0445f396b3d7b54124a486353da3e01c3d",
+        "rev": "1bc826eeec0c47924cd00bb5002ea6ef5d22667f",
         "type": "github"
       },
       "original": {
