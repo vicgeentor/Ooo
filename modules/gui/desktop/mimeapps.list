@@ -47,3 +47,4 @@ text/plain=ghostty-neovim.desktop;
 application/zip=ghostty-neovim.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=writer.desktop;
 image/svg+xml=zen-twilight.desktop;
+application/vnd.oasis.opendocument.text=writer.desktop;
