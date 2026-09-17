@@ -24,7 +24,16 @@
 
       services.displayManager.dms-greeter = {
         enable = true;
-        compositor.name = "niri";
+        compositor = {
+          name = "niri";
+          customConfig = ''
+            input {
+              keyboard {
+                numlock
+              }
+            }
+          '';
+        };
         configHome = "/home/${config.flake.meta.vic.username}";
         logs = {
           save = true;

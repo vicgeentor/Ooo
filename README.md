@@ -22,7 +22,7 @@ The laptop that I use for everything.
 
 ### [bonnibel](https://adventuretime.fandom.com/wiki/Princess_Bubblegum)
 
-My DigitalOcean VPS that is running
+My OVHcloud VPS that is running
 [Pangolin](https://github.com/fosrl/pangolin) through which all
 my web services running on different hosts (e.g.
 [simon](#simon)) are routed via a
