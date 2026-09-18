@@ -32,6 +32,9 @@
                 numlock
               }
             }
+            hotkey-overlay {
+              skip-at-startup
+            }
           '';
         };
         configHome = "/home/${config.flake.meta.vic.username}";

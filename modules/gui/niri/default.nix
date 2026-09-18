@@ -4,16 +4,6 @@
 
     systemd.user.services.niri-flake-polkit.enable = false; # already using dms polkit agent
 
-    # Not needed with dms-greeter
-    # programs.bash = {
-    #   loginShellInit = ''
-    #     if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]; then
-    #       niri-session -l
-    #       exit
-    #     fi
-    #   '';
-    # };
-
     nix.settings = {
       substituters = [ "https://niri.cachix.org" ];
       trusted-substituters = [ "https://niri.cachix.org" ];
