@@ -13,12 +13,12 @@
       arr-stack
       dns
       fwupd
-      grafana
+      # grafana
       graphics
       networkmanager
       nginx
       nvidia
-      prometheus
+      # prometheus
       ssh
       systemdboot
       tailscale
