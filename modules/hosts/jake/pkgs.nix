@@ -10,6 +10,7 @@
         bat
         brightnessctl
         cowsay
+        distrobox
         efibooteditor
         element-desktop
         ente-auth

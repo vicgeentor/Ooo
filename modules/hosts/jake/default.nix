@@ -11,7 +11,6 @@
       base
 
       acer-wmi
-      asense
       bluetooth
       boot-screen-animation
       btrfs
