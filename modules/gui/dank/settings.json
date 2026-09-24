@@ -257,7 +257,50 @@
       "removeWidgetPadding": false,
       "maximizeWidgetIcons": false,
       "iconScale": 1,
-      "attachToScreenEdge": false
+      "attachToScreenEdge": false,
+      "island": false,
+      "islandReserveThickness": 30,
+      "islandCompactThickness": 30,
+      "islandOuterGap": 4,
+      "islandHomeLayout": [
+        {
+          "id": "media",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "notifications",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": false
+        },
+        {
+          "id": "status",
+          "enabled": false
+        },
+        {
+          "id": "volume",
+          "enabled": false
+        },
+        {
+          "id": "brightness",
+          "enabled": false
+        }
+      ],
+      "islandHomeCompactTight": false,
+      "islandCornerRadius": 10,
+      "islandHighContrast": false,
+      "islandMediaClockVisible": true,
+      "islandSatellitesEnabled": true,
+      "islandSatelliteBackground": false,
+      "islandSatelliteGothCorners": true,
+      "islandSatellitePosition": "edges",
+      "islandInteractionMode": "click"
     }
   ],
   "desktopClockCustomColor": {
@@ -292,6 +335,12 @@
     },
     "dms_clipboard_search": {
       "trigger": "!"
+    },
+    "dms_power": {
+      "trigger": "pw"
+    },
+    "dms_qr_generator": {
+      "trigger": "qrg"
     }
   },
   "launcherPluginVisibility": {
