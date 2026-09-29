@@ -1,13 +1,13 @@
 return {
 	{
-		"neovim-treesitter/nvim-treesitter",
+		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
-			"neovim-treesitter/treesitter-parser-registry",
 			{
 				"nvim-treesitter/nvim-treesitter-context",
 				opts = { max_lines = 3 },
 			},
 		},
+    branch = "main",
 		lazy = false,
 		build = ":TSUpdate",
 		config = function()
