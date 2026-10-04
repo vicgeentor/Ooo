@@ -6,6 +6,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-cornelis.url = "github:NixOS/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
+    nixpkgs-zotero.url = "github:NixOS/nixpkgs/7a0f122f5090cf4c2ade2a13a0e229d4e19ba71f";
 
     # remove later when tree-sitter version 0.27 is in nixpkgs unstable
     tree-sitter.url = "github:tree-sitter/tree-sitter";
@@ -13,7 +14,6 @@
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.darwin.follows = "";
     };
 
     cornelis = {

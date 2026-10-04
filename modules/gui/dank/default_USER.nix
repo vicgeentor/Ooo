@@ -10,9 +10,10 @@
       programs.dms-shell = {
         enable = true;
         systemd.enable = true;
-        enableAudioWavelength = false;
-        enableCalendarEvents = false;
-        enableDynamicTheming = false;
+        excludePackages = [
+          pkgs.cava
+          pkgs.matugen
+        ];
 
         plugins = {
           emojiLauncher.enable = true;

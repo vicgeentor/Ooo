@@ -24,6 +24,7 @@ application/x-shellscript=ghostty-neovim.desktop
 application/octet-stream=ghostty-neovim.desktop
 x-scheme-handler/discord=vesktop.desktop
 image/svg+xml=zen-twilight.desktop
+image/bmp=qimgv.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen-twilight.desktop;
@@ -48,3 +49,4 @@ application/zip=ghostty-neovim.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=writer.desktop;
 image/svg+xml=zen-twilight.desktop;
 application/vnd.oasis.opendocument.text=writer.desktop;
+image/bmp=qimgv.desktop;

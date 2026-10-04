@@ -3,6 +3,13 @@
 {
   flake.modules.nixos.jake =
     { pkgs, ... }:
+    let
+      # TODO: Remove this after Zotero 11 is in Nixpkgs
+      pkgs-zotero = import inputs.nixpkgs-zotero {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
+    in
     {
       environment.systemPackages = with pkgs; [
         inputs.agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -55,7 +62,7 @@
         yt-dlp
         zapzap # Whatsapp
         zip
-        zotero
+        pkgs-zotero.zotero
       ];
     };
 }

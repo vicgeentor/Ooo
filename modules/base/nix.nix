@@ -6,7 +6,6 @@
     nix = {
       channel.enable = false;
       registry.nixpkgs.flake = inputs.nixpkgs;
-      nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       optimise = {
         automatic = true;
         dates = [ "05:00" ];
@@ -16,6 +15,7 @@
           "nix-command"
           "flakes"
         ];
+        nix-path = [ "nixpkgs=${inputs.nixpkgs}" ];
         stalled-download-timeout = 10000;
         max-jobs = 6;
         warn-dirty = false;
