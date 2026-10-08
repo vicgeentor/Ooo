@@ -14,7 +14,7 @@
       environment.systemPackages = [ pkgs.auto-cpufreq ];
       services = {
         auto-cpufreq = {
-          enable = false; # not using this because dank doesn't use it
+          enable = false; # not using this because of upower + power-profiles-daemon
           settings = {
             battery = {
               governor = "powersave";

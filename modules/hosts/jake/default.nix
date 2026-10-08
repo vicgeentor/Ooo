@@ -15,7 +15,6 @@
       boot-screen-animation
       btrfs
       calibre
-      dank
       default-terminal
       docker
       ente-auth
@@ -36,6 +35,7 @@
       nh
       niri
       nix-ld
+      noctalia
       nvidia
       nvidia-hybrid
       nvim
@@ -45,7 +45,6 @@
       ssd
       ssh
       steam
-      stylix
       systemdboot
       tailscale
       thunar

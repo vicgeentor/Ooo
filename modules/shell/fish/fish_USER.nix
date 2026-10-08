@@ -77,6 +77,7 @@
           # nvim
           vim = "nvim";
           vi = "nvim";
+          v = "nvim";
           svim = "sudo nvim";
           gvim = "nvim --listen ~/.cache/nvim/godot.pipe .";
 
@@ -123,6 +124,7 @@
           screenrec-history = "wl-screenrec --low-power off --audio --history 30 &";
           screenrec-history-get = "killall -USR1 wl-screenrec";
           dontsleep = "systemd-inhibit --what=handle-lid-switch hypridle";
+          cat = "bat";
         };
       };
     };

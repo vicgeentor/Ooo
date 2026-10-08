@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+input=$1
+toml_file=~/.config/noctalia/nightlight.toml
+incr=200
+
+if ! test -f $toml_file; then
+  printf "[nightlight]\ntemperature_night = 4000" > $toml_file
+else
+  current=$(cat $toml_file | awk '{print $NF}' | tail -n 1) 
+  new=0
+  if [ "$input" = "up" ]; then
+    new=$((current+incr))
+  elif [ "$input" = "down" ]; then
+    new=$((current-incr))
+  else
+    exit
+  fi
+  new=$(echo $new | awk '$0<1000{$0=1000}$0>6500{$0=6500}1')
+  sed -i "s/$current/$new/g" $toml_file
+fi
+
+

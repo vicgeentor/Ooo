@@ -1,6 +1,4 @@
 {
-  "currentThemeName": "dynamic",
-  "currentThemeCategory": "dynamic",
   "cornerRadius": 12,
   "clockFormat": "24h",
   "m3ElevationEnabled": false,
@@ -59,6 +57,7 @@
   "workspaceFollowFocus": true,
   "showOccupiedWorkspacesOnly": true,
   "audioVisualizerEnabled": false,
+  "mediaUseAlbumArtAccent": true,
   "audioWheelScrollAmount": 2,
   "runningAppsCurrentWorkspace": false,
   "appLauncherGridColumns": 5,
@@ -92,7 +91,7 @@
       "enabled": false
     }
   ],
-  "networkPreference": "ethernet",
+  "networkPreference": "wifi",
   "cursorSettings": {
     "theme": "System Default",
     "size": 24,

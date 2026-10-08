@@ -1,0 +1,191 @@
+[bar.default]
+center = [ "media", "spacer_1", "clock" ]
+concave_edge_corners = false
+end = [
+    "tray",
+    "input_volume",
+    "bluetooth",
+    "notifications",
+    "clipboard",
+    "volume",
+    "brightness",
+    "nightlight",
+    "network",
+    "ram",
+    "battery",
+    "control-center"
+]
+margin_ends = 0
+radius = 0
+start = [ "launcher", "workspaces" ]
+widget_spacing = 10
+
+[brightness]
+minimum_brightness = 0.0099999997764825821
+
+[control_center]
+hidden_tabs = [ "weather", "screen-time" ]
+sidebar = "full"
+sidebar_section = "full"
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 800.0
+    cy = 718.0
+    output = "eDP-1"
+    placement_height = 900.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[nightlight]
+temperature_night = 2300
+
+[shell.animation]
+speed = 2.0000000298023224
+
+[shell.panel]
+open_near_click_control_center = true
+
+[theme]
+builtin = "Rosé Pine"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
+    community_ids = [ "discord", "gimp", "prismlauncher", "fastfetch", "obs", "papirus-icons", "bat", "fzf" ]
+
+[wallpaper]
+directory = "/home/vic/personal/Pictures/wallpapers"
+enabled = true
+
+    [wallpaper.default]
+    path = "/home/vic/personal/Pictures/wallpapers/cats.jpg"
+
+    [wallpaper.last]
+    path = "/home/vic/personal/Pictures/wallpapers/cats.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/vic/personal/Pictures/wallpapers/cats.jpg"
+
+    [[wallpaper.favorite]]
+    builtin_palette = "Rosé Pine"
+    palette_source = "builtin"
+    path = "/home/vic/personal/Pictures/wallpapers/cats.jpg"
+    theme_mode = "dark"
+
+[widget.bluetooth]
+hide_when_no_connected_device = true
+
+[widget.brightness]
+show_label = false
+
+[widget.clock]
+anchor = true
+format = "{:%H:%M  %a %-d}"
+
+[widget.control-center]
+color = "primary"
+
+    [widget.control-center.actions]
+    right = "dpms-off"
+
+[widget.input_volume]
+hide_when_inactive = true
+show_label = false
+
+[widget.launcher]
+color = "primary"
+glyph = "snowflake"
+
+[widget.media]
+hide_when_no_media = true
+title_scroll = "on_hover"
+
+    [widget.media.actions]
+    scroll_down = "volume-down"
+    scroll_up = "volume-up"
+
+[widget.network]
+show_label = false
+
+[widget.nightlight]
+color = "on_surface"
+
+    [widget.nightlight.actions]
+    left = "nightlight-force-toggle"
+
+[widget.ram]
+highlight_color = "on_surface"
+stat = "ram_pct"
+visualization = "none"
+
+    [widget.ram.actions]
+    right = "exec ghostty +new-window --title=btop-window -e btop"
+
+[widget.session]
+color = "error"
+
+[widget.spacer_1]
+length = 125
+type = "spacer"
+
+[widget.tray]
+capsule = true
+capsule_border = "outline"
+hide_passive = false
+
+[widget.volume]
+show_label = false
+
+    [widget.volume.actions]
+    scroll_down = "volume-down 2"
+    scroll_up = "volume-up 2"
+
+[widget.workspaces]
+hide_when_empty = true
+show_tooltip = false

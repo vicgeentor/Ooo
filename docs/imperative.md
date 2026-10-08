@@ -11,3 +11,4 @@ Everything that requires an imperative setup is listed here:
   `protonup`
 - Installing Battle.net games through Steam
   ([guide](https://frankbaier.medium.com/linux-how-to-play-diablo-ii-resurrected-open-beta-with-steam-proton-ff830523f378))
+- Setting the theme to `adw-gtk3` inside `nwg-look` so the GTK3/4 templates of Noctalia work correctly

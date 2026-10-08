@@ -67,7 +67,6 @@
       stylix = {
         enableReleaseChecks = false; # Remove warning message
         targets = {
-          # dank-material-shell.enable = false;
           dunst.enable = false;
           fish.enable = false;
           ghostty.enable = false;

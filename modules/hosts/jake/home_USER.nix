@@ -8,19 +8,21 @@
         alacritty
         desktop
         direnv
-        dank
         default-terminal
         dunst
         fastfetch
         fish
+        fonts
         fzf
         ghostty
+        gtk
         mpv
         niri
+        noctalia
         nvim
+        pointer-cursor
         rofi
         scripts
-        stylix
         thunar
         tmux
         zoxide

@@ -32,4 +32,16 @@
         };
       };
     };
+  flake.modules.homeManager.fonts =
+    {
+      fonts.fontconfig = {
+        enable = true;
+        defaultFonts = {
+          serif = [ "Ubuntu Nerd Font" ];
+          sansSerif = [ "UbuntuSans Nerd Font" ];
+          monospace = [ "JetBrainsMono Nerd Font" ];
+          emoji = [ "Noto Color Emoji" ];
+        };
+      };
+    };
 }

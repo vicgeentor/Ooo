@@ -1,3 +1,4 @@
 **/*lazy-lock.json
 **/.pre-commit-config.yaml
 result
+modules/gui/noctalia/nightlight.toml
