@@ -9,29 +9,29 @@ return {
 				options = {
 					globalstatus = true,
 					theme = "auto",
-					component_separators = { left = "", right = "" },
-					section_separators = { left = "", right = "" },
+					component_separators = { left = "", right = "" },
+					section_separators = { left = "", right = "" },
 				},
 				sections = {
 					lualine_a = {
 						{
 							"mode",
 							icon = "",
-							separator = { left = "", right = "" },
+							separator = { left = "", right = "" },
 						},
 					},
 					lualine_b = {
 						{
 							"branch",
 							icon = "",
-							separator = { left = "", right = "" },
+							separator = { left = "", right = "" },
 							color = { fg = "#1c1d21", bg = "#7d83ac" },
 						},
 					},
 					lualine_c = {
 						{
 							"diagnostics",
-							separator = { left = "", right = "" },
+							separator = { left = "", right = "" },
 							color = { bg = "#45475a" },
 						},
 						{ "filename", path = 4 },
