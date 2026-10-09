@@ -25,6 +25,7 @@
         zoxide.enableFishIntegration = true;
         direnv.enableFishIntegration = true;
         nix-index.enableFishIntegration = false;
+        fzf.enableFishIntegration = true;
       };
 
       home.file = {

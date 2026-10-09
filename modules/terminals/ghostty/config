@@ -5,7 +5,6 @@ bold-color = bright
 
 # Theme
 theme = noctalia
-background = #0F0F0F
 
 # Cursor
 cursor-style = block

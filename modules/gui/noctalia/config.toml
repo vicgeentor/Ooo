@@ -1,32 +1,52 @@
+[audio]
+sound_volume = 0.99999997764825821
+
 [bar.default]
 center = [ "media", "spacer_1", "clock" ]
+compositor_blur = false
 concave_edge_corners = false
-end = [
-    "tray",
-    "input_volume",
-    "bluetooth",
-    "notifications",
-    "clipboard",
-    "volume",
-    "brightness",
-    "nightlight",
-    "network",
-    "ram",
-    "battery",
-    "control-center"
-]
-margin_ends = 0
-radius = 0
+end = [ "tray", "input_volume", "group:g1", "ram", "battery", "control-center" ]
+margin_ends = 11
+radius = 40
+radius_top_left = 0
+radius_top_right = 0
 start = [ "launcher", "workspaces" ]
 widget_spacing = 10
 
+    [bar.default.dead_zone.actions]
+    middle = "settings-open"
+
+    [[bar.default.capsule_group]]
+    accordion = true
+    accordion_direction = "end"
+    border_width = 1.0
+    enabled = true
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "notifications", "clipboard", "bluetooth", "volume", "brightness", "nightlight", "network" ]
+    opacity = 1.0
+    padding = 6.0
+
+[battery]
+warning_threshold = 20
+
 [brightness]
 minimum_brightness = 0.0099999997764825821
+
+[calendar]
+enabled = true
+
+    [calendar.account.personal_google]
+    name = "Google - Personal"
+    type = "google"
 
 [control_center]
 hidden_tabs = [ "weather", "screen-time" ]
 sidebar = "full"
 sidebar_section = "full"
+
+    [control_center.calendar]
+    show_week_numbers = true
 
     [[control_center.shortcuts]]
     type = "wifi"
@@ -46,10 +66,45 @@ sidebar_section = "full"
     [[control_center.shortcuts]]
     type = "caffeine"
 
-[lockscreen_widgets]
+[desktop_widgets]
 enabled = false
 schema_version = 2
-widget_order = [ "lockscreen-login-box@eDP-1" ]
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[idle]
+behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 660.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 600.0
+
+[lockscreen]
+blurred_desktop = true
+fingerprint = false
+transition_duration = 500
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-0000000000000001" ]
 
     [lockscreen_widgets.grid]
     cell_size = 16
@@ -60,7 +115,7 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
     box_height = 196.0
     box_width = 810.0
     cx = 800.0
-    cy = 718.0
+    cy = 708.0
     output = "eDP-1"
     placement_height = 900.0
     placement_width = 1600.0
@@ -83,21 +138,115 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_unlock_hint = true
         show_weather = true
 
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 144.0
+    box_width = 272.0
+    cx = 800.0
+    cy = 298.0
+    output = "eDP-1"
+    placement_height = 900.0
+    placement_width = 1600.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = true
+        clock_style = "digital"
+        font_family = "Atkinson Hyperlegible Next ExtraBold"
+        shadow = true
+
 [nightlight]
-temperature_night = 2300
+temperature_night = 2900
 
-[shell.animation]
-speed = 2.0000000298023224
+[osd]
+hide_delay_ms = 1600
 
-[shell.panel]
-open_near_click_control_center = true
+[shell]
+launch_apps_as_systemd_services = true
+password_style = "default"
+polkit_agent = true
+
+    [shell.animation]
+    speed = 2.0000000298023224
+
+    [shell.launcher]
+    categories = false
+
+        [shell.launcher.providers.emoji]
+        prefix = "/"
+
+        [shell.launcher.providers.session]
+        prefix = ":"
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    launcher_placement = "attached"
+    open_near_click_clipboard = true
+    open_near_click_control_center = true
+    open_near_click_session = true
+
+    [shell.screenshot]
+    directory = "/home/vic/personal/Pictures/screenshots"
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = false
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
 
 [theme]
 builtin = "Rosé Pine"
+mode = "dark"
+source = "builtin"
 
     [theme.templates]
-    builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "niri", "qt" ]
-    community_ids = [ "discord", "gimp", "prismlauncher", "fastfetch", "obs", "papirus-icons", "bat", "fzf" ]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "kcolorscheme", "niri", "qt" ]
+    community_ids = [
+        "zen-browser",
+        "discord",
+        "gimp",
+        "libreoffice",
+        "neovim",
+        "prismlauncher",
+        "obs",
+        "thunderbird",
+        "papirus-icons",
+        "bat"
+    ]
+
+        [theme.templates.user.nvim_base16]
+        input_path = "~/.config/nvim/lua/matugen-template.lua"
+        output_path = "~/.config/nvim/lua/matugen.lua"
+        post_hook = "pkill -SIGUSR1 nvim"
 
 [wallpaper]
 directory = "/home/vic/personal/Pictures/wallpapers"
@@ -118,8 +267,14 @@ enabled = true
     path = "/home/vic/personal/Pictures/wallpapers/cats.jpg"
     theme_mode = "dark"
 
+[weather]
+enabled = false
+
+[widget.battery.actions]
+right = "power-cycle"
+
 [widget.bluetooth]
-hide_when_no_connected_device = true
+hide_when_no_connected_device = false
 
 [widget.brightness]
 show_label = false
@@ -132,7 +287,7 @@ format = "{:%H:%M  %a %-d}"
 color = "primary"
 
     [widget.control-center.actions]
-    right = "dpms-off"
+    right = "panel-toggle session"
 
 [widget.input_volume]
 hide_when_inactive = true
@@ -141,6 +296,9 @@ show_label = false
 [widget.launcher]
 color = "primary"
 glyph = "snowflake"
+
+    [widget.launcher.actions]
+    right = "dpms-off"
 
 [widget.media]
 hide_when_no_media = true
@@ -188,4 +346,5 @@ show_label = false
 
 [widget.workspaces]
 hide_when_empty = true
+show_all_outputs = true
 show_tooltip = false

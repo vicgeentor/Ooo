@@ -125,6 +125,8 @@ binds {
   XF86AudioNext { spawn-sh "noctalia msg media next"; }
   XF86AudioPrev { spawn-sh "noctalia msg media previous"; }
 
+  Mod+W { spawn-sh "noctalia msg bar-toggle"; }
+
   // My mic mute button does not work
   Shift+F7      allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
   XF86AudioMute allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
@@ -293,6 +295,21 @@ window-rule {
   match app-id=r#"org.quickshell$"#
   open-floating true
 }
+
+// Static workspaces
+workspace "one"
+workspace "two"
+workspace "three"
+workspace "four"
+workspace "five"
+workspace "six"
+workspace "seven"
+workspace "eight"
+workspace "nine"
+workspace "ten"
+
+// Noctalia
+
 layer-rule {
   match namespace="^noctalia-wallpaper"
   place-within-backdrop true
@@ -310,17 +327,5 @@ debug {
   // Allows notification actions and window activation from Noctalia.
   honor-xdg-activation-with-invalid-serial
 }
-
-// Static workspaces
-workspace "one"
-workspace "two"
-workspace "three"
-workspace "four"
-workspace "five"
-workspace "six"
-workspace "seven"
-workspace "eight"
-workspace "nine"
-workspace "ten"
 
 include "noctalia.kdl"

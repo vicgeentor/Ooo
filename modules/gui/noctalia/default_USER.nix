@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   flake.modules.nixos.noctalia =
     { pkgs, ... }:
@@ -21,6 +22,9 @@
           package = pkgs.rose-pine-cursor;
           name = "BreezeX-RosePine-Linux";
         };
+        passwordlessSyncUsers = [
+          config.flake.meta.vic.username
+        ];
       };
 
       environment.systemPackages = with pkgs; [
