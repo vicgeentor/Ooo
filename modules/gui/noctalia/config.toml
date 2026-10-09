@@ -156,7 +156,7 @@ widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-00000000000000
         shadow = true
 
 [nightlight]
-temperature_night = 2900
+temperature_night = 2500
 
 [osd]
 hide_delay_ms = 1600
@@ -316,6 +316,8 @@ color = "on_surface"
 
     [widget.nightlight.actions]
     left = "nightlight-force-toggle"
+    scroll_down = "exec nightlight-noctalia down"
+    scroll_up = "exec nightlight-noctalia up"
 
 [widget.ram]
 highlight_color = "on_surface"
