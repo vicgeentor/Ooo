@@ -23,6 +23,7 @@ require("lazy").setup("plugins")
 
 Color() -- Run colorscheme function at startup
 
+-- Noctalia theming:
 -- For using a synced Noctalia theme, uncomment the following
 -- and comment out the `Color()` call above
 -- require('matugen').setup()

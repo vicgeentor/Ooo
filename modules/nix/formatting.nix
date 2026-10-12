@@ -23,6 +23,7 @@
           "*.ini"
           "*.rasi"
           "*.desktop"
+          "*.toml"
         ];
       };
     };

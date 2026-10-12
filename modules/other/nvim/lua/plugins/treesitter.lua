@@ -7,7 +7,7 @@ return {
 				opts = { max_lines = 3 },
 			},
 		},
-    branch = "main",
+		branch = "main",
 		lazy = false,
 		build = ":TSUpdate",
 		config = function()

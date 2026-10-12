@@ -61,7 +61,7 @@
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
-    simple-nixos-mailserver.url = "gitlab:simple-nixos-mailserver/nixos-mailserver";
+    simple-nixos-mailserver.url = "git+https://gitlab.com/simple-nixos-mailserver/nixos-mailserver";
 
     stylix = {
       url = "github:nix-community/stylix";

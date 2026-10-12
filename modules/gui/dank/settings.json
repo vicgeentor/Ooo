@@ -133,18 +133,11 @@
   "osdAlwaysShowValue": true,
   "osdPowerProfileEnabled": true,
   "powerActionHoldDuration": 0.25,
-  "powerMenuActions": [
-    "reboot",
-    "poweroff",
-    "lock",
-    "suspend"
-  ],
+  "powerMenuActions": ["reboot", "poweroff", "lock", "suspend"],
   "powerMenuDefaultAction": "poweroff",
   "updaterIntervalSeconds": 86400,
   "screenPreferences": {
-    "wallpaper": [
-      "all"
-    ]
+    "wallpaper": ["all"]
   },
   "barConfigs": [
     {
@@ -152,9 +145,7 @@
       "name": "Main Bar",
       "enabled": true,
       "position": 0,
-      "screenPreferences": [
-        "all"
-      ],
+      "screenPreferences": ["all"],
       "showOnLastDisplay": true,
       "leftWidgets": [
         {
