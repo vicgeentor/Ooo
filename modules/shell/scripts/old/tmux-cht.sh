@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-selected=`cat ~/personal/bin/.tmux-cht-languages ~/personal/bin/.tmux-cht-commands | fzf`
+selected=`cat ~/personal/bin/.tmux-cht-languages ~/personal/bin/.tmux-cht-commands | fzf --layout=reverse --border`
 if [[ -z $selected ]]; then
     exit 0
 fi

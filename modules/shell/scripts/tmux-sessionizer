@@ -105,7 +105,7 @@ fzf_directory() {
 
     if [[ -f $config ]]; then
         dirs=$(cat $config | tr '\n' ' ')
-        eval "find $symlinks $dirs -maxdepth 1 -type d 2> /dev/null| fzf"
+        eval "find $symlinks $dirs -maxdepth 1 -type d 2> /dev/null | fzf --layout=reverse --border"
     else
         fd --type d --base-directory "$HOME" --search-path "$HOME" \
           --exclude mnt \
@@ -113,7 +113,7 @@ fzf_directory() {
           --exclude Zotero \
           --exclude Git/vicgeentor/nixpkgs \
           --exclude personal/Documents/Books \
-          | fzf
+          | fzf --layout=reverse --border
     fi
 }
 

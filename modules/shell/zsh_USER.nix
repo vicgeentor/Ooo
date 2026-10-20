@@ -83,9 +83,6 @@
           # Tmux
           t = "tmux";
 
-          # Syncing
-          odsync = "onedrive --sync";
-
           # NixOS
           update = "nix flake update --flake ~/Ooo";
           clean = "nh clean all --keep 10";
@@ -108,7 +105,7 @@
           view = "qimgv";
           thu = "thunar .";
           R = "R --save --quiet";
-          pf = "fd --type f | fzf | xargs ${config.flake.meta.vic.editor}";
+          pf = "fd --type f | fzf --layout=reverse --border| xargs ${config.flake.meta.vic.editor}";
           cp = "cp -v";
           mv = "mv -v";
           godot = "godot4 --display-driver wayland";

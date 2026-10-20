@@ -1,15 +1,7 @@
 {
-  flake.modules.homeManager.fzf =
+  flake.modules.nixos.fzf =
     { pkgs, ... }:
     {
-      home.packages = [ pkgs.fzf ];
-
-      programs.fzf = {
-        enable = true;
-        defaultOptions = [
-          "--layout=reverse"
-          "--border"
-        ];
-      };
+      environment.systemPackages = [ pkgs.fzf ];
     };
 }

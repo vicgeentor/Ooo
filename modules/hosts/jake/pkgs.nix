@@ -48,6 +48,7 @@
         R
         servo
         signal-desktop
+        spotifast
         spotify
         sshfs
         teams-for-linux
@@ -62,6 +63,7 @@
         yt-dlp
         zapzap # Whatsapp
         zip
+        z-library-desktop
         pkgs-zotero.zotero
       ];
     };

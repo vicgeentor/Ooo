@@ -2,14 +2,20 @@
 sound_volume = 0.99999997764825821
 
 [bar.default]
+auto_hide = false
+background_opacity = 0.9499999787658453
 center = [ "media", "spacer_1", "clock" ]
 compositor_blur = false
-concave_edge_corners = false
-end = [ "tray", "input_volume", "group:g1", "ram", "battery", "control-center" ]
+concave_edge_corners = true
+end = [ "input_volume", "group:g1", "tray", "ram", "battery", "control-center" ]
 margin_ends = 11
-radius = 40
-radius_top_left = 0
-radius_top_right = 0
+position = "bottom"
+radius = 0
+radius_bottom_left = 0
+radius_bottom_right = 0
+radius_top_left = 40
+radius_top_right = 40
+show_on_workspace_switch = false
 start = [ "launcher", "workspaces" ]
 widget_spacing = 10
 
@@ -18,12 +24,12 @@ widget_spacing = 10
 
     [[bar.default.capsule_group]]
     accordion = true
-    accordion_direction = "end"
+    accordion_direction = "start"
     border_width = 1.0
     enabled = true
     fill = "surface_variant"
     id = "g1"
-    members = [ "notifications", "clipboard", "bluetooth", "volume", "brightness", "nightlight", "network" ]
+    members = [ "network", "notifications", "clipboard", "bluetooth", "volume", "brightness", "nightlight" ]
     opacity = 1.0
     padding = 6.0
 
@@ -79,12 +85,12 @@ widget_order = []
     [desktop_widgets.widget]
 
 [idle]
-behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
 
     [idle.behavior.lock]
     action = "lock"
     enabled = true
-    timeout = 660.0
+    timeout = 600.0
 
     [idle.behavior.lock-and-suspend]
     action = "lock_and_suspend"
@@ -94,10 +100,16 @@ behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
     [idle.behavior.screen-off]
     action = "screen_off"
     enabled = true
-    timeout = 600.0
+    timeout = 660.0
+
+[keybinds]
+down = [ "Down", "Ctrl+j", "Ctrl+n" ]
+left = [ "Left", "Ctrl+h" ]
+right = [ "Right", "Ctrl+l" ]
+up = [ "Up", "Ctrl+k", "Ctrl+p" ]
 
 [lockscreen]
-blurred_desktop = true
+blurred_desktop = false
 fingerprint = false
 transition_duration = 500
 
@@ -139,10 +151,10 @@ widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-00000000000000
         show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 144.0
-    box_width = 272.0
+    box_height = 320.0
+    box_width = 592.0
     cx = 800.0
-    cy = 298.0
+    cy = 290.0
     output = "eDP-1"
     placement_height = 900.0
     placement_width = 1600.0
@@ -156,10 +168,13 @@ widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-00000000000000
         shadow = true
 
 [nightlight]
-temperature_night = 2500
+temperature_night = 1600
 
 [osd]
 hide_delay_ms = 1600
+
+[plugins]
+enabled = []
 
 [shell]
 launch_apps_as_systemd_services = true
@@ -183,6 +198,7 @@ polkit_agent = true
     launcher_placement = "attached"
     open_near_click_clipboard = true
     open_near_click_control_center = true
+    open_near_click_launcher = true
     open_near_click_session = true
 
     [shell.screenshot]
@@ -225,8 +241,10 @@ polkit_agent = true
 
 [theme]
 builtin = "Rosé Pine"
+community_palette = "Oxocarbon"
 mode = "dark"
 source = "builtin"
+wallpaper_scheme = "m3-content"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "kcolorscheme", "niri", "qt" ]
@@ -240,7 +258,8 @@ source = "builtin"
         "obs",
         "thunderbird",
         "papirus-icons",
-        "bat"
+        "bat",
+        "tmux"
     ]
 
         [theme.templates.user.nvim_base16]
@@ -251,6 +270,9 @@ source = "builtin"
 [wallpaper]
 directory = "/home/vic/personal/Pictures/wallpapers"
 enabled = true
+
+    [wallpaper.automation]
+    enabled = false
 
     [wallpaper.default]
     path = "/home/vic/personal/Pictures/wallpapers/cats.jpg"
@@ -305,8 +327,8 @@ hide_when_no_media = true
 title_scroll = "on_hover"
 
     [widget.media.actions]
-    scroll_down = "volume-down"
-    scroll_up = "volume-up"
+    scroll_down = "volume-down 2"
+    scroll_up = "volume-up 2"
 
 [widget.network]
 show_label = false
@@ -321,7 +343,7 @@ color = "on_surface"
 
 [widget.ram]
 highlight_color = "on_surface"
-stat = "ram_pct"
+stat = "ram_used"
 visualization = "none"
 
     [widget.ram.actions]

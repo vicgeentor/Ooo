@@ -6,7 +6,7 @@
       kernelPackages = config.boot.kernelPackages.extend (
         final: prev: {
           acer-wmi-battery =
-            inputs.my-nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages.acer-wmi-battery;
+            inputs.my-acer-wmi-branch.legacyPackages.${pkgs.stdenv.hostPlatform.system}.linuxPackages.acer-wmi-battery;
         }
       );
     in

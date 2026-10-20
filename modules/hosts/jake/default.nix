@@ -21,6 +21,7 @@
       fish
       fonts
       formatting
+      fzf
       graphics
       intel
       javascript

@@ -5,7 +5,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    my-nixpkgs.url = "github:vicgeentor/nixpkgs";
+    my-acer-wmi-branch.url = "github:vicgeentor/nixpkgs/acer-wmi-battery-fix";
     nixpkgs-cornelis.url = "github:NixOS/nixpkgs/6c7513ecb8ebb66e819ec75d988bbb2bb608e789";
     nixpkgs-zotero.url = "github:NixOS/nixpkgs/7a0f122f5090cf4c2ade2a13a0e229d4e19ba71f";
 
@@ -25,11 +25,6 @@
 
     disko = {
       url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dms-plugin-registry = {
-      url = "github:AvengeMedia/dms-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -54,19 +49,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     simple-nixos-mailserver.url = "git+https://gitlab.com/simple-nixos-mailserver/nixos-mailserver";
-
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     systems.url = "github:nix-systems/default";
 

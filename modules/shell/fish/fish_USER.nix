@@ -38,9 +38,13 @@
         interactiveShellInit = ''
           set fish_greeting # Disable greeting
 
-          function fish_greeting
-            # fortune | cowsay | sed 's/^/    /'
+          if test -f /home/${config.flake.meta.vic.username}/.config/fzf/themes/noctalia.fish
+            source /home/${config.flake.meta.vic.username}/.config/fzf/themes/noctalia.fish
           end
+
+          # function fish_greeting
+          #   fortune | cowsay | sed 's/^/    /'
+          # end
         '';
         binds = {
           "ctrl-f" = {
@@ -94,7 +98,6 @@
           gl = "git log";
 
           # Syncing
-          odsync = "onedrive --sync";
           gdsync = "rclone bisync gdrive:/ ${hmArgs.config.home.homeDirectory}/personal --verbose";
 
           # NixOS
@@ -118,7 +121,7 @@
           valias = "${config.flake.meta.vic.editor} ~/Ooo/modules/shell/fish/fish_USER.nix";
           view = "qimgv";
           thu = "thunar .";
-          pf = "fd --type f | fzf | xargs ${config.flake.meta.vic.editor}";
+          pf = "fd --type f | fzf --layout=reverse -- border | xargs ${config.flake.meta.vic.editor}";
           godot = "godot4 --display-driver wayland";
           vpak = "${config.flake.meta.vic.editor} ~/Ooo/modules/hosts/jake/pkgs.nix";
           screenrec = "wl-screenrec --low-power off --audio";

@@ -1,21 +1,8 @@
 {
-  flake.modules.homeManager.base = {
-    programs.btop = {
-      enable = true;
-      settings = {
-        # Theme
-        theme_background = false;
-
-        # Looks
-        show_battery = true;
-        show_disks = false;
-        shown_boxes = "cpu mem proc";
-        presets = "cpu:1:default,mem:0:default,proc:0:default";
-        proc_sorting = "memory";
-
-        # Other
-        vim_keys = true;
-      };
+  flake.modules.homeManager.base = hmArgs: {
+    home.file = {
+      ".config/btop/btop.conf".source =
+        hmArgs.config.lib.file.mkOutOfStoreSymlink "${hmArgs.config.home.homeDirectory}/Ooo/modules/base/btop.conf";
     };
   };
 }

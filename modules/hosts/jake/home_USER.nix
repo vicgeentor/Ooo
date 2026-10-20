@@ -13,7 +13,6 @@
         fastfetch
         fish
         fonts
-        fzf
         ghostty
         gtk
         mpv

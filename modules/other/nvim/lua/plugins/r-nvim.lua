@@ -19,6 +19,7 @@ return {
 					)
 				end,
 			},
+			auto_quit = true,
 			R_args = { "--quiet", "--no-save" },
 			min_editor_width = 20,
 			rconsole_width = 50,
@@ -34,6 +35,8 @@ return {
 			chunk_hl = {
 				bg = "none", -- Use a different background color
 			},
+			Rout_more_colors = true,
+			Rout_follow_colorscheme = true,
 		})
 	end,
 }
