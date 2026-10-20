@@ -7,7 +7,7 @@ background_opacity = 0.9499999787658453
 center = [ "media", "spacer_1", "clock" ]
 compositor_blur = false
 concave_edge_corners = true
-end = [ "input_volume", "group:g1", "tray", "ram", "battery", "control-center" ]
+end = [ "input_volume", "group:g1", "tray", "notifications", "ram", "battery", "control-center" ]
 margin_ends = 11
 position = "bottom"
 radius = 0
@@ -29,7 +29,7 @@ widget_spacing = 10
     enabled = true
     fill = "surface_variant"
     id = "g1"
-    members = [ "network", "notifications", "clipboard", "bluetooth", "volume", "brightness", "nightlight" ]
+    members = [ "network", "clipboard", "bluetooth", "volume", "brightness", "nightlight" ]
     opacity = 1.0
     padding = 6.0
 
@@ -151,8 +151,8 @@ widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-00000000000000
         show_weather = true
 
     [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
-    box_height = 320.0
-    box_width = 592.0
+    box_height = 512.0
+    box_width = 960.0
     cx = 800.0
     cy = 290.0
     output = "eDP-1"
@@ -162,13 +162,14 @@ widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-00000000000000
     type = "clock"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
-        background = true
+        background = false
+        center_text = true
         clock_style = "digital"
         font_family = "Atkinson Hyperlegible Next ExtraBold"
         shadow = true
 
 [nightlight]
-temperature_night = 1600
+temperature_night = 4000
 
 [osd]
 hide_delay_ms = 1600
@@ -259,6 +260,7 @@ wallpaper_scheme = "m3-content"
         "thunderbird",
         "papirus-icons",
         "bat",
+        "fzf",
         "tmux"
     ]
 
@@ -304,6 +306,10 @@ show_label = false
 [widget.clock]
 anchor = true
 format = "{:%H:%M  %a %-d}"
+
+    [widget.clock.actions]
+    scroll_down = "brightness-down"
+    scroll_up = "brightness-up"
 
 [widget.control-center]
 color = "primary"

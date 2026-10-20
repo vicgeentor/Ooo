@@ -74,6 +74,46 @@
         };
       };
 
+      # Fixes:
+
       systemd.services.pangolin.serviceConfig.ReadWritePaths = [ "/var/lib/pangolin" ];
+
+      # Pangolin's disposable runtime files must be owned by its service user.
+      system.activationScripts.pangolin-ad-hoc-fixes = {
+        deps = [
+          "users"
+          "groups"
+        ];
+        text = ''
+          rm -rf /var/lib/pangolin/.next
+          chown -R traefik:fossorial /var/lib/pangolin/config/traefik
+        '';
+      };
+
+      # The upstream module's 0700 Traefik-owned directory prevents
+      # Pangolin's acmeCertSync from even statting acme.json.
+      systemd.tmpfiles.settings."10-fossorial-paths" = lib.mkForce {
+        "/var/lib/pangolin" = {
+          d = {
+            user = "pangolin";
+            group = "fossorial";
+            mode = "0770";
+          };
+        };
+        "/var/lib/pangolin/config" = {
+          d = {
+            user = "pangolin";
+            group = "fossorial";
+            mode = "0770";
+          };
+        };
+        "/var/lib/pangolin/config/letsencrypt" = {
+          d = {
+            user = "traefik";
+            group = "fossorial";
+            mode = "0750";
+          };
+        };
+      };
     };
 }
