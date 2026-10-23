@@ -20,7 +20,6 @@
     hmArgs@{ pkgs, ... }:
     {
       programs = {
-        tmux.shell = "${pkgs.fish}/bin/fish";
         ghostty.enableFishIntegration = true;
         zoxide.enableFishIntegration = true;
         direnv.enableFishIntegration = true;

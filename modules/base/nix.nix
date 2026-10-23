@@ -8,7 +8,7 @@
       registry.nixpkgs.flake = inputs.nixpkgs;
       optimise = {
         automatic = true;
-        dates = [ "05:00" ];
+        dates = "weekly";
       };
       settings = {
         experimental-features = [
