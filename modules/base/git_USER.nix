@@ -13,6 +13,7 @@
         init.defaultBranch = "main";
         push.autoSetupRemote = true;
         gpg.format = "ssh";
+        commit.gpgsign = true;
       };
     };
   };
