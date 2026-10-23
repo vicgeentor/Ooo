@@ -304,6 +304,22 @@
         "type": "github"
       }
     },
+    "my-acer-wmi-branch": {
+      "locked": {
+        "lastModified": 1792779822,
+        "narHash": "sha256-0WMt4xdv1MFqzNR7e4G20Kd/tFDItTJRp7axw0Kg2Uw=",
+        "owner": "vicgeentor",
+        "repo": "nixpkgs",
+        "rev": "43b3b93d03b39c2e2cb38059f9e9fadb26acb07f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vicgeentor",
+        "ref": "acer-wmi-fix-module-install-UNSTABLE",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "neovim-nightly-overlay": {
       "inputs": {
         "flake-parts": "flake-parts_3",
@@ -550,6 +566,7 @@
         "givenv": "givenv",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
+        "my-acer-wmi-branch": "my-acer-wmi-branch",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nix-minecraft": "nix-minecraft",
         "nixarr": "nixarr",

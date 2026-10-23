@@ -8,6 +8,7 @@
     nixpkgs-cornelis.url = "github:NixOS/nixpkgs/9640786e2594ed75361748409d98776fb5071ce0";
     nixpkgs-zotero.url = "github:NixOS/nixpkgs/7a0f122f5090cf4c2ade2a13a0e229d4e19ba71f";
     nixpkgs-calibre.url = "github:NixOS/nixpkgs/9640786e2594ed75361748409d98776fb5071ce0";
+    my-acer-wmi-branch.url = "github:vicgeentor/nixpkgs/acer-wmi-fix-module-install-UNSTABLE";
 
     # remove later when tree-sitter version 0.27 is in nixpkgs unstable
     tree-sitter.url = "github:tree-sitter/tree-sitter";
