@@ -37,9 +37,9 @@ return {
 						{ "filename", path = 4 },
 					},
 					lualine_x = {
-						"progress",
-						"filesize",
-						"fileformat",
+						-- "progress",
+						-- "filesize",
+						-- "fileformat",
 					},
 					lualine_y = { { "filetype" } },
 					lualine_z = { { "location", icon = "" } },

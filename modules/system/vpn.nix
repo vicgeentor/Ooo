@@ -1,10 +1,5 @@
 {
-  flake.modules.nixos.vpn =
-    { pkgs, ... }:
-    {
-      networking.firewall.checkReversePath = false;
-      environment.systemPackages = with pkgs; [
-        eddie
-      ];
-    };
+  flake.modules.nixos.vpn = {
+    networking.firewall.checkReversePath = false;
+  };
 }

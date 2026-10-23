@@ -36,7 +36,6 @@
         imagemagick
         jq
         mermaid-cli
-        nixd # Nix lsp
         inputs.givenv.packages.${pkgs.stdenv.hostPlatform.system}.default
         obs-studio
         kdePackages.okular # pdf

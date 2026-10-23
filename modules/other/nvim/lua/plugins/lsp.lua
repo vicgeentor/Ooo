@@ -98,6 +98,8 @@ return {
 			})
 			vim.lsp.config("nixd", {
 				cmd = { "nixd" },
+				filetypes = { "nix" },
+				root_markers = { "flake.nix", ".git" },
 				settings = {
 					nixd = {
 						nixpkgs = {
@@ -109,6 +111,12 @@ return {
 						options = {
 							nixos = {
 								expr = '(builtins.getFlake "/home/vic/Ooo").nixosConfigurations.jake.options',
+							},
+							home_manager = {
+								expr = '(builtins.getFlake "/home/vic/Ooo").nixosConfigurations.jake.options.home-manager.users.type.getSubOptions []',
+							},
+							flake_parts = {
+								expr = '(builtins.getFlake "/home/vic/Ooo").currentSystem.options',
 							},
 						},
 					},

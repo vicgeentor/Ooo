@@ -11,6 +11,7 @@
         lua5_1
         lua-language-server
         luajitPackages.luarocks
+        nixd
         nodejs
         ripgrep
         stylua

@@ -29,7 +29,7 @@ widget_spacing = 10
     enabled = true
     fill = "surface_variant"
     id = "g1"
-    members = [ "network", "clipboard", "bluetooth", "volume", "brightness", "nightlight" ]
+    members = [ "network", "clipboard", "bar", "bluetooth", "volume", "brightness", "nightlight" ]
     opacity = 1.0
     padding = 6.0
 
@@ -67,10 +67,10 @@ sidebar_section = "full"
     type = "nightlight"
 
     [[control_center.shortcuts]]
-    type = "notification"
+    type = "caffeine"
 
     [[control_center.shortcuts]]
-    type = "caffeine"
+    type = "andrewdems/vpn-manager:toggle"
 
 [desktop_widgets]
 enabled = false
@@ -174,8 +174,12 @@ temperature_night = 4000
 [osd]
 hide_delay_ms = 1600
 
+[plugin_settings."andrewdems/vpn-manager"]
+auto_disconnect_on_trusted = false
+trust_all_ethernet = false
+
 [plugins]
-enabled = []
+enabled = [ "andrewdems/vpn-manager" ]
 
 [shell]
 launch_apps_as_systemd_services = true
@@ -293,6 +297,9 @@ enabled = true
 
 [weather]
 enabled = false
+
+[widget.bar]
+type = "andrewdems/vpn-manager:bar"
 
 [widget.battery.actions]
 right = "power-cycle"
