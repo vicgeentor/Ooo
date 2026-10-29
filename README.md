@@ -35,7 +35,6 @@ It also runs a receiving email server using
 
 My home server that runs some services:
 
-- [your_spotify](https://github.com/Yooooomi/your_spotify)
 - [nixarr stack](https://github.com/nix-media-server/nixarr)
 
 ### [gunter](https://adventuretime.fandom.com/wiki/gunter)

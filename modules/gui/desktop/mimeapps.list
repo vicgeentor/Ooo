@@ -55,3 +55,4 @@ image/bmp=qimgv.desktop;
 application/json=ghostty-neovim.desktop;
 video/matroska=mpv.desktop;
 application/epub+zip=calibre-ebook-viewer.desktop;
+text/csv=ghostty-neovim.desktop;

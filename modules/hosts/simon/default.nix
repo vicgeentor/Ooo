@@ -13,17 +13,14 @@
       arr-stack
       dns
       fwupd
-      # grafana
       graphics
       networkmanager
       nginx
       nvidia
-      # prometheus
       ssh
       systemdboot
       tailscale
       tdarr
-      your-spotify
     ];
   };
 }

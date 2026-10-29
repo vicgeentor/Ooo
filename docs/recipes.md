@@ -31,3 +31,35 @@ inputs.input-name.packages.${pkgs.stdenv.hostPlatform.system}.default
 ```nix
 "/home/${config.flake.meta.vic.username}"
 ```
+
+## Add treefmt to a flake-parts flake
+
+```nix
+inputs.treefmt-nix = {
+    url = "github:numtide/treefmt-nix";
+    inputs.nixpkgs.follows = "nixpkgs";
+};
+
+# ...
+
+imports = [
+  inputs.treefmt-nix.flakeModule
+];
+
+# ...
+
+perSystem =
+  { config, pkgs, ... }:
+  {
+    # ...
+    treefmt = {
+      projectRootFile = "flake.nix";
+      programs = {
+        nixfmt.enable = true;
+        cabal-fmt.enable = true;
+        ormolu.enable = true;
+        hlint.enable = true;
+      };
+    };
+  }
+```
