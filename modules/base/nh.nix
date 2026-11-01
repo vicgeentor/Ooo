@@ -1,11 +1,11 @@
 {
-  flake.modules.nixos.nh = {
+  flake.modules.nixos.base = {
     programs.nh = {
       enable = true;
       clean = {
         enable = true;
-        dates = "weekly";
-        extraArgs = "--keep 5";
+        dates = "Mon 05:00";
+        extraArgs = "--keep 5 --no-direnv";
       };
     };
   };

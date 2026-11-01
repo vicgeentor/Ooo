@@ -33,7 +33,6 @@
       markdown
       minecraft
       networkmanager
-      nh
       niri
       nix-ld
       noctalia
