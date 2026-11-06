@@ -1,6 +1,6 @@
 {
   flake.modules.nixos.pangolin =
-    nixosArgs@{ lib, ... }:
+    nixosArgs@{ pkgs, lib, ... }:
     {
       age.secrets = {
         pangolin.file = ../../_secrets/pangolin.age;
@@ -34,8 +34,8 @@
             prefer_wildcard_cert = true;
           };
           email = {
-            smtp_host = "mail-eu.smtp2go.com";
-            smtp_port = 2525;
+            smtp_host = "mail.vicgeentor.nl";
+            smtp_port = 465;
             smtp_user = "vic@vicgeentor.nl";
             smtp-secure = true;
             no-reply = "pangolin-no-reply@vicgeentor.nl";
@@ -75,10 +75,23 @@
       };
 
       # Fixes:
+      systemd.services.pangolin.serviceConfig = {
+        User = lib.mkForce "pangolin";
+        Group = lib.mkForce "fossorial";
+        ReadWritePaths = [ "/var/lib/pangolin" ];
+        ExecStartPre = "+${pkgs.coreutils}/bin/chown -R pangolin:fossorial /var/lib/pangolin";
+      };
+      systemd.services.traefik.serviceConfig = {
+        User = lib.mkForce "pangolin";
+        Group = lib.mkForce "fossorial";
+        ExecStartPre = "+${pkgs.coreutils}/bin/chown -R pangolin:fossorial /var/lib/pangolin";
+      };
+      systemd.services.gerbil.serviceConfig = {
+        User = lib.mkForce "pangolin";
+        Group = lib.mkForce "fossorial";
+        ExecStartPre = "+${pkgs.coreutils}/bin/chown -R pangolin:fossorial /var/lib/pangolin";
+      };
 
-      systemd.services.pangolin.serviceConfig.ReadWritePaths = [ "/var/lib/pangolin" ];
-
-      # Pangolin's disposable runtime files must be owned by its service user.
       system.activationScripts.pangolin-ad-hoc-fixes = {
         deps = [
           "users"
@@ -86,34 +99,38 @@
         ];
         text = ''
           rm -rf /var/lib/pangolin/.next
-          chown -R traefik:fossorial /var/lib/pangolin/config/traefik
         '';
       };
 
+      systemd.tmpfiles.rules = [
+        "d /var/lib/pangolin 0750 pangolin fossorial - -"
+        "Z /var/lib/pangolin - pangolin fossorial - -"
+      ];
+
       # The upstream module's 0700 Traefik-owned directory prevents
       # Pangolin's acmeCertSync from even statting acme.json.
-      systemd.tmpfiles.settings."10-fossorial-paths" = lib.mkForce {
-        "/var/lib/pangolin" = {
-          d = {
-            user = "pangolin";
-            group = "fossorial";
-            mode = "0770";
-          };
-        };
-        "/var/lib/pangolin/config" = {
-          d = {
-            user = "pangolin";
-            group = "fossorial";
-            mode = "0770";
-          };
-        };
-        "/var/lib/pangolin/config/letsencrypt" = {
-          d = {
-            user = "traefik";
-            group = "fossorial";
-            mode = "0750";
-          };
-        };
-      };
+      # systemd.tmpfiles.settings."10-fossorial-paths" = lib.mkForce {
+      #   "/var/lib/pangolin" = {
+      #     d = {
+      #       user = "pangolin";
+      #       group = "fossorial";
+      #       mode = "0770";
+      #     };
+      #   };
+      #   "/var/lib/pangolin/config" = {
+      #     d = {
+      #       user = "pangolin";
+      #       group = "fossorial";
+      #       mode = "0770";
+      #     };
+      #   };
+      #   "/var/lib/pangolin/config/letsencrypt/acme.json" = {
+      #     f = {
+      #       user = "pangolin";
+      #       group = "fossorial";
+      #       mode = "0750";
+      #     };
+      #   };
+      # };
     };
 }

@@ -7,7 +7,7 @@
         ltex-ls-plus
         aspell # Spell checker
         aspellDicts.en
-        bibclean # For BibTeX files
+        bibtex-tidy # For BibTeX files
       ];
     };
 }

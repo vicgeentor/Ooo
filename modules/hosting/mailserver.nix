@@ -19,15 +19,15 @@
         993
       ];
 
-      services.postfix.settings.main = {
-        smtp_sasl_auth_enable = "yes";
-        smtp_sasl_password_maps = "texthash:${nixosArgs.config.age.secrets.smtp-sasl-password-maps.path}";
-        smtp_sasl_security_options = "noanonymous";
-        smtp_tls_security_level = lib.mkForce "may";
-        header_size_limit = 4096000;
-        relayhost = [ "[mail-eu.smtp2go.com]:2525" ];
-        relay_destination_concurrency_limit = 20;
-      };
+      # services.postfix.settings.main = {
+      #   smtp_sasl_auth_enable = "yes";
+      #   smtp_sasl_password_maps = "texthash:${nixosArgs.config.age.secrets.smtp-sasl-password-maps.path}";
+      #   smtp_sasl_security_options = "noanonymous";
+      #   smtp_tls_security_level = lib.mkForce "may";
+      #   header_size_limit = 4096000;
+      #   relayhost = [ "[mail-eu.smtp2go.com]:2525" ];
+      #   relay_destination_concurrency_limit = 20;
+      # };
 
       security.acme = {
         acceptTerms = true;

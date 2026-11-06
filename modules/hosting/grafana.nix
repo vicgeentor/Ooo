@@ -28,14 +28,14 @@
         security = {
           secret_key = "$__file{${nixosArgs.config.age.secrets.grafana.path}}";
         };
-        smtp = {
-          enabled = true;
-          user = "vic@vicgeentor.nl";
-          password = "$__file{${nixosArgs.config.age.secrets.email-password-vic-at-vicgeentornl-grafana.path}}";
-          host = "mail-eu.smtp2go.com:2525";
-          from_address = "grafana-no-reply@vicgeentor.nl";
-          startTLS_policy = "MandatoryStartTLS";
-        };
+        # smtp = {
+        #   enabled = true;
+        #   user = "vic@vicgeentor.nl";
+        #   password = "$__file{${nixosArgs.config.age.secrets.email-password-vic-at-vicgeentornl-grafana.path}}";
+        #   host = "mail-eu.smtp2go.com:2525";
+        #   from_address = "grafana-no-reply@vicgeentor.nl";
+        #   startTLS_policy = "MandatoryStartTLS";
+        # };
       };
     };
   };

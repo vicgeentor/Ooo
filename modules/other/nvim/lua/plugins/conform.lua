@@ -66,6 +66,7 @@ return {
 					rust = { "rustfmt" },
 					tex = { "latexindent" },
 					typst = { "typstyle" },
+					bib = { "bibtex-tidy" },
 				},
 			})
 		end,
