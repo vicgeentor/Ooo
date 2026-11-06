@@ -106,31 +106,5 @@
         "d /var/lib/pangolin 0750 pangolin fossorial - -"
         "Z /var/lib/pangolin - pangolin fossorial - -"
       ];
-
-      # The upstream module's 0700 Traefik-owned directory prevents
-      # Pangolin's acmeCertSync from even statting acme.json.
-      # systemd.tmpfiles.settings."10-fossorial-paths" = lib.mkForce {
-      #   "/var/lib/pangolin" = {
-      #     d = {
-      #       user = "pangolin";
-      #       group = "fossorial";
-      #       mode = "0770";
-      #     };
-      #   };
-      #   "/var/lib/pangolin/config" = {
-      #     d = {
-      #       user = "pangolin";
-      #       group = "fossorial";
-      #       mode = "0770";
-      #     };
-      #   };
-      #   "/var/lib/pangolin/config/letsencrypt/acme.json" = {
-      #     f = {
-      #       user = "pangolin";
-      #       group = "fossorial";
-      #       mode = "0750";
-      #     };
-      #   };
-      # };
     };
 }
