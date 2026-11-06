@@ -1,3 +1,4 @@
+Repo moved to [Codeberg](https://codeberg.org/vicgeentor/Ooo)!
 # [Land of Ooo](https://adventuretime.fandom.com/wiki/Land_of_Ooo)
 
 ## Dendritic Design Pattern
